@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "fit_score",
+  "type": "object",
+  "required": [
+    "company_id",
+    "opportunity_id",
+    "score",
+    "decisao_recomendada",
+    "versao",
+    "data",
+    "modelo",
+    "versao_prompt",
+    "confianca"
+  ],
+  "properties": {
+    "company_id": {
+      "type": "string"
+    },
+    "opportunity_id": {
+      "type": "string"
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "componentes": {
+      "type": "object",
+      "properties": {
+        "fit_tecnico": {
+          "type": "number"
+        },
+        "capacidade_documental": {
+          "type": "number"
+        },
+        "margem_estimada": {
+          "type": "number"
+        },
+        "probabilidade_competitiva": {
+          "type": "number"
+        },
+        "complexidade_operacional": {
+          "type": "number"
+        },
+        "risco_juridico": {
+          "type": "number"
+        },
+        "prazo_preparacao": {
+          "type": "number"
+        },
+        "valor_estrategico": {
+          "type": "number"
+        }
+      }
+    },
+    "justificativa": {
+      "type": "string"
+    },
+    "riscos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "condicoes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "decisao_recomendada": {
+      "type": "string",
+      "enum": [
+        "GO",
+        "GO_COM_CONDICOES",
+        "PARCERIA_NECESSARIA",
+        "NO_GO"
+      ]
+    },
+    "versao": {
+      "type": "string"
+    },
+    "data": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "modelo": {
+      "type": "string"
+    },
+    "versao_prompt": {
+      "type": "string"
+    },
+    "confianca": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "aprovador_humano": {
+      "type": "string"
+    }
+  }
+}

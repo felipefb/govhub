@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "opportunity",
+  "type": "object",
+  "required": [
+    "orgao",
+    "objeto",
+    "modalidade",
+    "fonte",
+    "status"
+  ],
+  "properties": {
+    "orgao": {
+      "type": "string"
+    },
+    "uf": {
+      "type": "string"
+    },
+    "municipio": {
+      "type": "string"
+    },
+    "objeto": {
+      "type": "string"
+    },
+    "modalidade": {
+      "type": "string"
+    },
+    "regime_juridico": {
+      "type": "string",
+      "enum": [
+        "lei_14133_2021",
+        "lei_13303_2016",
+        "outro"
+      ]
+    },
+    "valor_estimado": {
+      "type": "number"
+    },
+    "data_limite": {
+      "type": "string",
+      "format": "date"
+    },
+    "fonte": {
+      "type": "string"
+    },
+    "url_fonte": {
+      "type": "string"
+    },
+    "data_coleta": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "futura",
+        "aberta",
+        "em_disputa",
+        "homologada",
+        "encerrada"
+      ]
+    },
+    "momento_demanda": {
+      "type": "string",
+      "enum": [
+        "demanda_futura",
+        "oportunidade_aberta",
+        "expansao_contratual"
+      ]
+    },
+    "setores": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "documentos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "origem_informacao": {
+      "type": "string",
+      "enum": [
+        "declarada_pela_empresa",
+        "verificada_pelo_govhub",
+        "fonte_publica",
+        "inferencia_ia"
+      ]
+    }
+  }
+}

@@ -1,0 +1,831 @@
+Câmara Nacional de Modelos de Licitações e Contratos da Consultoria-Geral da União
+Modelo de Edital - Lei nº 14.133, de 2021.
+Aprovado pela Secretaria de Gestão e Inovação.
+Identidade visual pela Secretaria de Gestão e Inovação
+Atualização: NOV/2025
+1 de 18
+CONSELHO REGIONAL DE ARQUITETURA E URBANISMO
+Edital 5/2026
+Informações Básicas
+Número do artefato UASG Editado por Atualizado em
+5/2026 926307-CONSELHO REGIONAL DE ARQUITETURA E URBANISMO FILIPE BENTO LEAES 14/07/2026 13:25 (v 0.5)
+Status
+DISPONIBILIZADO
+Outras informações
+Categoria Número da 
+Contratação
+Processo 
+Administrativo
+V - prestação de serviços, inclusive os técnico-profissionais especializados/Serviço continuado sem 
+dedicação exclusiva de mão de obra 15/2026 00177.000227/2026-
+81
+1. DO OBJETO
+ 
+PREGÃO ELETRÔNICO
+90004/2026
+ 
+CONTRATANTE (UASG)
+926307
+ 
+ 
+OBJETO
+Contratação de empresa especializada para prestação de serviços de desenvolvimento, configuração,
+integração de Inteligência Artificial (LLM/RAG), disponibilização de licenças e consultoria continuada
+por 12 (doze) meses para a plataforma de atendimento automatizado via WhatsApp do CAU/SC
+ 
+ 
+ 
+VALOR TOTAL DA CONTRATAÇÃO
+UASG 926307
+Câmara Nacional de Modelos de Licitações e Contratos da Consultoria-Geral da União
+Modelo de Edital - Lei nº 14.133, de 2021.
+Aprovado pela Secretaria de Gestão e Inovação.
+Identidade visual pela Secretaria de Gestão e Inovação
+Atualização: NOV/2025
+2 de 18
+R$ 37.108,20 (trinta e sete mil, cento e oito reais e vinte centavos)
+ 
+ 
+DATA DA SESSÃO PÚBLICA
+Dia às 30/07/2026  09h00min (horário de Brasília)
+ 
+ 
+Critério de Julgamento:
+menor preço
+ 
+Modo de disputa:
+aberto
+ 
+ 
+TRATAMENTO FAVORECIDO ME/EPP/EQUIPARADAS
+SIM
+ 
+ 
+MARGEM DE PREFERÊNCIA PARA ALGUM ITEM
+NÃO
+ 
+ 
+ 
+CONSELHO DE ARQUITETURA E URBANISMO DE SANTA CATARINA - CAU/SC
+PREGÃO ELETRÔNICO Nº 90004/2026
+Processo Administrativo n° 00177.000227/2026-81
+Torna-se público que o(a) Conselho de Arquitetura e Urbanismo de Santa Catarina - CAU/SC, por meio do(a) Setor
+de Compras, Contratos e Licitações, sediado(a) na Av. Pref. Osmar Cunha 260, Centro, Florianópolis/SC, realizará
+licitação, na modalidade , na forma ELETRÔNICA, nos termos da Lei nº 14.133, de 1º dePREGÃO ELETRÔNICO
+abril de 2021, e demais legislação aplicável e, ainda, de acordo com as condições estabelecidas neste Edital.
+1. DO OBJETO
+
+Câmara Nacional de Modelos de Licitações e Contratos da Consultoria-Geral da União
+Modelo de Edital - Lei nº 14.133, de 2021.
+Aprovado pela Secretaria de Gestão e Inovação.
+Identidade visual pela Secretaria de Gestão e Inovação
+Atualização: NOV/2025
+3 de 18
+1.1. O objeto da presente licitação é Contratação de empresa especializada para prestação de serviços de
+desenvolvimento, configuração, integração de Inteligência Artificial (LLM/RAG), disponibilização de licenças e
+consultoria continuada por 12 (doze) meses para a plataforma de atendimento automatizado via WhatsApp do CAU
+/SC, conforme condições, quantidades e exigências estabelecidas neste Edital e seus anexos.
+1.2. A licitação será realizada em único item.
+ 
+ 
+ 
+ 
+2. DO REGISTRO DE PREÇOS
+2.1. N/A
+3. DA PARTICIPAÇÃO NA LICITAÇÃO
+3.1.   Poderão participar deste certame os interessados previamente credenciados no Sistema de Cadastramento
+Unificado de Fornecedores - SICAF e no Sistema de Compras do Governo Federal (www.gov.br/compras).
+3.2. Os interessados deverão atender às condições exigidas no cadastramento no Sicaf até o terceiro dia útil anterior
+à data prevista para recebimento das propostas.
+3.3. O licitante responsabiliza-se exclusiva e formalmente pelas transações efetuadas em seu nome, assume como
+firmes e verdadeiras suas propostas e seus lances, inclusive os atos praticados diretamente ou por seu
+representante, excluída a responsabilidade do provedor do sistema ou do órgão ou entidade promotora da licitação
+por eventuais danos decorrentes de uso indevido das credenciais de acesso, ainda que por terceiros.
+3.4. É de responsabilidade do cadastrado conferir a exatidão dos seus dados cadastrais nos Sistemas relacionados
+no item anterior e mantê-los atualizados junto aos órgãos responsáveis pela informação, devendo proceder,
+imediatamente, à correção ou à alteração dos registros tão logo identifique incorreção ou aqueles se tornem
+desatualizados.
+3.5. A não observância do disposto no item anterior poderá ensejar desclassificação no momento da habilitação.
+3.8. Será concedido tratamento favorecido para as microempresas e empresas de pequeno porte, para as sociedades
+cooperativas mencionadas no artigo 16 da Lei nº 14.133, de 2021[A3]  , para o agricultor familiar, o produtor rural
+pessoa física e para o microempreendedor individual - MEI, nos limites previstos da Lei Complementar nº 123, de
+2006 e do Decreto nº 8.538, de 2015.
+3.10. Não poderão disputar esta licitação:
+3.10.1. aquele que não atenda às condições deste Edital e seu(s) anexo(s);
+3.10.2. sociedade que desempenhe atividade incompatível com o objeto da licitação;
+3.10.3. empresas estrangeiras que não tenham representação legal no Brasil com poderes expressos
+para receber citação e responder administrativa ou judicialmente;
+3.10.4.  autor do anteprojeto, do projeto básico ou do projeto executivo, pessoa física ou jurídica, quando
+a licitação versar sobre serviços ou fornecimento de bens a ele relacionados;
+3.10.5. . empresa, isoladamente ou em consórcio, responsável pela elaboração do projeto básico ou do
+projeto executivo, ou empresa da qual o autor do projeto seja dirigente, gerente, controlador, acionista ou
+
+Câmara Nacional de Modelos de Licitações e Contratos da Consultoria-Geral da União
+Modelo de Edital - Lei nº 14.133, de 2021.
+Aprovado pela Secretaria de Gestão e Inovação.
+Identidade visual pela Secretaria de Gestão e Inovação
+Atualização: NOV/2025
+4 de 18
+detentor de mais de 5% (cinco por cento) do capital com direito a voto, responsável técnico ou
+subcontratado, quando a licitação versar sobre serviços ou fornecimento de bens a ela necessários;
+3.10.6 pessoa física ou jurídica que se encontre, ao tempo da licitação, impossibilitada de participar da
+licitação em decorrência de sanção que lhe foi imposta;
+3.10.7. aquele que mantenha vínculo de natureza técnica, comercial, econômica, financeira, trabalhista
+ou civil com dirigente do órgão ou entidade contratante ou com agente público que desempenhe função
+na licitação ou atue na fiscalização ou na gestão do contrato, ou que deles seja cônjuge, companheiro ou
+parente em linha reta, colateral ou por afinidade, até o terceiro grau;
+3.10.8. empresas controladoras, controladas ou coligadas, nos termos da Lei nº 6.404, de 15 de
+dezembro de 1976, concorrendo entre si;
+3.10.9 pessoa física ou jurídica que, nos 5 (cinco) anos anteriores à divulgação do edital, tenha sido
+condenada judicialmente, com trânsito em julgado, por exploração de trabalho infantil, por submissão de
+trabalhadores a condições análogas às de escravo ou por contratação de adolescentes nos casos
+vedados pela legislação trabalhista;
+3.10.10 Organizações da Sociedade Civil de Interesse Público - OSCIP, atuando nessa condição;
+3.10.13. pessoas físicas.
+3.11. Não poderá participar, direta ou indiretamente, da licitação ou da execução do contrato agente público do órgão
+ou entidade contratante, devendo ser observadas as situações que possam configurar conflito de interesses no
+exercício ou após o exercício do cargo ou emprego, nos termos da legislação que disciplina a matéria, conforme § 1º
+do art. 9º da Lei nº 14.133, de 2021.
+3.12. O impedimento de que trata o item 3.10.6 será também aplicado ao licitante que atue em substituição a outra
+pessoa, física ou jurídica, com o intuito de burlar a efetividade da sanção a ela aplicada, inclusive a sua controladora,
+controlada ou coligada, desde que devidamente comprovado o ilícito ou a utilização fraudulenta da personalidade
+jurídica do licitante.
+3.13. A critério da Administração e exclusivamente a seu serviço, o autor dos projetos e a empresa a que se referem
+os itens 3.10.4 e 3.10.5 poderão participar no apoio das atividades de planejamento da contratação, de execução da
+licitação ou de gestão do contrato, desde que sob supervisão exclusiva de agentes públicos do órgão ou entidade.
+3.14. Equiparam-se aos autores do projeto as empresas integrantes do mesmo grupo econômico.
+3.15. O disposto nos itens 3.10.4 e 3.10.5 não impede a licitação ou a contratação de serviço que inclua como
+encargo do contratado a elaboração do projeto básico e do projeto executivo, nas contratações integradas, e do
+projeto executivo, nos demais regimes de execução.
+3.16. Em licitações e contratações realizadas no âmbito de projetos e programas parcialmente financiados por
+agência oficial de cooperação estrangeira ou por organismo financeiro internacional com recursos do financiamento
+ou da contrapartida nacional, não poderá participar pessoa física ou jurídica que integre o rol de pessoas sancionadas
+por essas entidades ou que seja declarada inidônea nos termos da Lei nº 14.133, de 2021.
+3.17. A vedação de que trata o item 3.11 estende-se a terceiro que auxilie a condução da contratação na qualidade de
+integrante de equipe de apoio, profissional especializado ou funcionário ou representante de empresa que preste
+assessoria técnica.
+4. DO ORÇAMENTO ESTIMADO
+4.1. O orçamento estimado da presente contratação não será de caráter sigiloso.
+
+Câmara Nacional de Modelos de Licitações e Contratos da Consultoria-Geral da União
+Modelo de Edital - Lei nº 14.133, de 2021.
+Aprovado pela Secretaria de Gestão e Inovação.
+Identidade visual pela Secretaria de Gestão e Inovação
+Atualização: NOV/2025
+5 de 18
+5. DA APRESENTAÇÃO DA PROPOSTA E DOS DOCUMENTOS DE HABILITAÇÃO
+5.1.  Na presente licitação, a fase de habilitação sucederá as fases de apresentação de propostas e lances e de
+julgamento.
+5.2. Os licitantes encaminharão, exclusivamente por meio do sistema eletrônico, a proposta com o preço ou o
+percentual de desconto, conforme o critério de julgamento adotado neste Edital, até a data e o horário estabelecidos
+para abertura da sessão pública.
+5.3. Caso a fase de habilitação anteceda as fases de apresentação de propostas e lances, os licitantes
+encaminharão, na forma e no prazo estabelecidos no item anterior, simultaneamente os documentos de habilitação e
+a proposta com o preço ou o percentual de desconto, observado o disposto nos itens 9.1.1 e 9.13.2 deste Edital.
+5.4. No cadastramento da proposta inicial, o licitante declarará, em campo próprio do sistema, que:
+5.4.1. está ciente e concorda com as condições contidas no edital e seus anexos, bem como de que a proposta
+apresentada compreende a integralidade dos custos para atendimento dos direitos trabalhistas assegurados na
+Constituição Federal, nas leis trabalhistas, nas normas infralegais, nas convenções coletivas de trabalho e nos termos
+de ajustamento de conduta vigentes na data de sua entrega em definitivo e que cumpre plenamente os requisitos de
+habilitação definidos no instrumento convocatório;
+5.4.2. não emprega menor de 18 anos em trabalho noturno, perigoso ou insalubre e não emprega menor de 16 anos,
+salvo menor, a partir de 14 anos, na condição de aprendiz, nos termos do artigo 7°, XXXIII, da Constituição;
+5.4.3. não possui empregados executando trabalho degradante ou forçado, observando o disposto nos incisos III e IV
+do art. 1º e no inciso III do art. 5º da Constituição Federal;
+5.4.4. cumpre as exigências de reserva de cargos para pessoa com deficiência e para reabilitado da Previdência
+Social, previstas em lei e em outras normas específicas.
+5.5. O licitante organizado em cooperativa deverá declarar, ainda, em campo próprio do sistema eletrônico, que
+cumpre os requisitos estabelecidos no artigo 16 da Lei nº 14.133, de 2021.
+5.7. No caso das empresas que foram beneficiadas pela Lei nº 12.546, de 2011, as propostas de preços deverão ser
+apresentadas com as alíquotas em vigor, nos termos da Lei nº 14.973, de 2024, aplicáveis para o ano de
+apresentação da proposta.
+5.7.1. A pedido da empresa contratada, o preço do contrato poderá ser revisto, nos termos do art. 134 c/c art. 136, I,
+da Lei nº 14.133, de 2021, após efetiva majoração das alíquotas, conforme regime de transição previsto no art. 9ºA e
+9º-B da Lei nº 12.546, de 2011, com a redação dada pela Lei nº 14.973, de 2024.
+5.8. O fornecedor enquadrado como microempresa, empresa de pequeno porte ou sociedade cooperativa deverá
+declarar, ainda, em campo próprio do sistema eletrônico, que cumpre os requisitos estabelecidos no artigo 3° da Lei
+Complementar nº 123, de 2006, estando apto a usufruir do tratamento favorecido estabelecido em seus arts. 42 a 49,
+observado o disposto nos §§ 1º ao 3º do art. 4º, da Lei nº 14.133, de 2021.
+5.8.1. No item exclusivo para participação de microempresas e empresas de pequeno porte, a assinalação do campo
+“não” impedirá o prosseguimento no certame, para aquele item;
+5.8.2. Nos itens em que a participação não for exclusiva para microempresas e empresas de pequeno porte, a
+assinalação do campo “não” apenas produzirá o efeito de o licitante não ter direito ao tratamento favorecido previsto
+na Lei Complementar nº 123, de 2006, mesmo que microempresa, empresa de pequeno porte ou sociedade
+cooperativa.
+5.9. Não poderá se beneficiar do tratamento jurídico diferenciado estabelecido nos arts. 42 a 49 da Lei Complementar
+nº 123, de 2006, a pessoa jurídica:
+5.9.1. de cujo capital participe outra pessoa jurídica;
+5.9.2. que seja filial, sucursal, agência ou representação, no País, de pessoa jurídica com sede no exterior;
+
+Câmara Nacional de Modelos de Licitações e Contratos da Consultoria-Geral da União
+Modelo de Edital - Lei nº 14.133, de 2021.
+Aprovado pela Secretaria de Gestão e Inovação.
+Identidade visual pela Secretaria de Gestão e Inovação
+Atualização: NOV/2025
+6 de 18
+5.9.3. de cujo capital participe pessoa física que seja inscrita como empresário ou seja sócia de outra empresa que
+receba tratamento jurídico diferenciado nos termos da Lei Complementar nº 123, de 2006, desde que a receita bruta
+global ultrapasse o limite de que trata o inciso II do art. 3º da referida lei;
+5.9.4. cujo titular ou sócio participe com mais de 10% (dez por cento) do capital de outra empresa não beneficiada
+pela Lei Complementar nº 123, de 2006, desde que a receita bruta global ultrapasse o limite de que trata o inciso II do
+art. 3º da referida lei;
+5.9.5. cujo sócio ou titular seja administrador ou equiparado de outra pessoa jurídica com fins lucrativos, desde que a
+receita bruta global ultrapasse o limite de que trata o inciso II do art. 3º da referida lei;
+5.9.6. constituída sob a forma de cooperativas, salvo as de consumo;
+5.9.7 que participe do capital de outra pessoa jurídica;
+5.9.8. que exerça atividade de banco comercial, de investimentos e de desenvolvimento, de caixa econômica, de
+sociedade de crédito, financiamento e investimento ou de crédito imobiliário, de corretora ou de distribuidora de
+títulos, valores mobiliários e câmbio, de empresa de arrendamento mercantil, de seguros privados e de capitalização
+ou de previdência complementar;
+5.9.9. resultante ou remanescente de cisão ou qualquer outra forma de desmembramento de pessoa jurídica que
+tenha ocorrido em um dos 5 (cinco) anos-calendário anteriores;
+5.9.10. constituída sob a forma de sociedade por ações.
+5.9.11. cujos titulares ou sócios guardem, cumulativamente, com o contratante do serviço, relação de pessoalidade,
+subordinação e habitualidade.
+5.10. O licitante deverá declarar em campo próprio do sistema que desenvolve programa de integridade, nos termos
+do Decreto nº 12.304, de 2024, e da Portaria Normativa SE/CGU nº 226, de 9 de setembro de 2025, para fazer jus ao
+benefício do critério de desempate previsto no art. 60, caput, inciso IV, da lei n. 14.133, de 2021
+5.11. A falsidade da declaração de que trata os itens 5.4, 5.8 ou 5.10 sujeitará o licitante às sanções previstas na Lei
+nº 14.133, de 2021, e neste Edital.
+5.12. Os licitantes poderão retirar ou substituir a proposta ou, na hipótese de a fase de habilitação anteceder as fases
+de apresentação de propostas e lances e de julgamento, os documentos de habilitação anteriormente inseridos no
+sistema, até a abertura da sessão pública.
+5.13. Não haverá ordem de classificação na etapa de apresentação da proposta e dos documentos de habilitação
+pelo licitante, o que ocorrerá somente após os procedimentos de abertura da sessão pública e da fase de envio de
+lances.
+5.14. Serão disponibilizados para acesso público os documentos que compõem a proposta dos licitantes convocados
+para apresentação de propostas, após a fase de envio de lances.
+5.15. Desde que disponibilizada a funcionalidade no sistema, o licitante poderá parametrizar o seu valor final mínimo
+ou o seu percentual de desconto máximo quando do cadastramento da proposta e obedecerá às seguintes regras:
+5.15.1. a aplicação do intervalo mínimo de diferença de valores ou de percentuais entre os lances, que incidirá tanto
+em relação aos lances intermediários quanto em relação ao lance que cobrir a melhor oferta; e
+5.15.2. os lances serão de envio automático pelo sistema, respeitado o valor final mínimo, caso estabelecido, e o
+intervalo de que trata o subitem acima.
+5.16. O valor final mínimo ou o percentual de desconto final máximo parametrizado no sistema poderá ser alterado
+pelo fornecedor durante a fase de disputa, sendo vedado:
+5.16.1. valor superior a lance já registrado pelo fornecedor no sistema, quando adotado o critério de julgamento por
+menor preço; e
+
+Câmara Nacional de Modelos de Licitações e Contratos da Consultoria-Geral da União
+Modelo de Edital - Lei nº 14.133, de 2021.
+Aprovado pela Secretaria de Gestão e Inovação.
+Identidade visual pela Secretaria de Gestão e Inovação
+Atualização: NOV/2025
+7 de 18
+ 5.16.2. percentual de desconto inferior a lance já registrado pelo fornecedor no sistema, quando adotado o critério de
+julgamento por maior desconto.
+5.17. O valor final mínimo ou o percentual de desconto final máximo parametrizado na forma do item 5.15 possuirá
+caráter sigiloso para os demais fornecedores e para o órgão ou entidade promotora da licitação, podendo ser
+disponibilizado estrita e permanentemente aos órgãos de controle externo e interno.
+5.18. Caberá ao licitante interessado em participar da licitação acompanhar as operações no sistema eletrônico
+durante o processo licitatório e se responsabilizar pelo ônus decorrente da perda de negócios diante da inobservância
+de mensagens emitidas pela Administração ou de sua desconexão.
+5.19. O licitante deverá comunicar imediatamente ao provedor do sistema qualquer acontecimento que possa
+comprometer o sigilo ou a segurança, para imediato bloqueio de acesso.
+6. DO PREENCHIMENTO DA PROPOSTA
+6.1. O licitante deverá enviar sua proposta mediante o preenchimento, no sistema eletrônico, dos seguintes campos:
+6.1.1. valor total do item;
+6.1.2. Quantidade cotada
+6.2. Todas as especificações do objeto contidas na proposta vinculam o licitante.
+6.2.1. O licitante NÃO  poderá oferecer proposta em quantitativo inferior ao máximo previsto para
+contratação.
+6.3. Nos valores propostos estarão inclusos todos os custos operacionais, encargos previdenciários, trabalhistas,
+tributários, comerciais e quaisquer outros que incidam direta ou indiretamente na execução do objeto.
+6.4. Os preços ofertados, tanto na proposta inicial, quanto na etapa de lances, serão de exclusiva responsabilidade do
+licitante, não lhe assistindo o direito de pleitear qualquer alteração, sob alegação de erro, omissão ou qualquer outro
+pretexto.
+6.5. Se o regime tributário da empresa implicar o recolhimento de tributos em percentuais variáveis, a cotação
+adequada será a que corresponde à média dos efetivos recolhimentos da empresa nos últimos doze meses.
+6.5.1. No regime de incidência não-cumulativa de PIS e COFINS, a cotação adequada será a que
+corresponde à média das alíquotas efetivamente recolhidas pela empresa, comprovada, a qualquer
+tempo, por documentos de Escrituração Fiscal Digital da Contribuição (EFD-Contribuições) para o PIS
+/PASEP e COFINS dos últimos 12 (doze) meses anteriores à apresentação da proposta, ou por outro
+meio hábil.
+6.6. Independentemente do percentual de tributo inserido na planilha, no pagamento serão retidos na fonte os
+percentuais estabelecidos na legislação vigente.
+6.7. Na presente licitação, a Microempresa e a Empresa de Pequeno Porte poderão se beneficiar do regime de
+tributação pelo Simples Nacional.
+6.9. A apresentação das propostas implica obrigatoriedade do cumprimento das disposições nelas contidas, em
+conformidade com o que dispõe o Termo de Referência/Projeto Básico, assumindo o proponente o compromisso de
+executar o objeto licitado nos seus termos, bem como de fornecer os materiais, equipamentos, ferramentas e
+utensílios necessários, em quantidades e qualidades adequadas à perfeita execução contratual, promovendo, quando
+requerido, sua substituição.
+6.10. O prazo de validade da proposta não será inferior a  dias  a contar da data de sua apresentação.60 (sessenta) ,
+6.11. Os licitantes devem respeitar os preços máximos estabelecidos nas normas de regência de contratações
+públicas federais, quando participarem de licitações públicas;
+
+Câmara Nacional de Modelos de Licitações e Contratos da Consultoria-Geral da União
+Modelo de Edital - Lei nº 14.133, de 2021.
+Aprovado pela Secretaria de Gestão e Inovação.
+Identidade visual pela Secretaria de Gestão e Inovação
+Atualização: NOV/2025
+8 de 18
+6.12. Caso o critério de julgamento seja o de menor preço, os licitantes devem respeitar os preços máximos previstos
+no Termo de Referência/Projeto Básico;
+6.13. Caso o critério de julgamento seja o de maior desconto, o preço já decorrente da aplicação do desconto ofertado
+deverá respeitar os preços máximos previstos no Termo de Referência/Projeto Básico.
+6.14. O descumprimento das regras supramencionadas pode ensejar a  Tribunal de Contas daresponsabilização pelo
+União e, após o devido processo legal, gerar as seguintes consequências: assinatura de prazo para a adoção das
+medidas necessárias ao exato cumprimento da lei, nos termos do art. 71, inciso IX, da Constituição; ou condenação
+dos agentes públicos responsáveis e da empresa contratada ao pagamento dos prejuízos ao erário, caso verificada a
+ocorrência de superfaturamento por sobrepreço na execução do contrato.
+7. DA ABERTURA DA SESSÃO, CLASSIFICAÇÃO DAS PROPOSTAS E FORMULAÇÃO 
+DE LANCES
+7.1.  A abertura da presente licitação dar-se-á automaticamente em sessão pública, por meio de sistema eletrônico,
+na data, horário e local indicados neste Edital.
+7.2. Os licitantes poderão retirar ou substituir a proposta ou os documentos de habilitação, quando for o caso,
+anteriormente inseridos no sistema, até a abertura da sessão pública.
+7.3. O sistema disponibilizará campo próprio para troca de mensagens entre o Pregoeiro/Agente de Contratação
+/Comissão e os licitantes.
+7.4. Iniciada a etapa competitiva, os licitantes deverão encaminhar lances exclusivamente por meio de sistema
+eletrônico, sendo imediatamente informados do seu recebimento e do valor consignado no registro.
+7.5. O lance deverá ser ofertado pelo valor unitário do item.
+7.6. Os licitantes poderão oferecer lances sucessivos, observando o horário fixado para abertura da sessão e as
+regras estabelecidas no Edital.
+7.7. O licitante somente poderá oferecer lance de valor inferior ou percentual de desconto superior ao último por ele
+ofertado e registrado pelo sistema.
+relação aos7.8. O intervalo mínimo de diferença de valores ou percentuais entre os lances, que incidirá tanto em 
+lances intermediários quanto em relação à proposta que cobrir a melhor oferta deverá ser de 0,75% (setenta e cinco
+centésimos por cento)
+7.9. O licitante poderá, uma única vez, excluir seu último lance ofertado, no intervalo de quinze segundos após o
+registro no sistema, na hipótese de lance inconsistente ou inexequível.
+7.10. O procedimento seguirá de acordo com o modo de disputa adotado.
+7.11. Caso seja adotado para o envio de lances na licitação o modo de disputa “aberto”, os licitantes apresentarão
+lances públicos e sucessivos, com prorrogações.
+7.11.1. A etapa de lances da sessão pública terá duração de dez minutos e, após isso, será prorrogada
+automaticamente pelo sistema quando houver lance ofertado nos últimos dois minutos do período de
+duração da sessão pública.
+7.11.2. A prorrogação automática da etapa de lances, de que trata o subitem anterior, será de dois
+minutos e ocorrerá sucessivamente sempre que houver lances enviados nesse período de prorrogação,
+inclusive no caso de lances intermediários.
+
+Câmara Nacional de Modelos de Licitações e Contratos da Consultoria-Geral da União
+Modelo de Edital - Lei nº 14.133, de 2021.
+Aprovado pela Secretaria de Gestão e Inovação.
+Identidade visual pela Secretaria de Gestão e Inovação
+Atualização: NOV/2025
+9 de 18
+7.11.3. Não havendo novos lances na forma estabelecida nos itens anteriores, a sessão pública encerrar-
+se-á automaticamente, e o sistema ordenará e divulgará os lances conforme a ordem de classificação,
+sem prejuízo da aplicação da margem de preferência e do desempate ficto, conforme disposto neste
+edital, quando for o caso.
+7.11.4. Definida a melhor proposta, se a diferença em relação à proposta classificada em segundo lugar
+for de pelo menos 5% (cinco por cento), o Pregoeiro/Agente de Contratação/Comissão, auxiliado pela
+equipe de apoio, poderá admitir o reinício da disputa aberta, para a definição das demais colocações.
+7.11.5. Após o reinício previsto no item supra, os licitantes serão convocados para apresentar lances
+intermediários.
+7.12. Caso seja adotado para o envio de lances na licitação o modo de disputa “aberto e fechado”, os licitantes
+apresentarão lances públicos e sucessivos, com lance final e fechado.
+7.12.1. A etapa de lances da sessão pública terá duração inicial de quinze minutos. Após esse prazo, o
+sistema encaminhará aviso de fechamento iminente dos lances, após o que transcorrerá o período de até
+dez minutos, aleatoriamente determinado, findo o qual será automaticamente encerrada a recepção de
+lances.
+7.12.2. Encerrado o prazo previsto no subitem anterior, o sistema abrirá oportunidade para que o autor
+da oferta de valor mais baixo e os das ofertas com preços até 10% (dez por cento) superiores àquela
+possam ofertar um lance final e fechado em até cinco minutos, o qual será sigiloso até o encerramento
+deste prazo.
+7.12.5. Não havendo pelo menos três ofertas nas condições definidas neste item, poderão os autores
+dos melhores lances subsequentes, na ordem de classificação, até o máximo de três, oferecer um lance
+final e fechado em até cinco minutos, o qual será sigiloso até o encerramento deste prazo.
+7.13. Caso seja adotado para o envio de lances na licitação o modo de disputa “fechado e aberto”, poderão participar
+da etapa aberta somente os licitantes que apresentarem a proposta de menor preço/ maior percentual de desconto e
+os das propostas até 10% (dez por cento) superiores/inferiores àquela, em que os licitantes apresentarão lances
+públicos e sucessivos, até o encerramento da sessão e eventuais prorrogações. 
+7.13.2. Não havendo pelo menos 3 (três) propostas nas condições definidas no item 7.13, poderão os
+licitantes que apresentaram as três melhores propostas, consideradas as empatadas, oferecer novos
+lances sucessivos.
+7.13.3. A etapa de lances da sessão pública terá duração de dez minutos e, após isso, será prorrogada
+automaticamente pelo sistema quando houver lance ofertado nos últimos dois minutos do período de
+duração da sessão pública.
+7.13.4. A prorrogação automática da etapa de lances, de que trata o subitem anterior, será de dois
+minutos e ocorrerá sucessivamente sempre que houver lances enviados nesse período de prorrogação,
+inclusive no caso de lances intermediários.
+7.13.5. Não havendo novos lances na forma estabelecida nos itens anteriores, a sessão pública encerrar-
+se-á automaticamente, e o sistema ordenará e divulgará os lances conforme a ordem final de
+classificação.
+7.13.6. Definida a melhor proposta, se a diferença em relação à proposta classificada em segundo lugar
+for de pelo menos 5% (cinco por cento), o Pregoeiro/Agente de Contratação/Comissão, auxiliado pela
+equipe de apoio, poderá admitir o reinício da disputa aberta, para a definição das demais colocações.
+7.13.7. Após o reinício previsto no subitem supra, os licitantes serão convocados para apresentar lances
+intermediários. 
+7.14. Após o término dos prazos estabelecidos nos subitens anteriores, o sistema ordenará e divulgará os lances
+segundo a ordem crescente de valores.
+
+Câmara Nacional de Modelos de Licitações e Contratos da Consultoria-Geral da União
+Modelo de Edital - Lei nº 14.133, de 2021.
+Aprovado pela Secretaria de Gestão e Inovação.
+Identidade visual pela Secretaria de Gestão e Inovação
+Atualização: NOV/2025
+10 de 18
+7.15. Não serão aceitos dois ou mais lances de mesmo valor, prevalecendo aquele que for recebido e registrado em
+primeiro lugar.
+7.16. Durante o transcurso da sessão pública, os licitantes serão informados, em tempo real, do valor do menor lance
+registrado, vedada a identificação do licitante.
+7.17. No caso de desconexão com o Pregoeiro/Agente de Contratação/Comissão, no decorrer da etapa competitiva
+da licitação, o sistema eletrônico poderá permanecer acessível aos licitantes para a recepção dos lances.
+7.18. Quando a desconexão do sistema eletrônico para o Pregoeiro/Agente de Contratação/Comissão persistir por
+tempo superior a dez minutos, a sessão pública será suspensa e reiniciada somente após decorridas vinte e quatro
+horas da comunicação do fato pelo Pregoeiro/Agente de Contratação/Comissão aos participantes, no sítio eletrônico
+utilizado para divulgação.
+7.19. Caso o licitante não apresente lances, concorrerá com o valor de sua proposta.
+7.21. Em relação a itens não exclusivos para participação de microempresas e empresas de pequeno porte, uma vez
+encerrada a etapa de lances, será efetivada a verificação automática, junto à Receita Federal, do porte da entidade
+empresarial, §§1º e 2º do art. 4º da Lei nº 14.133, de 2021. O caso a contratação não se enquadre nas vedações dos 
+sistema identificará em coluna própria as microempresas e empresas de pequeno porte participantes, procedendo à
+comparação com os valores da primeira colocada, se esta for empresa de maior porte, assim como das demais
+classificadas, para o fim de aplicar-se o disposto nos arts. 44 e 45 da Lei Complementar nº 123, de 2006,
+regulamentada pelo Decreto nº 8.538, de 2015.
+7.21.3. Nessas condições, as propostas de microempresas e empresas de pequeno porte que se
+encontrarem na faixa de até 10% (dez por cento), caso se trate de uma concorrência, ou de até 5%
+(cinco por cento), caso se trate de um pregão, serão consideradas empatadas com a primeira colocada.
+7.21.4. A licitante mais bem classificada nos termos do subitem anterior terá o direito de encaminhar uma
+última oferta para desempate, obrigatoriamente em valor inferior ao da primeira colocada, no prazo de 5
+(cinco) minutos controlados pelo sistema, contados após a comunicação automática para tanto.
+7.21.5. Caso a microempresa ou a empresa de pequeno porte melhor classificada desista ou não se
+manifeste no prazo estabelecido, serão convocadas as demais licitantes microempresa e empresa de
+pequeno porte que se encontrem naquele intervalo de até 10% (dez por cento), caso se trate de uma
+concorrência, ou de até 5% (cinco por cento), caso se trate de um pregão, na ordem de classificação,
+para o exercício do mesmo direito, no prazo estabelecido no subitem anterior.
+7.21.6. No caso de equivalência dos valores apresentados pelas microempresas e empresas de pequeno
+porte que se encontrem nos intervalos estabelecidos nos subitens anteriores, será realizado sorteio entre
+elas para que se identifique aquela que primeiro poderá apresentar melhor oferta.
+7.21.7. A obtenção do benefício a que se refere o item anterior fica limitada às microempresas e às
+empresas de pequeno porte que, no ano-calendário de realização da licitação, ainda não tenham
+celebrado contratos com a Administração Pública cujos valores somados extrapolem a receita bruta
+máxima admitida para fins de enquadramento como empresa de pequeno porte.
+7.22. Só poderá haver empate entre propostas iguais (não seguidas de lances), ou entre lances finais da fase fechada
+do modo de disputa aberto e fechado.
+7.23. Havendo eventual empate entre propostas ou lances, o critério de desempate será aquele previsto no art. 60 da
+Lei nº 14.133, de 2021, nesta ordem:
+7.23.1. disputa final, hipótese em que os licitantes empatados poderão apresentar nova proposta em ato
+contínuo à classificação;
+7.23.2. avaliação do desempenho contratual prévio dos licitantes, para a qual deverão preferencialmente
+ser utilizados registros cadastrais para efeito de atesto de cumprimento de obrigações previstos nesta Lei;
+
+Câmara Nacional de Modelos de Licitações e Contratos da Consultoria-Geral da União
+Modelo de Edital - Lei nº 14.133, de 2021.
+Aprovado pela Secretaria de Gestão e Inovação.
+Identidade visual pela Secretaria de Gestão e Inovação
+Atualização: NOV/2025
+11 de 18
+7.23.3. desenvolvimento pelo licitante de ações de equidade entre homens e mulheres no ambiente de
+trabalho, nos termos do Decreto nº 11.430, de 2023, e da Instrução Normativa SEGES/MGI nº 382, de 17
+de setembro de 2025;
+7.23.4. declaração do licitante de que desenvolve programa de integridade, conforme Decreto n° 12.304,
+de 2024, e Portaria Normativa SE/CGU n° 226, de 9 de setembro de 2025.
+7.24. Persistindo o empate, será assegurada preferência, sucessivamente, aos bens e serviços produzidos ou
+prestados por:
+7.24.2. empresas brasileiras;
+7.24.3. empresas que invistam em pesquisa e no desenvolvimento de tecnologia no País;
+7.24.4. empresas que comprovem a prática de mitigação, nos termos da Lei nº 12.187, de 29 de
+dezembro de 2009.
+7.25. Esgotados todos os demais critérios de desempate previstos em lei, a escolha do licitante vencedor ocorrerá por
+sorteio, em ato público, para o qual todos os licitantes serão convocados, vedado qualquer outro processo.
+7.26. Encerrada a etapa de envio de lances da sessão pública, na hipótese da proposta do primeiro colocado
+permanecer acima do preço máximo ou inferior ao desconto definido para a contratação, o Pregoeiro/Agente de
+Contratação/Comissão poderá negociar condições mais vantajosas, após definido o resultado do julgamento.
+7.26.2. A negociação poderá ser feita com os demais licitantes, segundo a ordem de classificação
+inicialmente estabelecida, quando o primeiro colocado, mesmo após a negociação, for desclassificado
+em razão de sua proposta permanecer acima do preço máximo definido pela Administração.
+7.26.3. A negociação será realizada por meio do sistema, podendo ser acompanhada pelos demais
+licitantes.
+7.26.4. O resultado da negociação será divulgado a todos os licitantes e anexado aos autos do processo
+licitatório.
+7.26.5. O Pregoeiro/Agente de Contratação/Comissão solicitará ao licitante mais bem classificado que,
+no prazo de 2 (duas) horas, envie a proposta adequada ao último lance ofertado após a negociação
+realizada, acompanhada, se for o caso, dos documentos complementares, quando necessários à
+confirmação daqueles exigidos neste Edital e já apresentados.
+7.26.6. É facultado ao Pregoeiro/Agente de Contratação/Comissão prorrogar o prazo estabelecido, a
+partir de solicitação fundamentada feita no chat pelo licitante, antes de findo o prazo.
+7.27. Após a negociação do preço, o Pregoeiro/Agente de Contratação/Comissão iniciará a fase de aceitação e
+julgamento da proposta.
+8. DA FASE DE JULGAMENTO
+8.1. Encerrada a etapa de negociação, o Pregoeiro/Agente de Contratação/Comissão verificará se o licitante
+provisoriamente classificado em primeiro lugar atende às condições de participação no certame, conforme previsto no
+art. 14 da Lei nº 14.133, de 2021, legislação correlata e no item 3.10 do edital, especialmente quanto à existência de
+sanção que impeça a participação no certame ou a futura contratação, mediante a consulta aos seguintes cadastros:
+8.1.1. Sicaf; 
+8.1.2 Cadastro Nacional de Empresas Inidôneas e Suspensas – CEIS,
+8.1.3. Cadastro Nacional de Empresas Punidas – CNEP e
+8.1.4. Lista de licitantes inidôneos, mantida pelo Tribunal de Contas da União.
+
+Câmara Nacional de Modelos de Licitações e Contratos da Consultoria-Geral da União
+Modelo de Edital - Lei nº 14.133, de 2021.
+Aprovado pela Secretaria de Gestão e Inovação.
+Identidade visual pela Secretaria de Gestão e Inovação
+Atualização: NOV/2025
+12 de 18
+8.2. A consulta aos cadastros será realizada no nome e no CNPJ da empresa licitante.
+8.2.1. A consulta no CEIS quanto às sanções previstas na Lei nº 8.429, de 1992, também ocorrerá no
+nome e no CPF do sócio majoritário da empresa licitante, se houver, por força do art. 12 da citada lei.
+8.3. Para a consulta de licitantes pessoa jurídica poderá haver a substituição das consultas ao CEIS, CNEP e Lista de
+licitantes inidôneos pela Consulta Consolidada de Pessoa Jurídica do TCU. 
+8.4. Caso conste na Consulta de Situação do licitante a existência de Ocorrências Impeditivas Indiretas, o Pregoeiro
+/Agente de Contratação/Comissão diligenciará para verificar se houve fraude por parte das empresas apontadas no
+Relatório de Ocorrências Impeditivas Indiretas.
+8.4.1. A tentativa de burla será verificada por meio dos vínculos societários, linhas de fornecimento
+similares, dentre outros.
+8.4.2. O licitante será convocado para manifestação previamente a uma eventual desclassificação.
+8.4.3. Constatada a existência de sanção, o licitante será reputado inabilitado, por falta de condição de
+participação.
+8.5. Na hipótese de inversão das fases de habilitação e julgamento, caso atendidas as condições de participação,
+será iniciado o procedimento de habilitação.
+8.6. Caso o licitante provisoriamente classificado em primeiro lugar tenha se utilizado de algum tratamento favorecido
+às ME/EPPs ou tenha se valido da aplicação da margem de preferência, o Pregoeiro/Agente de Contratação
+/Comissão verificará se o licitante faz jus ao benefício aplicado.
+8.6.1. Caso o licitante não venha a comprovar o atendimento dos requisitos para fazer jus ao benefício
+da margem de preferência, as propostas serão reclassificadas, para fins de nova aplicação da margem
+de preferência.
+8.7. Verificadas as condições de participação e de utilização do tratamento favorecido, o Pregoeiro/Agente de
+Contratação/Comissão examinará a proposta classificada em primeiro lugar quanto à adequação ao objeto e à
+compatibilidade do preço em relação ao máximo estipulado para contratação neste Edital e em seus anexos,
+observado o disposto nos arts. 29 a 35 da Instrução Normativa SEGES/ME nº 73, de 30 de setembro de 2022.
+8.10. Será desclassificada a proposta vencedora que:
+8.10.1. contiver vícios insanáveis;
+8.10.2 não obedecer às especificações técnicas contidas no Termo de Referência/Projeto Básico;
+8.10.3. apresentar preços inexequíveis ou permanecerem acima do preço máximo definido para a
+contratação;
+8.10.4. não tiver sua exequibilidade demonstrada, quando exigido pela Administração;
+8.10.5. não cumpra os critérios de aceitabilidade de preços definidos no Termo de Referência;
+8.10.6. apresentar desconformidade com quaisquer outras exigências deste Edital ou seus anexos,
+desde que insanável.
+8.11. No caso de bens e serviços em geral, é indício de inexequibilidade das propostas valores inferiores a 50%
+(cinquenta por cento) do valor orçado pela Administração.
+8.12. A inexequibilidade, na hipótese de que trata o item anterior, só será considerada após diligência do Pregoeiro
+/Agente de Contratação/Comissão, que comprove:
+8.12.1. que o custo do licitante ultrapassa o valor da proposta; e
+8.12.2. inexistirem custos de oportunidade capazes de justificar o vulto da oferta.
+
+Câmara Nacional de Modelos de Licitações e Contratos da Consultoria-Geral da União
+Modelo de Edital - Lei nº 14.133, de 2021.
+Aprovado pela Secretaria de Gestão e Inovação.
+Identidade visual pela Secretaria de Gestão e Inovação
+Atualização: NOV/2025
+13 de 18
+8.14. Se houver indícios de inexequibilidade da proposta de preço, ou em caso da necessidade de esclarecimentos
+complementares, poderão ser efetuadas diligências, para que o licitante comprove a exequibilidade da proposta.
+8.15. Caso o custo global estimado do objeto licitado tenha sido decomposto em seus respectivos custos unitários por
+meio de Planilha de Custos e Formação de Preços elaborada pela Administração, o licitante classificado em primeiro
+lugar será convocado para apresentar Planilha por ele elaborada, com os respectivos valores adequados ao valor
+final da sua proposta, sob pena de não aceitação da proposta.
+8.16. Erros no preenchimento da planilha não constituem motivo para a desclassificação da proposta. A planilha
+poderá́ ser ajustada pelo licitante, no prazo indicado pelo sistema, desde que não haja majoração do preço e que se
+comprove que este é o bastante para arcar com todos os custos da contratação;
+8.16.1. O ajuste de que trata este dispositivo se limita a sanar erros ou falhas que não alterem a substância das
+propostas;
+8.16.2. Considera-se erro no preenchimento da planilha passível de correção a indicação de recolhimento de
+impostos e contribuições na forma do Simples Nacional, quando não cabível esse regime.
+8.17. Para fins de análise da proposta quanto ao cumprimento das especificações do objeto, poderá ser colhida a
+manifestação escrita do setor requisitante do serviço ou da área especializada no objeto.
+8.18. Caso o Termo de Referência exija a apresentação de carta de solidariedade emitida pelo fabricante, que
+assegure a execução do contrato, no caso de licitante revendedor ou distribuidor, o licitante classificado em primeiro
+lugar deverá apresentá-la, sob pena de não aceitação da proposta.
+8.19. Caso o Termo de Referência/Projeto Básico exija a apresentação de amostra, o licitante classificado em
+primeiro lugar deverá apresentá-la, conforme disciplinado no Termo de Referência, sob pena de não aceitação da
+proposta.
+8.20. Por meio de mensagem no sistema, será divulgado o local e horário de realização do procedimento para a
+avaliação das amostras, cuja presença será facultada a todos os interessados, incluindo os demais licitantes.
+8.21. Os resultados das avaliações serão divulgados por meio de mensagem no sistema.
+8.22. No caso de não haver entrega da amostra ou ocorrer atraso na entrega, sem justificativa aceita pelo Pregoeiro
+/Agente de Contratação/Comissão, ou havendo entrega de amostra fora das especificações previstas neste Edital, a
+proposta do licitante será recusada.
+8.23. Se a(s) amostra(s) apresentada(s) pelo primeiro classificado não for(em) aceita(s), o Pregoeiro/Agente de
+Contratação/Comissão analisará a aceitabilidade da proposta ou lance ofertado pelo segundo classificado. Seguir-se-
+á com a verificação da(s) amostra(s) e, assim, sucessivamente, até a verificação de uma que atenda às
+especificações constantes no Termo de Referência.
+8.26. O pregoeiro/agente de contratação/comissão de contratação realizará a verificação da observância da proposta
+classificada provisoriamente em primeiro lugar quanto aos custos unitários mínimos relevantes estabelecidos pela
+Administração, além dos demais aspectos ligados à conformidade da proposta ao objeto licitado e à compatibilidade
+do preço.
+8.27. O pregoeiro/agente de contratação/comissão de contratação concederá o prazo de no mínimo duas horas para
+readequação da proposta quando esta não observar os custos unitários mínimos relevantes, sob pena de
+desclassificação, na forma da Instrução Normativa nº 73, de 30 de setembro de 2022.
+8.28. O pregoeiro/agente de contratação/comissão de contratação deve verificar se as previsões do Acordo,
+Convenção Coletiva de Trabalho ou Dissídio Coletivo indicados pela Administração estão sendo contempladas na
+Planilha de Custos e Formação de Preços, em especial, quando o Acordo, Convenção Coletiva de Trabalho ou
+Dissídio Coletivo utilizado pelo licitante for diferente da norma coletiva paradigma utilizada pela Administração.
+
+Câmara Nacional de Modelos de Licitações e Contratos da Consultoria-Geral da União
+Modelo de Edital - Lei nº 14.133, de 2021.
+Aprovado pela Secretaria de Gestão e Inovação.
+Identidade visual pela Secretaria de Gestão e Inovação
+Atualização: NOV/2025
+14 de 18
+9. DA FASE DE HABILITAÇÃO
+9.1. Os documentos previstos no Termo de Referência, necessários e suficientes para demonstrar a capacidade do
+licitante de realizar o objeto da licitação, serão exigidos para fins de habilitação, nos termos dos arts. 62 a 70 da Lei nº
+14.133, de 2021.
+9.1.1. . A documentação exigida para fins de habilitação jurídica, fiscal, social e trabalhista e econômico-ﬁnanceira,
+poderá ser substituída pelo registro cadastral no Sicaf.
+9.2 Quando permitida a participação de empresas estrangeiras que não funcionem no País, as exigências de
+habilitação serão atendidas mediante documentos equivalentes, inicialmente apresentados em tradução livre.
+9.3. Na hipótese de o licitante vencedor ser empresa estrangeira que não funcione no País, para ﬁns de assinatura do
+contrato ou da ata de registro de preços, os documentos exigidos para a habilitação serão traduzidos por tradutor
+juramentado no País e apostilados nos termos do disposto no Decreto nº 8.660, de 29 de janeiro de 2016, ou de outro
+que venha a substituí-lo, ou consularizados pelos respectivos consulados ou embaixadas.
+9.4. Quando permitida a participação de consórcio de empresas, a habilitação técnica, quando exigida, será feita por
+meio do somatório dos quantitativos de cada consorciado e, para efeito de habilitação econômico-financeira, quando
+exigida, será observado o somatório dos valores de cada consorciado.
+9.4.1. Se o consórcio não for formado integralmente por microempresas ou empresas de pequeno porte e o Termo de
+Referência exigir requisitos de habilitação econômico-financeira, haverá um acréscimo de 15% (quinze por
+cento)  para o consórcio em relação ao valor exigido para os licitantes individuais.
+9.5. Os documentos exigidos para fins de habilitação poderão ser apresentados em original ou por cópia
+9.6. Os documentos exigidos para fins de habilitação poderão ser substituídos por registro cadastral emitido por órgão
+ou entidade pública, desde que o registro tenha sido feito em obediência ao disposto na Lei nº 14.133, de 2021.
+9.7. Será verificado se o licitante apresentou declaração de que atende aos requisitos de habilitação, e o declarante
+responderá pela veracidade das informações prestadas, na forma da lei.
+9.8. Será verificado se o licitante apresentou no sistema, sob pena de inabilitação, a declaração de que cumpre as
+exigências de reserva de cargos para pessoa com deficiência e para reabilitado da Previdência Social, previstas em
+lei e em outras normas específicas.
+9.9. O licitante deverá apresentar, sob pena de desclassificação, declaração de que suas propostas econômicas
+compreendem a integralidade dos custos para atendimento dos direitos trabalhistas assegurados na Constituição
+Federal, nas leis trabalhistas, nas normas infralegais, nas convenções coletivas de trabalho e nos termos de
+ajustamento de conduta vigentes na data de entrega das propostas.
+9.11. A habilitação será verificada por meio do Sicaf, nos documentos por ele abrangidos.
+9.11.1. Somente haverá a necessidade de comprovação do preenchimento de requisitos mediante apresentação dos
+documentos originais não-digitais quando houver dúvida em relação à integridade do documento digital ou quando a
+lei expressamente o exigir.
+9.12. É de responsabilidade do licitante conferir a exatidão dos seus dados cadastrais no Sicaf e mantê-los
+atualizados junto aos órgãos responsáveis pela informação, devendo proceder, imediatamente, à correção ou à
+alteração dos registros tão logo identifique incorreção ou aqueles se tornem desatualizados.
+9.12.1. A não observância do disposto no item anterior poderá ensejar desclassificação no momento da habilitação.
+9.13. A verificação pelo Pregoeiro/Agente de Contratação/Comissão, em sítios eletrônicos oficiais de órgãos e
+entidades emissores de certidões constitui meio legal de prova, para fins de habilitação.
+9.13.1.Os documentos exigidos para habilitação que não estejam contemplados no Sicaf serão enviados por meio do
+sistema, em formato digital, no prazo de 2 (duas) horas, prorrogável por igual período, contado da solicitação do
+Pregoeiro/Agente de Contratação/Comissão.
+
+Câmara Nacional de Modelos de Licitações e Contratos da Consultoria-Geral da União
+Modelo de Edital - Lei nº 14.133, de 2021.
+Aprovado pela Secretaria de Gestão e Inovação.
+Identidade visual pela Secretaria de Gestão e Inovação
+Atualização: NOV/2025
+15 de 18
+9.13.2. Na hipótese de a fase de habilitação anteceder a fase de apresentação de propostas e lances, os licitantes
+encaminharão, por meio do sistema, simultaneamente os documentos de habilitação e a proposta com o preço ou o
+percentual de desconto, observado o disposto no § 1º do art. 36 e no § 1º do art. 39 da Instrução Normativa SEGES
+/ME nº 73, de 30 de setembro de 2022.
+9.14. A verificação no Sicaf ou a exigência dos documentos nele não contidos somente será feita em relação ao
+licitante vencedor.
+9.14.1. Os documentos relativos à regularidade fiscal que constem do Termo de Referência somente serão exigidos,
+em qualquer caso, em momento posterior ao julgamento das propostas, e apenas do licitante mais bem classificado.
+9.14.2. Respeitada a exceção do subitem anterior, relativa à regularidade fiscal, quando a fase de habilitação
+anteceder as fases de apresentação de propostas e lances e de julgamento, a verificação ou exigência do presente
+subitem ocorrerá em relação a todos os licitantes.
+9.15. Encerrado o prazo para envio da documentação de que trata o item 9.13.1, poderá ser admitida, mediante
+decisão fundamentada do Pregoeiro/Agente de Contratação, a apresentação de novos documentos de habilitação ou
+a complementação de informações acerca dos documentos já apresentados pelos licitantes, em até 2 (duas) horas,
+para: 
+9.15.1. a aferição das condições de habilitação do licitante, desde que decorrentes de fatos existentes à época da
+abertura do certame;
+9.15.2. atualização de documentos cuja validade tenha expirado após a data de recebimento das propostas;
+9.15.3. suprimento da ausência de documento de cunho declaratório emitido unilateralmente pelo licitante;
+ 9.15.4. suprimento da ausência de certidão e/ou documento de cunho declaratório expedido por órgão ou entidade
+cujos atos gozem de presunção de veracidade e fé pública.
+9.16. Findo o prazo assinalado sem o envio da nova documentação, restará preclusa essa oportunidade conferida ao
+licitante, implicando sua inabilitação.
+9.17. Na análise dos documentos de habilitação, a comissão de contratação poderá sanar erros ou falhas, que não
+alterem a substância dos documentos e sua validade jurídica, mediante decisão fundamentada, registrada em ata e
+acessível a todos, atribuindo-lhes eﬁcácia para fins de habilitação e classificação.
+9.18. Na hipótese de o licitante não atender às exigências para habilitação, o Pregoeiro/Agente de Contratação
+/Comissão examinará a proposta subsequente e assim sucessivamente, na ordem de classificação, até a apuração
+de uma proposta que atenda ao presente edital, observado o prazo disposto no subitem 9.13.1.
+9.19. Somente serão disponibilizados para acesso público os documentos de habilitação do licitante cuja proposta
+atenda ao edital de licitação, após concluídos os procedimentos de que trata o subitem anterior.
+9.20. A comprovação de regularidade fiscal e trabalhista das microempresas e das empresas de pequeno porte
+somente será exigida para efeito de contratação, e não como condição para participação na licitação.
+9.21. Quando a fase de habilitação anteceder a de julgamento e já tiver sido encerrada, não caberá exclusão de
+licitante por motivo relacionado à habilitação, salvo em razão de fatos supervenientes ou só conhecidos após o
+julgamento.
+10. DO TERMO DE CONTRATO
+10.1. Após a homologação e adjudicação, caso se conclua pela contratação, será firmado termo de contrato, ou outro
+instrumento equivalente.
+
+Câmara Nacional de Modelos de Licitações e Contratos da Consultoria-Geral da União
+Modelo de Edital - Lei nº 14.133, de 2021.
+Aprovado pela Secretaria de Gestão e Inovação.
+Identidade visual pela Secretaria de Gestão e Inovação
+Atualização: NOV/2025
+16 de 18
+ 10.2. O adjudicatário terá o prazo de 2 (dois) dias úteis, contados a partir da data de sua convocação, para assinar o
+termo de contrato ou instrumento equivalente, sob pena de decair o direito à contratação, sem prejuízo das sanções
+previstas neste Edital.
+10.3. Alternativamente à convocação para comparecer perante o órgão ou entidade para a assinatura do Termo de
+Contrato ou instrumento equivalente, a Administração poderá: a) encaminhá-lo para assinatura, mediante
+correspondência postal com aviso de recebimento (AR), para que seja assinado e devolvido no prazo de 2 (dois)  dias
+úteis, a contar da data de seu recebimento; b) disponibilizar acesso a sistema de processo eletrônico para que seja
+assinado digitalmente em até 2 (dois)  dias úteis; ou c) outro meio eletrônico, assegurado o prazo de 2 (dois)  dias úteis
+para resposta após recebimento da notificação pela Administração.
+10.5. Os prazos dos itens 10.2 e 10.3 poderão ser prorrogados, por igual período, por solicitação justificada do
+adjudicatário e aceita pela Administração.
+Termo de Referência10.6. O prazo de vigência da contratação é o estabelecido no .
+10.7. Na assinatura do contrato ou instrumento equivalente será exigido o Cadastro Informativo de Créditos não
+Quitados do Setor Público Federal – Cadin e a comprovação das condições de habilitação e contratação consignadas
+neste Edital, que deverão ser mantidas pelo fornecedor durante a vigência do contrato.
+10.7.1. . A existência de registro no Cadin constitui fator impeditivo para a contratação.
+11. DA ATA DE REGISTRO DE PREÇOS
+N/A
+ 
+12. DA FORMAÇÃO DO CADASTRO DE RESERVA
+N/A
+13. DOS RECURSOS
+13.1. interposição de recurso referente ao julgamento das propostas, à habilitação ou inabilitação de licitantes, à
+anulação ou revogação da licitação, observará o disposto no .art. 165 da Lei nº 14.133, de 2021
+13.2. O prazo recursal é de 3 (três) dias úteis, contados da data de intimação ou de lavratura da ata.
+13.3. Quando o recurso apresentado impugnar o julgamento das propostas ou o ato de habilitação ou inabilitação do
+licitante:
+13.3.1. a intenção de recorrer deverá ser manifestada imediatamente, sob pena de preclusão;
+13.3.2. o prazo para a manifestação da intenção de recorrer não será inferior a 10 (dez) minutos.
+13.3.3. o prazo para apresentação das razões recursais será iniciado na data de intimação ou de
+lavratura da ata de habilitação ou inabilitação;
+13.3.4. na hipótese de adoção da inversão de fases prevista no ,§ 1º do art. 17 da Lei nº 14.133, de 2021
+o prazo para apresentação das razões recursais será iniciado na data de intimação da ata de julgamento.
+13.4. Os recursos deverão ser encaminhados em campo próprio do sistema.
+13.5. O recurso será dirigido à autoridade que tiver editado o ato ou proferido a decisão recorrida, a qual poderá
+reconsiderar sua decisão no prazo de 3 (três) dias úteis, ou, nesse mesmo prazo, encaminhar recurso para a
+
+Câmara Nacional de Modelos de Licitações e Contratos da Consultoria-Geral da União
+Modelo de Edital - Lei nº 14.133, de 2021.
+Aprovado pela Secretaria de Gestão e Inovação.
+Identidade visual pela Secretaria de Gestão e Inovação
+Atualização: NOV/2025
+17 de 18
+autoridade superior, a qual deverá proferi sua decisão no prazo de 10 (dez) dias úteis, contado do recebimento dos
+autos.
+13.5. Os recursos interpostos fora do prazo não serão conhecidos.
+13.6. O prazo para apresentação de contrarrazões ao recurso pelos demais licitantes será de 3 (três) dias úteis,
+contados da data da intimação pessoal ou da divulgação da interposição do recurso, assegurada a vista imediata dos
+elementos indispensáveis à defesa de seus interesses.
+13.7. O recurso e o pedido de reconsideração terão efeito suspensivo do ato ou da decisão recorrida até que
+sobrevenha decisão final da autoridade competente.
+13.8. O acolhimento do recurso invalida tão somente os atos insuscetíveis de aproveitamento.
+13.10. Os autos do processo permanecerão com vista franqueada aos interessados que deverão requerer acesso
+pelo e-mail licitacao@causc.gov.br.
+14. DAS INFRAÇÕES ADMINISTRATIVAS E SANÇÕES
+14.1.Se o fornecedor licitante ou o contratado praticar quaisquer das infrações administrativas previstas no art.
+155 da Lei nº 14.133/2021, lhe serão aplicadas sanções, observado o devido processo legal e assegurados o
+contraditório e a ampla defesa, nos termos da Lei nº 14.133/2021, da Portaria Normativa nº 02/2025 do CAU/SC,
+disponível no endereço eletrônico https://www.causc.gov.br/wp-content/uploads/portarias/normativas/2025/02
+/Portaria-Normativa-002-Rito-aplicacao-penalidades-previstas-na-Lei-no-14.133.pdf, e do Termo de Referência.
+15. DA IMPUGNAÇÃO AO EDITAL E DO PEDIDO DE ESCLARECIMENTO
+15.1. Qualquer pessoa é parte legítima para impugnar este Edital por irregularidade na aplicação da Lei nº 14.133, de
+, devendo protocolar o pedido até 3 (três) dias úteis antes da data da abertura do certame.2021
+15.2. A resposta à impugnação ou ao pedido de esclarecimento será divulgado em sítio eletrônico oficial no prazo de
+até 3 (três) dias úteis, limitado ao último dia útil anterior à data da abertura do certame.
+15.3. A impugnação e o pedido de esclarecimento poderão ser realizados por forma eletrônica, pelos seguintes
+meios: e-mail licitacao@causc.gov.br
+15.4. As impugnações e pedidos de esclarecimentos não suspendem os prazos previstos no certame.
+15.5. A concessão de efeito suspensivo à impugnação é medida excepcional e deverá ser motivada pelo Pregoeiro
+/Agente de Contratação/Comissão, nos autos do processo de licitação.
+15.6. Acolhida a impugnação, será definida e publicada nova data para a realização do certame.
+16. DAS DISPOSIÇÕES GERAIS
+16.1. Será divulgada ata da sessão pública no sistema eletrônico.
+16.2. Não havendo expediente ou ocorrendo qualquer fato superveniente que impeça a realização do certame na data
+marcada, a sessão será automaticamente transferida para o primeiro dia útil subsequente, no mesmo horário
+anteriormente estabelecido, desde que não haja comunicação em contrário, pelo Pregoeiro/Agente de Contratação
+/Comissão.
+16.3. Todas as referências de tempo no Edital, no aviso e durante a sessão pública observarão o horário de Brasília -
+DF.
+
+Câmara Nacional de Modelos de Licitações e Contratos da Consultoria-Geral da União
+Modelo de Edital - Lei nº 14.133, de 2021.
+Aprovado pela Secretaria de Gestão e Inovação.
+Identidade visual pela Secretaria de Gestão e Inovação
+Atualização: NOV/2025
+18 de 18
+16.4. A homologação do resultado desta licitação não implicará direito à contratação.
+16.5. As normas disciplinadoras da licitação serão sempre interpretadas em favor da ampliação da disputa entre os
+interessados, desde que não comprometam o interesse da Administração, o princípio da isonomia, a finalidade e a
+segurança da contratação.
+16.6. Os licitantes assumem todos os custos de preparação e apresentação de suas propostas e a Administração não
+será, em nenhum caso, responsável por esses custos, independentemente da condução ou do resultado do processo
+licitatório.
+16.7. Na contagem dos prazos estabelecidos neste Edital e seus Anexos, excluir-se-á o dia do início e incluir-se-á o
+do vencimento. Só se iniciam e vencem os prazos em dias de expediente na Administração.
+16.8. O desatendimento de exigências formais não essenciais não importará o afastamento do licitante, desde que
+seja possível o aproveitamento do ato, observados os princípios da isonomia e do interesse público.
+16.9. Em caso de divergência entre disposições deste Edital e de seus anexos ou demais peças que compõem o
+processo, prevalecerá as deste Edital.
+16.10. O Edital e seus anexos estão disponíveis, na íntegra, no Portal Nacional de Contratações Públicas (PNCP) e
+endereço eletrônico www.causc.gov.br
+16.11. Integram este Edital, para todos os fins e efeitos, os seguintes anexos:
+16.11.1. Anexo I - Termo de Referência;
+16.11.1.1. Apêndice do Anexo I – Estudo Técnico Preliminar;
+16.11.2. Anexo II – Minuta de Termo de Contrato;
+16.11.3. Anexo III – Termo de Ciência e concordância;
+16.11.4 Anexo IV - Teste de Conceito
+Florianópolis, 14 de julho de 2026
+ 
+17. Responsáveis
+Todas as assinaturas eletrônicas seguem o horário oficial de Brasília e fundamentam-se no §3º do Art. 4º do Decreto nº 10.543, de 13 de novembro de 
+.2020
+ 
+ 
+ 
+ 
+FILIPE BENTO LEAES
+Agente de contratação
+ 
+Assinou eletronicamente em 14/07/2026 às 13:25:44.
+ 
+ 

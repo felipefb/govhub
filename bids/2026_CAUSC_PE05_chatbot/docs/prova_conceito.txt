@@ -1,0 +1,66 @@
+ 
+ 
+Anexo 1018092 - CAUSC/GERGERAL/CORTSI
+ 
+Em 01 de junho de 2026.
+ROTEIRO DA PROVA FINAL DE CONCEITO
+1.
+ 
+Regra gerais da POC:
+A Prova de conceito será realizada nas dependências do CAU/SC
+Os representantes da empresa deverão estar presencialmente no local, podendo contar com suporte remoto.
+A Prova de Conceito terá a duração de até 5 (cinco) dias úteis, podendo ser prorrogado a critério do CAU/SC, ou
+finalizada antes do prazo se concluída.
+2.
+ 
+Durante a POC deverão ser realizadas as seguintes ações:
+2.1.
+ 
+Prova de Conceito Chatbot
+A empresa deverá demonstrar de forma prática, simulando um cenário específico em que a solução atende aos requisitos
+especificados no TR.
+Resultados Esperados
+Executar processos e fluxos de trabalho personalizados e pré- definidos;
+O painel administrativo deverá permitir acompanhamento em tempo real de:
+quantidade de atendimentos;
+usuários simultâneos;
+assuntos mais consultados;
+tempo médio de atendimento;
+taxa de transferência para atendimento humano;
+índice de satisfação do usuário.
+Caso o usuário selecione a opção "Abrir uma solicitação para área responsável e receber a resposta via e-mail", o chabot
+deverá perguntar qual a informação deseja receber e abrirá um chamado na fila de algum grupo responsável pelo
+atendimento.
+Caso o usuário selecione a opção "Voltar ao Menu principal" deverá votar para a opção de assuntos.
+Caso o usuário selecione a opção 
+"Gostaria de falar com um atendente" 
+nas opções iniciais da conversa, a plataforma
+deverá realizar o transbordo para o grupo de atendimento humanizado da área de interesse do usuario e ao finalizar o
+atendimento, deverá gerar uma solicitação fechada com os dados da conversa entre o usuário e o atendente.
+O chatbot deverá possuir mecanismo de validação e atualização da base de conhecimento, garantindo que apenas conteúdos
+oficiais e homologados pelo CAU sejam utilizados.
+A IA não deverá gerar interpretações jurídicas próprias, opiniões, recomendações não previstas em normativas oficiais ou
+respostas especulativas.
+O atendimento deve funcionar 7 dias por semana, 24h por dia, com parâmetros distintos para o período comercial e período de
+não atendimento.
+possibilitar a exportação de relatórios quantitativos e customizados para o CAU/SC nos formatos XLS, CSV, TXT, XML;
+possuir funcionalidade de interpretação de texto, o que implica em identificação das intenções, identificação de demandas de
+primeiro nível (respostas automáticas) ou necessidade de análise por um atendente, de dentre outros aspectos.
+Anexo Teste de Conceito (1018092)         SEI 00177.000227/2026-81 / pg. 1
+Cada atendimento deverá gerar um número de protocolo de atendimento
+Documento assinado eletronicamente por 
+FERNANDO DE OLIVEIRA VOLKMER
+, 
+Coordenador de Tecnologia e
+Sistemas da Informação
+, em 01/06/2026, às 16:29 (horário de Brasília), conforme Decreto Nº 10.543, de 13/11/2020,
+que regulamenta o art. 5º da Lei Nº 14.063, de 23 de setembro de 2020.
+A autenticidade do documento pode ser conferida no portal do SEI CAU, endereço caubr.gov.br/seicau, utilizando o
+código CRC 
+7296CDCD
+ e informando o identificador 
+1018092
+.
+00177.000227/2026-81
+1018092v2
+Anexo Teste de Conceito (1018092)         SEI 00177.000227/2026-81 / pg. 2

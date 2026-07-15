@@ -1,0 +1,2369 @@
+ 
+TERMO DE REFERÊNCIA
+SERVIÇOS - TIC
+Processo Administrativo
+: 00177.000227/2026-81
+ 
+1
+.
+CONDIÇÕES GERAIS DA CONTRATAÇÃO
+1
+.
+1
+.
+Contratação de empresa especializada para prestação de serviços de desenvolvimento, configuração, integração de
+Inteligência Artificial (LLM/RAG), disponibilização de licenças e consultoria continuada por 12 (doze) meses para a plataforma de
+atendimento automatizado via WhatsApp do CAU/SC.
+ITEM
+ESPECIFICAÇÃO
+CATSER
+MÉTRICA
+OU
+UNIDADE
+DE
+MEDIDA
+CÓD.
+PMC-
+TIC
+QDE
+VALOR
+IMPLANTAÇÃO
++ VALOR
+SUPORTE
+MENSAL (custo
+total para 12 meses)
+1
+Implantação, configuração e
+treinamento de plataforma, Licenças
+de API Meta e suporte
+26077
+serviço
+ 
+1
+R$ 
+37.108,20
+1
+.
+2
+.
+O(s) serviço(s) objeto desta contratação são caracterizados como comuns.
+1
+.
+3
+.
+O preço estimado da contratação é baseado na pesquisa de preços anexa ao processo. (
+1020732
+)
+1
+.
+4
+.
+O prazo de vigência da contratação é de 12 meses contados da assinatura do contrato, prorrogável para até 10 anos, na
+forma dos artigos 106 e 107 da Lei n° 14.133, de 2021.
+1
+.
+5
+.
+O serviço é enquadrado como continuado tendo em vista que se destina a atendimento constante de dúvidas e
+questionamentos de arquitetos durante o ano todo, sendo a vigência plurianual mais vantajosa considerando os fatores expostos no
+Estudo Técnico Preliminar.
+1
+.
+6
+.
+O contrato oferece maior detalhamento das regras que serão aplicadas em relação à vigência da contratação.
+2
+.
+DESCRIÇÃO DA SOLUÇÃO COMO UM TODO CONSIDERADO O CICLO DE VIDA DO OBJETO E
+ESPECIFICAÇÃO DO PRODUTO
+2
+.
+1
+.
+A descrição da solução como um todo encontra-se pormenorizada em tópico específico dos Estudos Técnicos
+Preliminares, apêndice deste Termo de Referência.
+2
+.
+2
+.
+A solução de TIC consiste em uma plataforma para centralizar o atendimento aos arquitetos e a sociedade, de forma
+virtual, integrando com API Oficial da Meta (WhatsApp) + IA com RAG (Retrieval-Augmented Generation).
+3
+.
+FUNDAMENTAÇÃO E DESCRIÇÃO DA NECESSIDADE DA CONTRATAÇÃO
+3
+.
+1
+.
+O CAU/SC visa otimizar o atendimento ao arquiteto e urbanista, reduzindo a carga de trabalho dos 6 (seis) atendentes
+em dúvidas repetitivas de legislação e normativas. A automação permitirá triagem inteligente, respostas baseadas estritamente no
+repositório oficial do conselho e transbordo humano fluido apenas para casos complexos.
+3
+.
+2
+.
+O objeto da contratação está previsto no Plano de Contratações Anual 2026.
+OE5
+Prover infraestrutura de TI apropriada e necessária às
+atividades finalísticas do CAU/SC
+OE7
+Aprimorar o uso de gestão de mudanças
+OE9
+Desenvolver a capacidade e oportunidade de inovação
+tecnológica
+(CAUSC) Termo de Referência - Serviços TIC 22 Revisado (1064337)         SEI 00177.000227/2026-81 / pg. 1
+OE11
+Garantir a melhoria contínua da qualidade do serviço
+prestado pela TI
+3
+.
+3
+.
+Por tratar de oferta de serviços públicos digitais, o objeto da contratação será integrado à Plataforma Gov.br, nos
+termos do Decreto nº 8.936, de 19 de dezembro de 2016, e suas atualizações, de acordo com as especificações deste Termo de
+Referência.
+4
+.
+REQUISITOS DA CONTRATAÇÃO
+4
+.
+1
+.
+A contratada deverá fornece
+r (entrega de código editável) 
+e configurar:
+4
+.
+1
+.
+1
+.
+Motor de Integração (n8n): Instalação e configuração na VM em nuvem do CAU/SC (Self-hosted).
+4
+.
+1
+.
+1
+.
+1
+.
+O motor de integração sugerido, n8n, é opcional, não excludente, isto é, a plataforma pode ser criada e baseada em
+outras plataformas.
+4
+.
+1
+.
+2
+.
+Conectividade WhatsApp: Integração com a API Oficial da Meta (Cloud API ou via BSP credenciada).
+4
+.
+1
+.
+3
+.
+Inteligência Artificial & RAG: * Criação de Banco de Dados Vetorial (ex: Pinecone, Qdrant, PostgreSQL com
+pgvector).
+4
+.
+1
+.
+3
+.
+1
+.
+Leitura, quebra (chunking) e ingestão do repositório de Leis, Resoluções e Deliberações do CAU.
+4
+.
+1
+.
+3
+.
+2
+.
+Configuração de Prompt Engineering restritivo (A IA só responde se houver no documento, caso contrário, transfere
+para o humano).
+4
+.
+1
+.
+4
+.
+Módulo de Atendimento Humano (Transbordo): Configuração de ferramenta de chat multiatendente (ex: Chatwoot
+ou similar open-source integrada ao n8n) para os 6 atendentes.
+4
+.
+1
+.
+5
+.
+Criação de número protocolo com pronta informação ao usuário demandante do atendimento
+4
+.
+1
+.
+6
+.
+Gestão de Licenças
+4
+.
+1
+.
+6
+.
+1
+.
+A contratada englobará no custo as licenças de LLM (OpenAI, Anthropic ou similar) e APIs necessárias durante o
+contrato.
+4
+.
+2
+.
+Da Consultoria e Suporte (12 meses)
+4
+.
+2
+.
+1
+.
+Garantia de disponibilidade da plataforma de 99,5% (SLA).
+4
+.
+2
+.
+2
+.
+Suporte técnico corretivo e evolutivo ilimitado dentro do escopo do n8n e fluxos de IA.
+4
+.
+2
+.
+3
+.
+Retreinamento da IA (ingestão de novas deliberações e resoluções) sob demanda do CAU/SC.
+4
+.
+3
+.
+Requisitos de Capacitação
+4
+.
+3
+.
+1
+.
+Será necessário treinamento à equipe que atuará com a solução. O treinamento deverá ser de no mínimo10 horas de
+duração.
+4
+.
+4
+.
+Requisitos Legais
+4
+.
+4
+.
+1
+.
+O presente processo de contratação deve estar aderente à Constituição Federal, à Lei nº 14.133/2021, à Instrução
+Normativa SGD/ME nº 94, de 2022, Instrução Normativa SEGES/ME nº 65, de 7 de julho de 2021, Lei nº 13.709, de 14 de agosto de
+2018 (Lei Geral de Proteção de Dados Pessoais – LGPD), Lei n° 10.520, de 17 de julho de 2001, Decreto 10.024, de 20 de setembro
+de 2019, e a outras legislações aplicáveis;
+4
+.
+5
+.
+Requisitos de Manutenção
+4
+.
+5
+.
+1
+.
+Devido às características da solução, há necessidade de realização de manutenções
+(corretivas/preventivas/adaptativa/evolutiva) pela Contratada, visando à manutenção da disponibilidade da solução e ao
+aperfeiçoamento de suas funcionalidades;
+4
+.
+6
+.
+Requisitos Temporais
+4
+.
+6
+.
+1
+.
+Os serviços devem ser prestados de forma continuada, isto é, atendimento virtual 7 por 7, com indicação de horário
+de atendimento humano no caso de transbordo.
+4
+.
+7
+.
+Requisitos de Segurança e Privacidade
+4
+.
+7
+.
+1
+.
+A solução deverá atender aos princípios e procedimentos elencados na Política de Segurança da Informação do
+Contratante.
+4
+.
+8
+.
+Requisitos de Conformidade
+4
+.
+8
+.
+1
+.
+Será realizada Prova de Conceito para avaliar a aderência do serviço oferecido às cláusulas deste Termo de
+Referência conforme segue::
+4
+.
+8
+.
+1
+.
+1
+.
+O fornecedor deverá disponibilizar a ferramenta, em seu pleno funcionamento para testes pela contratante por 10 dias;
+4
+.
+8
+.
+1
+.
+2
+.
+A PROVE DE CONCEITO PARA CONTRATAÇÃO deverá seguir o escopo definido no anexo deste TR (
+1018092
+).
+4
+.
+9
+.
+Requisitos da Arquitetura Tecnológica
+4
+.
+9
+.
+1
+.
+Os serviços deverão ser executados observando-se as diretrizes de arquitetura tecnológica estabelecidas pela área
+técnica da Contratante.
+(CAUSC) Termo de Referência - Serviços TIC 22 Revisado (1064337)         SEI 00177.000227/2026-81 / pg. 2
+4
+.
+9
+.
+1
+.
+1
+.
+Arquitetura Técnica 
+Sugerida
+Entrada: Arquiteto manda mensagem no WhatsApp.
+a
+)
+n8n: Recebe o Webhook da Meta.
+b
+)
+IA (Embeddings): Converte a dúvida do usuário em vetor.
+c
+)
+Banco Vetorial: Busca as resoluções do CAU/SC mais parecidas com a dúvida.
+d
+)
+LLM (OpenAI/Claude): Lê a dúvida + a resolução achada e gera a resposta em português humano.
+e
+)
+Filtro de Transbordo: Se a IA der uma pontuação de certeza baixa, o n8n desvia o chat para o painel dos 6 atendentes.
+f
+)
+IA com tempo de resposta inferior a 3 segundos;
+g
+)
+Taxa mínima de resolução automatizada de 60%;
+h
+)
+Painel de controle com métricas e dashboards;
+i
+)
+Roteamento inteligente por setor;
+j
+)
+Integração via API com sistemas internos, com geração de protocolo.
+4
+.
+10
+.
+Requisitos de Garantia e Manutenção
+4
+.
+10
+.
+1
+.
+O prazo de garantia é aquele estabelecido na Lei nº 8.078, de 11 de setembro de 1990 (Código de Defesa do
+Consumidor), e suas atualizações.
+4
+.
+11
+.
+Requisitos de Experiência Profissional
+4
+.
+11
+.
+1
+.
+Os serviços de deverão ser prestados por técnicos devidamente capacitados nos produtos em questão, bem como com
+todos os recursos ferramentais necessários para a prestação dos serviços;
+4
+.
+12
+.
+Requisitos de Metodologia de Trabalho
+4
+.
+12
+.
+1
+.
+A execução dos serviços está condicionada ao recebimento pelo Contratado do contrato emitido pela Contratante.
+4
+.
+12
+.
+2
+.
+O Contrato indicará o serviço, a quantidade e a localidade na qual os deverão ser prestados.
+4
+.
+12
+.
+3
+.
+O Contratado deve fornecer meios para contato e registro de ocorrências da seguinte forma: com funcionamento 24
+horas por dia e7 dias por semana de maneira eletrônica e 8 horas por dia e 5 dias por semana por via telefônica.
+4
+.
+12
+.
+4
+.
+A execução do serviço dever ser acompanhada pelo Contratado, que dará ciência de eventuais acontecimentos à
+Contratante.
+4
+.
+13
+.
+Sustentabilidade
+4
+.
+13
+.
+1
+.
+Além dos critérios de sustentabilidade eventualmente inseridos na descrição do objeto, devem ser atendidos os
+seguintes requisitos, que se baseiam no Guia Nacional de Contratações Sustentáveis:
+1
+.
+Dimensão Ambiental (Eficiência Energética e Recursos): Como o n8n e os modelos de IA (LLMs) consomem muito
+processamento computacional, o foco aqui é a Eficiência Energética da Nuvem (Green IT):
+I
+ 
+-
+Uso de Data Centers Verdes: Exigir que a empresa contratada utilize provedores de nuvem (Cloud Providers)
+que comprovem o uso de energia renovável em seus Data Centers ou que possuam certificados de neutralidade de
+carbono (Ex: ISO 14064 ou relatórios públicos de sustentabilidade).
+II
+ 
+-
+Otimização de Código e Recursos (Green Coding): Estabelecer no TR que a arquitetura dos fluxos no n8n deve
+ser otimizada para evitar requisições desnecessárias à API e processamento em loop infinito, reduzindo o consumo de
+energia da VM computacional.
+III
+ 
+-
+Racionalização das Chamadas de IA: Utilizar técnicas de cache para perguntas frequentes. Se o usuário "A" e o
+usuário "B" fizerem a mesma pergunta, o n8n não deve gastar processamento chamando a LLM de novo; ele deve ler do
+banco vetorial, poupando energia e custos.
+2
+.
+Dimensão Tecnológica e Econômica (Longevidade e Lock-in): O Guia orienta o uso de padrões que garantam que o
+dinheiro público seja bem investido a longo prazo:
+I
+ 
+-
+Interoperabilidade e Padrões Abertos: Exigir que a solução não gere dependência tecnológica (vendor lock-in).
+Como o n8n é baseado em código aberto (fair-code) e APIs abertas, o CAU/SC deve reter a propriedade intelectual dos
+fluxos/prompts criados. Se o contrato acabar, outra empresa deve conseguir assumir os nós do n8n sem retrabalho.
+II
+ 
+-
+Independência de LLM (Modularidade): O fluxo no n8n deve ser construído de forma que, se no futuro o
+CAU/SC quiser trocar a OpenAI pela Anthropic (ou por um modelo Open Source local como o Llama 3), a troca seja
+modular, sem reconstruir a plataforma do zero.
+3
+.
+Dimensão Social e Trabalhista (Direitos e Inclusão): Esta é uma exigência forte do Guia e dos Acórdãos do TCU para a
+habilitação de empresas prestadoras de serviço:
+I
+ 
+-
+Respeito aos Direitos Trabalhistas e Teletrabalho: Comprovação de regularidade trabalhista e garantia de que os
+programadores e consultores da empresa trabalhem em condições ergonômicas e jornadas legais (especialmente em
+regime Home Office/Teletrabalho).
+II
+ 
+-
+Acessibilidade no Atendimento (Transbordo): Exigir que a interface de atendimento humano que os 6
+servidores do CAU/SC vão usar (o chat de transbordo) obedeça às regras de acessibilidade na web (como o eMAG -
+(CAUSC) Termo de Referência - Serviços TIC 22 Revisado (1064337)         SEI 00177.000227/2026-81 / pg. 3
+Modelo de Acessibilidade em Governo Eletrônico), permitindo que servidores com deficiência visual ou motora operem
+o sistema.
+4
+.
+14
+.
+Garantia da Contratação
+4
+.
+14
+.
+1
+.
+Não haverá exigência da garantia da contratação dos 
+artigos 96 e seguintes da Lei nº 14.133, de 2021
+, pelas razões
+constantes do Estudo Técnico Preliminar.
+4
+.
+15
+.
+Níveis de Serviço (SLA)
+4
+.
+15
+.
+1
+.
+Disponibilidade mínima: 98%;
+4
+.
+15
+.
+2
+.
+Tempo de resposta para incidentes críticos (P1): imediato;
+4
+.
+15
+.
+3
+.
+Suporte técnico com gerente de contas.
+5
+.
+PAPÉIS E RESPONSABILIDADES
+5
+.
+1
+.
+São obrigações da CONTRATANTE:
+a
+)
+nomear Gestor e Fiscais Técnico/Administrativo e Requisitante do contrato para acompanhar e fiscalizar a execução
+dos contratos;
+b
+)
+encaminhar formalmente a demanda por meio de Ordem de Serviço ou de Fornecimento de Bens, de acordo com os
+critérios estabelecidos no Termo de Referência;
+c
+)
+receber o objeto fornecido pelo contratado que esteja em conformidade com a proposta aceita, conforme inspeções
+realizadas;
+d
+)
+aplicar à contratada as sanções administrativas regulamentares e contratuais cabíveis, comunicando ao órgão
+gerenciador da Ata de Registro de Preços, quando aplicável;
+e
+)
+liquidar o empenho e efetuar o pagamento à contratada, dentro dos prazos preestabelecidos em contrato;
+f
+)
+comunicar à contratada todas e quaisquer ocorrências relacionadas com o fornecimento da solução de TIC;
+g
+)
+definir produtividade ou capacidade mínima de fornecimento da solução de TIC por parte do contratado, com base em
+pesquisas de mercado, quando aplicável;
+h
+)
+prever que os direitos de propriedade intelectual e direitos autorais da solução de TIC sobre os diversos artefatos e
+produtos cuja criação ou alteração seja objeto da relação contratual pertençam à Administração, incluindo a documentação, o
+código-fonte de aplicações, os modelos de dados e as bases de dados, justificando os casos em que isso não ocorrer;
+5
+.
+2
+.
+São obrigações do CONTRATADO
+a
+)
+indicar formalmente preposto apto a representá-la junto à contratante, que deverá responder pela fiel execução do
+contrato;
+b
+)
+atender prontamente quaisquer orientações e exigências da Equipe de Fiscalização do Contrato, inerentes à execução
+do objeto contratual;
+c
+)
+reparar quaisquer danos diretamente causados à contratante ou a terceiros por culpa ou dolo de seus representantes
+legais, prepostos ou empregados, em decorrência da relação contratual, não excluindo ou reduzindo a responsabilidade da
+fiscalização ou o acompanhamento da execução dos serviços pela contratante;
+d
+)
+propiciar todos os meios necessários à fiscalização do contrato pela contratante, cujo representante terá poderes para
+sustar o fornecimento, total ou parcial, em qualquer tempo, desde que motivadas as causas e justificativas desta decisão;
+e
+)
+manter, durante toda a execução do contrato, as mesmas condições da habilitação;
+f
+)
+quando especificada, manter, durante a execução do contrato, equipe técnica composta por profissionais devidamente
+habilitados, treinados e qualificados para fornecimento da solução de TIC;
+g
+)
+quando especificado, manter a produtividade ou a capacidade mínima de fornecimento da solução de TIC durante a
+execução do contrato;
+h
+)
+ceder os direitos de propriedade intelectual e direitos autorais da solução de TIC sobre os diversos artefatos e produtos
+produzidos em decorrência da relação contratual, incluindo a documentação, os modelos de dados e as bases de dados à
+Administração;
+i
+)
+fazer a transição contratual, quando for o caso;
+5
+.
+3
+.
+São obrigações do órgão gerenciador do registro de preços:
+a
+)
+efetuar o registro do licitante fornecedor e firmar a correspondente Ata de Registro de Preços;
+b
+)
+conduzir os procedimentos relativos a eventuais renegociações de condições, produtos ou preços registrados;
+c
+)
+definir mecanismos de comunicação com os órgãos participantes e não participantes, contendo:
+d
+)
+as formas de comunicação entre os envolvidos, a exemplo de ofício, telefone, e-mail, ou sistema informatizado,
+quando disponível; e
+e
+)
+definição dos eventos a serem reportados ao órgão gerenciador, com a indicação de prazo e responsável;
+f
+)
+definir mecanismos de controle de fornecimento da solução de TIC, observando, dentre outros:
+(CAUSC) Termo de Referência - Serviços TIC 22 Revisado (1064337)         SEI 00177.000227/2026-81 / pg. 4
+g
+)
+a definição da produtividade ou da capacidade mínima de fornecimento da solução de TIC;
+h
+)
+as regras para gerenciamento da fila de fornecimento da solução de TIC aos órgãos participantes e não participantes,
+contendo prazos e formas de negociação e redistribuição da demanda, quando esta ultrapassar a produtividade definida ou a
+capacidade mínima de fornecimento e for requerida pelo contratado; e
+i
+)
+as regras para a substituição da solução registrada na Ata de Registro de Preços, garantida a verificação de Amostra do
+Objeto, observado o disposto no inciso III, alínea "c", item 2 do art. 17 da Instrução Normativa SGS/ME nº 94, de 2022, em
+função de fatores supervenientes que tornem necessária e imperativa a substituição da solução tecnológica.
+6
+.
+MODELO DE EXECUÇÃO DO CONTRATO
+6
+.
+1
+.
+A execução do objeto seguirá a seguinte dinâmica:
+a
+)
+Início da execução do objeto: 02 dias da assinatura do contrato;
+b
+)
+Implantação da plataforma configuração dos acessos em até 15 dias
+c
+)
+Start em até 20 dias
+6
+.
+2
+.
+Local e horário da prestação dos serviços
+Não obstante os serviços serem executados de forma virtual, considera-se o endereço para todos os efeitos o endereço da
+sede do CAU/SC, a rua Prof Osmar Cunha, 260, 6º andar, Florianópolis/SC, nos horários de expediente, das 08:30 às
+17:30, horário de Brasília.
+7
+.
+MECANISMOS FORMAIS DE COMUNICAÇÃO
+7
+.
+1
+.
+São definidos como mecanismos formais de comunicação, entre a Contratante e o Contratado, os seguintes:
+7
+.
+1
+.
+1
+.
+E-mails
+7
+.
+1
+.
+2
+.
+Cartas;
+7
+.
+1
+.
+3
+.
+Será permitido o uso de reuniões virtuais, preferencialmente o teams ou google meeting.
+8
+.
+FORMAS DE PAGAMENTO
+Os critérios de medição e pagamento dos serviços prestados serão tratados em tópico próprio do Modelo de Gestão do
+Contrato.
+9
+.
+MANUTENÇÃO DE SIGILO E NORMAS DE SEGURANÇA
+9
+.
+1
+.
+O Contratado deverá manter sigilo absoluto sobre quaisquer dados e informações contidos em quaisquer documentos
+e mídias, incluindo os equipamentos e seus meios de armazenamento, de que venha a ter conhecimento durante a execução dos
+serviços, não podendo, sob qualquer pretexto, divulgar, reproduzir ou utilizar, sob pena de lei, independentemente da classificação de
+sigilo conferida pelo Contratante a tais documentos.
+10
+.
+MODELO DE GESTÃO DO CONTRATO
+10
+.
+1
+.
+O contrato deverá ser executado fielmente pelas partes, de acordo com as cláusulas avençadas e as normas da Lei nº
+14.133, de 2021, e cada parte responderá pelas consequências de sua inexecução total ou parcial.
+10
+.
+2
+.
+Em caso de impedimento, ordem de paralisação ou suspensão do contrato, o cronograma de execução será
+prorrogado automaticamente pelo tempo correspondente, anotadas tais circunstâncias mediante simples apostila.
+10
+.
+3
+.
+As comunicações entre o órgão ou entidade e o contratado devem ser realizadas por escrito sempre que o ato exigir
+tal formalidade, admitindo-se o uso de mensagem eletrônica para esse fim.
+10
+.
+4
+.
+O órgão ou entidade poderá convocar representante da empresa para adoção de providências que devam ser
+cumpridas de imediato.
+11
+.
+PREPOSTO
+11
+.
+1
+.
+A Contratada designará formalmente o preposto da empresa, antes do início da prestação dos serviços, indicando no
+instrumento os poderes e deveres em relação à execução do objeto contratado.
+11
+.
+2
+.
+A Contratada deverá manter preposto da empresa no local da execução do objeto durante o período....
+11
+.
+3
+.
+Contratante poderá recusar, desde que justificadamente, a indicação ou a manutenção do preposto da empresa,
+hipótese em que a Contratada designará outro para o exercício da atividade
+12
+.
+REUNIÃO INICIAL
+12
+.
+1
+.
+Após a assinatura do Contrato e a nomeação do Gestor e Fiscais do Contrato, será realizada a Reunião Inicial de
+alinhamento com o objetivo de nivelar os entendimentos acerca das condições estabelecidas no Contrato, Edital e seus anexos, e
+esclarecer possíveis dúvidas acerca da execução dos serviços.
+12
+.
+2
+.
+A reunião será realizada em conformidade com o previsto no inciso I do Art. 31 da IN SGD/ME nº 94, de 2022, e
+ocorrerá em até 03 (três) dias úteis da assinatura do Contrato, podendo ser prorrogada a critério da Contratante.
+12
+.
+3
+.
+A pauta desta reunião observará, pelo menos:
+12
+.
+4
+.
+Presença do representante legal da contratada, que apresentará o seu preposto;
+(CAUSC) Termo de Referência - Serviços TIC 22 Revisado (1064337)         SEI 00177.000227/2026-81 / pg. 5
+12
+.
+5
+.
+Entrega, por parte da Contratada, do Termo de Compromisso e dos Termos de Ciência;
+12
+.
+6
+.
+esclarecimentos relativos a questões operacionais, administrativas e de gestão do contrato;
+12
+.
+7
+.
+A Carta de apresentação do Preposto deverá conter no mínimo o nome completo e CPF do funcionário da empresa
+designado para acompanhar a execução do contrato e atuar como interlocutor principal junto à Contratante, incumbido de receber,
+diligenciar, encaminhar e responder as principais questões técnicas, legais e administrativas referentes ao andamento contratual;
+12
+.
+8
+.
+Apresentação das declarações/certificados do fabricante, comprovando que o produto ofertado possui a garantia
+solicitada neste termo de referência.
+13
+.
+FISCALIZAÇÃO
+13
+.
+1
+.
+A execução do contrato deverá ser acompanhada e fiscalizada pelo(s) fiscal(is) do contrato, ou pelos respectivos
+substitutos (
+Lei nº 14.133, de 2021, art. 117, caput
+) , nos termos do art. 33 da IN SGD nº 94, de 2022, observando-se, em especial, as
+rotinas a seguir.
+13
+.
+2
+.
+Fiscalização Técnica/Administrativa
+a
+)
+O fiscal do contrato, além de exercer as atribuições previstas no art. 33, II, da IN SGD nº 94, de 2022, acompanhará a
+execução do contrato, para que sejam cumpridas todas as condições estabelecidas no contrato, de modo a assegurar os melhores
+resultados para a Administração. (Decreto nº 11.246, de 2022, art. 22, VI);
+b
+)
+O fiscal do contrato anotará no histórico de gerenciamento do contrato todas as ocorrências relacionadas à execução
+do contrato, com a descrição do que for necessário para a regularização das faltas ou dos defeitos observados. (
+Lei nº 14.133, de
+2021, art. 117, §1º
+, e 
+Decreto nº 11.246, de 2022, art. 22, II
+);
+c
+)
+Identificada qualquer inexatidão ou irregularidade, o fiscal do contrato emitirá notificações para a correção da
+execução do contrato, determinando prazo para a correção. (
+Decreto nº 11.246, de 2022, art. 22, III
+);
+d
+)
+O fiscal do contrato informará ao gestor do contato, em tempo hábil, a situação que demandar decisão ou adoção de
+medidas que ultrapassem sua competência, para que adote as medidas necessárias e saneadoras, se for o caso. (
+Decreto nº
+11.246, de 2022, art. 22, IV
+).
+e
+)
+No caso de ocorrências que possam inviabilizar a execução do contrato nas datas aprazadas, o fiscal do contrato
+comunicará o fato imediatamente ao gestor do contrato. (
+D
+ecreto nº 11.246, de 2022, art. 22, V).
+f
+)
+O fiscal do contrato comunicará ao gestor do contrato, em tempo hábil, o término do contrato sob sua
+responsabilidade, com vistas à renovação tempestiva ou à prorrogação contratual 
+(Decreto nº 11.246, de 2022, art. 22, VII
+).
+g
+)
+O fiscal do contrato, além de exercer as atribuições previstas no art. 33, IV, da IN SGD nº 94, de 2022, verificará a
+manutenção das condições de habilitação do contratado, acompanhará o empenho, o pagamento, as garantias, as glosas e a
+formalização de apostilamento e termos aditivos, solicitando quaisquer documentos comprobatórios pertinentes, caso necessário
+(
+Art. 23, I e II, do Decreto nº 11.246, de 2022
+).
+h
+)
+Caso ocorra descumprimento das obrigações contratuais, o fiscal do contrato atuará tempestivamente na solução do
+problema, reportando ao gestor do contrato para que tome as providências cabíveis, quando ultrapassar a sua competência;
+(
+Decreto nº 11.246, de 2022, art. 23, IV
+).
+13
+.
+3
+.
+Gestor do Contrato
+a
+)
+O gestor do contrato, além de exercer as atribuições previstas no art. 33, I, da IN SGD nº 94, de 2022, coordenará a
+atualização do processo de acompanhamento e fiscalização do contrato contendo todos os registros formais da execução no
+histórico de gerenciamento do contrato, a exemplo da ordem de serviço, do registro de ocorrências, das alterações e das
+prorrogações contratuais, elaborando relatório com vistas à verificação da necessidade de adequações do contrato para fins de
+atendimento da finalidade da administração. (
+Decreto nº 11.246, de 2022, art. 21, IV
+).
+b
+)
+O gestor do contrato acompanhará os registros realizados pelos fiscais do contrato, de todas as ocorrências
+relacionadas à execução do contrato e as medidas adotadas, informando, se for o caso, à autoridade superior àquelas que
+ultrapassarem a sua competência. (
+Decreto nº 11.246, de 2022, art. 21, II
+).
+c
+)
+O gestor do contrato acompanhará a manutenção das condições de habilitação do contratado, para fins de empenho de
+despesa e pagamento, e anotará os problemas que obstem o fluxo normal da liquidação e do pagamento da despesa no relatório
+de riscos eventuais. (
+Decreto nº 11.246, de 2022, art. 21, III
+).
+d
+)
+O gestor do contrato emitirá documento comprobatório da avaliação realizada pelos fiscais técnico/administrativo e
+setorial quanto ao cumprimento de obrigações assumidas pelo contratado, com menção ao seu desempenho na execução
+contratual, baseado nos indicadores objetivamente definidos e aferidos, e a eventuais penalidades aplicadas, devendo constar do
+cadastro de atesto de cumprimento de obrigações. (
+Decreto nº 11.246, de 2022, art. 21, VIII
+).
+e
+)
+O gestor do contrato tomará providências para a formalização de processo administrativo de responsabilização para
+fins de aplicação de sanções, a ser conduzido pela comissão de que trata o art. 158 da Lei nº 14.133, de 2021, ou pelo agente ou
+pelo setor com competência para tal, conforme o caso. (
+Decreto nº 11.246, de 2022, art. 21, X
+).
+f
+)
+O gestor do contrato deverá elaborará relatório final com informações sobre a consecução dos objetivos que tenham
+justificado a contratação e eventuais condutas a serem adotadas para o aprimoramento das atividades da Administração.
+(Decreto nº 11.246, de 2022, art. 21, VI).
+g
+)
+O gestor do contrato deverá enviar a documentação pertinente ao setor de contratos para a formalização dos
+procedimentos de liquidação e pagamento, no valor dimensionado pela fiscalização e gestão nos termos do contrato.
+(CAUSC) Termo de Referência - Serviços TIC 22 Revisado (1064337)         SEI 00177.000227/2026-81 / pg. 6
+14
+.
+CRITÉRIOS DE MEDIÇÃO E PAGAMENTO
+14
+.
+1
+.
+A avaliação da execução do objeto utilizará o Instrumento de Medição de Resultado (IMR) para aferição da qualidade
+da prestação dos serviços.
+IAP – ÍNDICE DE ATENDIMENTO NO PRAZO
+Tópico
+Descrição
+Finalidade
+Medir o tempo de atraso na prestação dos serviços
+constantes na Ordem de Serviço.
+Meta a cumprir
+IAP igual ou superior a (80) %.
+Instrumento de
+medição
+Deve ser aferido por meio de ferramentas,
+procedimentos de amostragem ou outros
+procedimentos de inspeção.
+Forma de
+acompanhamento
+É apurado pelos fiscais do contrato avaliando a
+quantidade atendida dentro do prazo em relação à
+quantidade total atendida no período de referência.
+Periodicidade
+Mensal
+Mecanismo de
+Cálculo (métrica)
+IAP = 100 * (ΣQtap / ΣQtr)
+ 
+Onde:
+IAP = Indicador de atendimento aos prazos do serviço;
+ΣQtap = Somatório do quantitativo atendido no prazo
+máximo estabelecido no TR com previsão de
+encerramento para o período de referência;
+ΣQtr = Somatório do quantitativo total registrado com
+previsão de encerramento para o período de
+referência.
+Observações
+Obs1: Serão utilizados dias corridos na medição.
+Obs2: Os dias com expediente parcial no
+órgão/entidade serão considerados como dias corridos
+no cômputo do indicador.
+Início de Vigência
+A partir da emissão da OS.
+(CAUSC) Termo de Referência - Serviços TIC 22 Revisado (1064337)         SEI 00177.000227/2026-81 / pg. 7
+Faixas de ajuste
+no pagamento e
+Sanções
+ 
+IAP >= 90%: sem descontos sobre o valor da fatura
+mensal.
+ 
+IAP >= 80% e < 90%: 10% de desconto sobre o valor
+da fatura mensal.
+ 
+IAP >= 70% e < 80%: 20% de desconto sobre o valor
+da fatura mensal.
+ 
+IAP < 70%: 30% de desconto sobre o valor da fatura
+mensal.
+14
+.
+2
+.
+Será indicada a retenção ou glosa no pagamento, proporcional à irregularidade verificada, sem prejuízo das sanções
+cabíveis, caso se constate que a Contratada:
+a
+)
+não produzir os resultados acordados;
+b
+)
+deixar de executar, ou não executar com a qualidade mínima exigida as atividades contratadas; ou
+c
+)
+deixar de utilizar materiais e recursos humanos exigidos para a execução do serviço, ou utilizá-los com qualidade ou
+quantidade inferior à demandada.
+d
+)
+A utilização do IMR não impede a aplicação concomitante de outros mecanismos para a avaliação da prestação dos
+serviços.
+14
+.
+3
+.
+Do recebimento
+14
+.
+3
+.
+1
+.
+Os serviços serão recebidos provisoriamente, no prazo de 05
+(cinco)
+ dias, pelo fiscal do contrato, mediante termos
+detalhados, quando verificado o cumprimento das exigências de caráter técnico e administrativo. (
+Art. 140, I, a , da Lei nº 14.133
+ e
+Arts. 22, X e 23, X do Decreto nº 11.246, de 2022
+).
+14
+.
+3
+.
+2
+.
+O prazo da disposição acima será contado do recebimento de comunicação de cobrança oriunda do contratado com a
+comprovação da prestação dos serviços a que se referem a parcela a ser paga.
+14
+.
+3
+.
+3
+.
+O fiscal do contrato realizará o recebimento provisório sob o ponto de vista técnico e administrativo.
+14
+.
+3
+.
+4
+.
+Para efeito de recebimento provisório, ao final de cada período de faturamento, o fiscal do contrato irá apurar o
+resultado das avaliações da execução do objeto e, se for o caso, a análise do desempenho e qualidade da prestação dos serviços
+realizados em consonância com os indicadores previstos, que poderá resultar no redimensionamento de valores a serem pagos à
+contratada, registrando em relatório a ser encaminhado ao gestor do contrato.
+14
+.
+3
+.
+5
+.
+Será considerado como ocorrido o recebimento provisório com a entrega do termo detalhado ou, em havendo mais de
+um a ser feito, com a entrega do último;
+14
+.
+3
+.
+6
+.
+O Contratado fica obrigado a reparar, corrigir, remover, reconstruir ou substituir, às suas expensas, no todo ou em
+parte, o objeto em que se verificarem vícios, defeitos ou incorreções resultantes da execução ou materiais empregados, cabendo à
+fiscalização não atestar a última e/ou única medição de serviços até que sejam sanadas todas as eventuais pendências que possam vir a
+ser apontadas no Recebimento Provisório.
+14
+.
+3
+.
+7
+.
+A fiscalização não efetuará o ateste da última e/ou única medição de serviços até que sejam sanadas todas as eventuais
+pendências que possam vir a ser apontadas no Recebimento Provisório. (
+Art. 119 c/c art. 140 da Lei nº 14133, de 2021
+)
+14
+.
+3
+.
+8
+.
+O recebimento provisório também ficará sujeito, quando cabível, à conclusão de todos os testes de campo e à entrega
+dos Manuais e Instruções exigíveis.
+14
+.
+3
+.
+9
+.
+Os serviços poderão ser rejeitados, no todo ou em parte, quando em desacordo com as especificações constantes neste
+Termo de Referência e na proposta, sem prejuízo da aplicação das penalidades.
+14
+.
+3
+.
+10
+.
+Quando a fiscalização for exercida por um único servidor, o Termo Detalhado deverá conter o registro, a análise e a
+conclusão acerca das ocorrências na execução do contrato, em relação à fiscalização técnica e administrativa e demais documentos
+que julgar necessários, devendo encaminhá-los ao gestor do contrato para recebimento definitivo.
+14
+.
+3
+.
+11
+.
+Os serviços serão recebidos definitivamente no prazo de 
+15(quinze)
+ dias, contados do recebimento provisório, por
+servidor ou comissão designada pela autoridade competente, após a verificação da qualidade e quantidade do serviço e consequente
+aceitação mediante termo detalhado, obedecendo os seguintes procedimentos:
+14
+.
+3
+.
+12
+.
+Emitir documento comprobatório da avaliação realizada pelos fiscais técnico, administrativo e setorial, quando
+houver, no cumprimento de obrigações assumidas pelo contratado, com menção ao seu desempenho na execução contratual, baseado
+em indicadores objetivamente definidos e aferidos, e a eventuais penalidades aplicadas, devendo constar do cadastro de atesto de
+cumprimento de obrigações, conforme regulamento (
+art. 21, VIII, Decreto nº 11.246, de 2022
+).
+14
+.
+3
+.
+13
+.
+Realizar a análise dos relatórios e de toda a documentação apresentada pela fiscalização e, caso haja irregularidades
+que impeçam a liquidação e o pagamento da despesa, indicar as cláusulas contratuais pertinentes, solicitando à Contratada, por
+escrito, as respectivas correções;
+14
+.
+3
+.
+14
+.
+Emitir Termo Detalhado para efeito de recebimento definitivo dos serviços prestados, com base nos relatórios e
+(CAUSC) Termo de Referência - Serviços TIC 22 Revisado (1064337)         SEI 00177.000227/2026-81 / pg. 8
+documentações apresentadas; e
+14
+.
+3
+.
+15
+.
+Comunicar a empresa para que emita a Nota Fiscal ou Fatura, com o valor exato dimensionado pela fiscalização.
+14
+.
+3
+.
+16
+.
+Enviar a documentação pertinente ao setor de contratos para a formalização dos procedimentos de liquidação e
+pagamento, no valor dimensionado pela fiscalização e gestão.
+14
+.
+3
+.
+17
+.
+No caso de controvérsia sobre a execução do objeto, quanto à dimensão, qualidade e quantidade, deverá ser
+observado o teor do 
+art. 143 da Lei nº 14.133, de 2021
+, comunicando-se à empresa para emissão de Nota Fiscal no que concerne à
+parcela incontroversa da execução do objeto, para efeito de liquidação e pagamento.
+14
+.
+3
+.
+18
+.
+Nenhum prazo de recebimento ocorrerá enquanto pendente a solução, pelo contratado, de inconsistências verificadas
+na execução do objeto ou no instrumento de cobrança.
+14
+.
+3
+.
+19
+.
+O recebimento provisório ou definitivo não excluirá a responsabilidade civil pela solidez e pela segurança do serviço
+nem a responsabilidade ético-profissional pela perfeita execução do contrato.
+15
+.
+PROCEDIMENTOS PARA RETENÇÃO OU GLOSA NO PAGAMENTO
+15
+.
+1
+.
+Nos casos de inadimplemento na execução do objeto, as ocorrências serão registradas pela contratante, conforme a
+tabela abaixo:
+Id
+Ocorrência
+Glosa / Sanção
+1
+Não prestar os esclarecimentos
+imediatamente, referente à execução dos
+serviços, salvo quando implicarem em
+indagações de caráter técnico, hipótese em
+que serão respondidos no prazo máximo de
+(48) horas úteis.
+Glosa (1) % sobre o valor total do Contrato por dia
+útil de atraso em prestar as informações por escrito,
+ou por outro meio quando autorizado pela
+contratante, até o limite de (5) dias úteis.
+Após o limite de (5) dias úteis, aplicar-se-á glosa de
+(6) % do valor total do Contrato.
+2
+Não atender ao indicador de nível de
+serviço IAP (Índice de Atendimento no
+Prazo)
+IAP >= 90%: sem descontos sobre o valor da
+fatura mensal.
+IAP >= 80% e < 90%: 10% de desconto sobre o
+valor da fatura mensal.
+IAP >= 70% e < 80%: 20% de desconto sobre o
+valor da fatura mensal.
+IAP < 70%: 30% de desconto sobre o valor da
+fatura mensal.
+3
+Não cumprir qualquer outra obrigação
+contratual não citada nesta tabela.
+Advertência.
+Em caso de reincidência ou configurado prejuízo
+aos resultados pretendidos com a contratação,
+aplica-se glosa de (10) % do valor total do Contrato.
+15
+.
+2
+.
+Nos termos do art. 19, inciso III da Instrução Normativa SGD/ME nº 94, de 2022, será efetuada a retenção ou glosa
+no pagamento, proporcional à irregularidade verificada, sem prejuízo das sanções cabíveis, nos casos em que o contratado:
+15
+.
+2
+.
+1
+.
+não atingir os valores mínimos aceitáveis fixados nos critérios de aceitação, não produzir os resultados ou deixar de
+executar as atividades contratadas; ou
+15
+.
+2
+.
+2
+.
+deixar de utilizar materiais e recursos humanos exigidos para fornecimento da solução de TIC, ou utilizá-los com
+qualidade ou quantidade inferior à demandada;
+16
+.
+SANÇÕES ADMINISTRATIVAS
+16
+.
+1
+.
+Se o fornecedor licitante ou o contratado praticar quaisquer das infrações administrativas previstas no art. 155 da Lei
+nº 14.133/2021, lhe serão aplicadas sanções, observado o devido processo legal e assegurados o contraditório e a ampla defesa, nos
+termos da Lei nº 14.133/2021 e da Portaria Normativa nº 02/2025 do CAU/SC, a qual regulamenta e disciplina o rito de aplicação
+(CAUSC) Termo de Referência - Serviços TIC 22 Revisado (1064337)         SEI 00177.000227/2026-81 / pg. 9
+destas penalidades legais e institui o rito do Processo Administrativo Sancionatório correspondente, a qual se encontra disponível no
+endereço eletrônico 
+https://www.causc.gov.br/wp-content/uploads/portarias/normativas/2025/02/Portaria-Normativa-002-Rito-
+aplicacao-penalidades-previstas-na-Lei-no-14.133.pdf
+.
+16
+.
+2
+.
+Ao fornecedor licitante ou contratado responsável pelas infrações administrativas dispostas no art. 155 da Lei nº
+14.133/2021, serão aplicadas as seguintes sanções, observado o devido processo legal e assegurados o contraditório e a ampla defesa:
+16
+.
+2
+.
+1
+.
+Advertência;
+16
+.
+2
+.
+2
+.
+Multa:
+16
+.
+2
+.
+2
+.
+1
+.
+compensatória;
+16
+.
+2
+.
+2
+.
+2
+.
+de mora.
+16
+.
+2
+.
+3
+.
+Impedimento de licitar e contratar;
+16
+.
+2
+.
+4
+.
+Declaração de inidoneidade para licitar ou contratar.
+16
+.
+3
+.
+As sanções previstas nos itens 16.2.1., 16.2.3. e 16.2.4. poderão ser aplicadas cumulativamente com a sanção prevista
+no item 16.2.2.
+16
+.
+4
+.
+A sanção de advertência será aplicada como instrumento de diálogo e correção de conduta nas seguintes hipóteses,
+quando não se justificar a imposição de penalidade mais grave:
+16
+.
+4
+.
+1
+.
+Descumprimento de pequena relevância;
+16
+.
+4
+.
+2
+.
+Inexecução parcial de obrigação contratual.
+16
+.
+5
+.
+A sanção de multa de caráter compensatório será aplicada ao responsável por qualquer das infrações administrativas
+previstas no art. 155 da Lei nº 14.133/2021, não podendo ser inferior a 0,5% (cinco décimos por cento) nem superior a 30% (trinta por
+cento) do valor contratado, observando-se os seguintes parâmetros:
+16
+.
+5
+.
+1
+.
+De 0,5% (cinco décimos por cento) a 10% (dez por cento) do valor do contrato, para aquele que:
+16
+.
+5
+.
+1
+.
+1
+.
+deixar de entregar a documentação exigida para o certame ou
+16
+.
+5
+.
+1
+.
+2
+.
+não mantiver a proposta, salvo em decorrência de fato superveniente devidamente justificado;
+16
+.
+5
+.
+2
+.
+De 10% (dez por cento) a 15% (quinze por cento) sobre o valor da parte inadimplida, em caso de inexecução parcial
+do contrato;
+16
+.
+5
+.
+3
+.
+de 10% (dez por cento) a 15% (quinze por cento) sobre o valor do contrato, para aquele que:
+16
+.
+5
+.
+3
+.
+1
+.
+não celebrar o contrato ou não entregar a documentação exigida para a contratação, quando convocado dentro do
+prazo de validade de sua proposta ou
+16
+.
+5
+.
+3
+.
+2
+.
+ensejar o retardamento da execução ou da entrega do objeto da licitação sem motivo justificado;
+16
+.
+5
+.
+4
+.
+De 20% (vinte por cento) a 30% (trinta por cento) sobre o valor da parcela do objeto não executada, em caso de
+inexecução parcial do contrato que cause grave dano ao CAU/SC, ao funcionamento dos serviços públicos ou ao interesse coletivo;
+16
+.
+5
+.
+5
+.
+De 20% (vinte por cento) a 30% (trinta por cento) sobre o valor do contrato, para aquele que:
+16
+.
+5
+.
+5
+.
+1
+.
+apresentar declaração ou documentação falsa exigida para o certame ou declaração falsa durante a licitação ou a
+execução do contrato,
+16
+.
+5
+.
+5
+.
+2
+.
+fraudar a licitação ou praticar ato fraudulento na execução do contrato,
+16
+.
+5
+.
+5
+.
+3
+.
+ter comportamento inidôneo ou praticar fraude de qualquer natureza,
+16
+.
+5
+.
+5
+.
+4
+.
+praticar atos ilícitos com vistas a frustrar os objetivos da licitação,
+16
+.
+5
+.
+5
+.
+5
+.
+praticar ato lesivo previsto no art. 5º da Lei nº 12.846/2013 ou
+16
+.
+5
+.
+5
+.
+6
+.
+ocasionar a inexecução total do objeto do contrato.
+16
+.
+5
+.
+6
+.
+Em relação aos contratos ou às atas de registro de preço que ainda não tiverem sido celebrados, o percentual de que
+trata o item 16.5. e seus subitens, para cálculo da multa, incidirá sobre o valor estimado da contratação.
+16
+.
+6
+.
+A sanção de multa de caráter moratório será aplicada na hipótese de atraso injustificado na entrega ou execução do
+objeto do contrato, quando serão aplicados os seguintes percentuais:
+16
+.
+6
+.
+1
+.
+0,33% (trinta e três centésimos por cento) por dia de atraso, na entrega de material ou execução de serviços, calculado
+sobre o valor correspondente à parte inadimplida, quando o atraso não for superior à 15 (quinze) dias úteis;
+16
+.
+6
+.
+2
+.
+0,66% (sessenta e seis centésimos por cento) por dia de atraso que exceder o prazo descrito na alínea anterior, na
+entrega de material ou execução de serviços, calculados desde o 16º (décimo sexto) dia útil de atraso, sobre o valor correspondente à
+parte inadimplida.
+16
+.
+6
+.
+3
+.
+Quando o prazo para o cumprimento de determinada obrigação não for definido no contrato de forma clara e objetiva,
+o atraso será computado a partir do dia seguinte ao do recebimento pelo licitante/contratado de notificação para o cumprimento da
+obrigação.
+16
+.
+6
+.
+4
+.
+A aplicação de multa de mora não impedirá que a Administração a converta em compensatória e promova a extinção
+unilateral do contrato, com a aplicação cumulada de outras sanções previstas no artigo 155 da Lei nº 14.133/2021.
+(CAUSC) Termo de Referência - Serviços TIC 22 Revisado (1064337)         SEI 00177.000227/2026-81 / pg. 10
+16
+.
+7
+.
+O pagamento da multa, compensatória ou moratória, poderá ser realizado mediante:
+16
+.
+7
+.
+1
+.
+Execução da garantia contratual, quando houver;
+16
+.
+7
+.
+2
+.
+Quitação do valor da penalidade em 15 (quinze) dias úteis a contar do trânsito em julgado da decisão definitiva
+quanto a sua aplicação, mediante depósito na conta bancária do CAU/SC, sendo que as tarifas de transferência ficarão a cargo do
+infrator.
+16
+.
+8
+.
+Se a multa aplicada for superior ao valor da garantia prestada, além da perda desta, responderá o contratado pela sua
+diferença.
+16
+.
+8
+.
+1
+.
+O valor da multa será atualizado pelo índice estipulado em contrato ou, na falta deste, pelo Índice Geral de Preços
+Mercado (IGPM) ou aquele que vier a substituí-lo, a contar do trânsito em julgado da decisão definitiva quanto a sua aplicação.
+16
+.
+8
+.
+2
+.
+O pagamento da importância devida poderá ser parcelado, mediante solicitação do infrator e autorização da
+Presidência do CAU/SC, em consonância com a legislação e as normas administrativas aplicáveis.
+16
+.
+8
+.
+3
+.
+Não ocorrendo o pagamento, o processo será encaminhado à Gerência Administrativa e Financeira do CAU/SC –
+GERAF, no prazo de 30 (trinta) dias úteis após o inadimplemento da obrigação, para fins de adoção dos procedimentos de cobrança
+necessários, inclusive a inscrição do débito em dívida ativa e eventual futura cobrança judicial.
+16
+.
+9
+.
+Será aplicada a sanção de impedimento de licitar e contratar com a Administração Pública Federal, pelo prazo
+máximo de 03 (três) anos, quando não se justificar a imposição de penalidade mais grave, observando-se os parâmetros estabelecidos,
+aos responsáveis pelas seguintes infrações:
+16
+.
+9
+.
+1
+.
+Dar causa à inexecução parcial do contrato que cause grave dano à Administração, ao funcionamento dos serviços
+públicos ou ao interesse coletivo;
+16
+.
+9
+.
+2
+.
+Dar causa à inexecução total do contrato;
+16
+.
+9
+.
+3
+.
+Deixar de entregar a documentação exigida para o certame;
+16
+.
+9
+.
+4
+.
+Não manter a proposta, salvo em decorrência de fato superveniente devidamente justificado;
+16
+.
+9
+.
+5
+.
+Não celebrar o contrato ou a ata de registros de preço ou não entregar a documentação exigida para a contratação,
+quando convocado dentro do prazo de validade de sua proposta;
+16
+.
+9
+.
+6
+.
+Ensejar o retardamento da execução ou da entrega do objeto da licitação sem motivo justificado.
+16
+.
+10
+.
+Aos responsáveis pelas infrações administrativas previstas nos itens 16.9.3., 16.9.4., 16.9.5. e 16.9.6. será aplicada a
+sanção de impedimento de licitar e contratar com a Administração Pública Federal pelo prazo de 01 (um) a 2 (dois) anos.
+16
+.
+11
+.
+Aos responsáveis pelas infrações administrativas previstas nos itens 16.9.1. e 16.9.2. será aplicada a sanção de
+impedimento de licitar e contratar com a Administração Pública Federal pelo prazo de 2 (dois) a 3 (três) anos.
+16
+.
+12
+.
+Será aplicada a sanção de declaração de inidoneidade para licitar e contratar com a Administração Pública Direta e
+Indireta de todos os entes federativos, pelo prazo mínimo de 03 (três) anos e máximo de 06 (seis) anos, observando-se os parâmetros
+estabelecidos, aos responsáveis pelas seguintes infrações:
+16
+.
+12
+.
+1
+.
+Apresentar declaração ou documentação falsa exigida para o certame ou prestar declaração falsa durante a licitação
+ou a execução do contrato;
+16
+.
+12
+.
+2
+.
+Fraudar a licitação ou praticar ato fraudulento na execução do contrato;
+16
+.
+12
+.
+3
+.
+comportar-se de modo inidôneo ou cometer fraude de qualquer natureza;
+16
+.
+12
+.
+4
+.
+Praticar atos ilícitos com vistas a frustrar os objetivos da licitação;
+16
+.
+12
+.
+5
+.
+Praticar ato lesivo previsto no 
+caput
+ do art. 5º da Lei nº 12.846/2013.
+16
+.
+13
+.
+Aos responsáveis pela infração administrativa prevista no item 16.12.1. será aplicada sanção de declaração de
+inidoneidade para licitar e contratar com a Administração Pública Direta e Indireta de todos os entes federativos pelo prazo de 3 (três)
+a 4 (quatro) anos.
+16
+.
+14
+.
+Aos responsáveis pelas infrações administrativas previstas nos itens 16.12.2., 16.12.3., 16.12.4. e 16.12.5. será
+aplicada a sanção de declaração de inidoneidade para licitar e contratar com a Administração Pública Direta e Indireta de todos os
+entes federativos pelo prazo de 4 (quatro) a 6 (seis) anos.
+16
+.
+15
+.
+A aplicação da sanção de declaração de inidoneidade para licitar e contratar (item 16.12.) deve ser precedida de
+análise jurídica.
+16
+.
+16
+.
+A aplicação das sanções previstas neste Termo de Referência não exclui, em hipótese alguma, a obrigação de
+reparação integral do dano causado ao Contratante.
+16
+.
+17
+.
+Os critérios para a dosimetria das sanções estão previstos na Portaria Normativa nº 02/2025 do CAU/SC.
+16
+.
+18
+.
+O Processo Administrativo Sancionatório a ser instaurado está regulamentado na Portaria Normativa nº 02/2025 do
+CAU/SC.
+16
+.
+19
+.
+A personalidade jurídica do Contratado poderá ser desconsiderada sempre que utilizada com abuso do direito para
+facilitar, encobrir ou dissimular a prática dos atos ilícitos previstos neste Termo de Referência ou para provocar confusão patrimonial,
+e, nesse caso, todos os efeitos das sanções aplicadas à pessoa jurídica serão estendidos aos seus administradores e sócios com poderes
+de administração, à pessoa jurídica sucessora ou à empresa do mesmo ramo com relação de coligação ou controle, de fato ou de
+direito, com o Contratado, observados, em todos os casos, o contraditório, a ampla defesa e a obrigatoriedade de análise jurídica
+(CAUSC) Termo de Referência - Serviços TIC 22 Revisado (1064337)         SEI 00177.000227/2026-81 / pg. 11
+prévia.
+16
+.
+20
+.
+As sanções de impedimento de licitar e contratar e declaração de inidoneidade para licitar ou contratar são passíveis
+de reabilitação na forma do art. 163 da Lei nº 14.133/2021 e da Portaria Normativa nº 02/2025 do CAU/SC.
+16
+.
+21
+.
+O Contratante deverá, no prazo máximo de 15 (quinze) dias úteis, contado da data de aplicação da sanção, informar e
+manter atualizados os dados relativos às sanções por ela aplicadas, para fins de publicidade, conforme o caso, no Cadastro Nacional
+de Empresas Inidôneas e Suspensas (CEIS), no Cadastro Nacional de Empresas Punidas (CNEP) e no Sistema de Cadastramento
+Unificado de Fornecedores – SICAF.
+17
+.
+LIQUIDAÇÃO
+17
+.
+1
+.
+Recebida a Nota Fiscal ou documento de cobrança equivalente, correrá o prazo de dez dias úteis para fins de
+liquidação, na forma desta seção, prorrogáveis por igual período, nos termos do 
+art. 7º, §2º da Instrução Normativa SEGES/ME nº
+77/2022
+.
+17
+.
+2
+.
+O prazo de que trata o item anterior será reduzido à metade, mantendo-se a possibilidade de prorrogação, no caso de
+contratações decorrentes de despesas cujos valores não ultrapassem o limite de que trata o 
+inciso II do art. 75 da Lei nº 14.133, de
+2021
+.
+17
+.
+3
+.
+Para fins de liquidação, o setor competente deverá verificar se a nota fiscal ou instrumento de cobrança equivalente
+apresentado expressa os elementos necessários e essenciais do documento, tais como:
+17
+.
+3
+.
+1
+.
+o prazo de validade;
+17
+.
+3
+.
+2
+.
+a data da emissão;
+17
+.
+3
+.
+3
+.
+os dados do contrato e do órgão contratante;
+17
+.
+3
+.
+4
+.
+o período respectivo de execução do contrato;
+17
+.
+3
+.
+5
+.
+o valor a pagar; e
+17
+.
+3
+.
+6
+.
+eventual destaque do valor de retenções tributárias cabíveis.
+17
+.
+4
+.
+Havendo erro na apresentação da nota fiscal ou instrumento de cobrança equivalente, ou circunstância que impeça a
+liquidação da despesa, esta ficará sobrestada até que o contratado providencie as medidas saneadoras, reiniciando-se o prazo após a
+comprovação da regularização da situação, sem ônus ao contratante;
+17
+.
+5
+.
+A nota fiscal ou instrumento de cobrança equivalente deverá ser obrigatoriamente acompanhado da comprovação da
+regularidade fiscal, constatada por meio de consulta on-line ao SICAF ou, na impossibilidade de acesso ao referido Sistema, mediante
+consulta aos sítios eletrônicos oficiais ou à documentação mencionada no 
+art. 68 da Lei nº 14.133, de 2021.
+17
+.
+6
+.
+A Administração deverá realizar consulta ao SICAF para: a) verificar a manutenção das condições de habilitação
+exigidas no edital; b) identificar possível razão que impeça a participação em licitação, no âmbito do órgão ou entidade, que implique
+proibição de contratar com o Poder Público, bem como ocorrências impeditivas indiretas. (INSTRUÇÃO NORMATIVA Nº 3, DE 26
+DE ABRIL DE 2018)
+17
+.
+7
+.
+Constatando-se, junto ao SICAF, a situação de irregularidade do contratado, será providenciada sua notificação, por
+escrito, para que, no prazo de 5 (cinco) dias úteis, regularize sua situação ou, no mesmo prazo, apresente sua defesa. O prazo poderá
+ser prorrogado uma vez, por igual período, a critério do contratante.
+17
+.
+8
+.
+Não havendo regularização ou sendo a defesa considerada improcedente, o contratante deverá comunicar aos órgãos
+responsáveis pela fiscalização da regularidade fiscal quanto à inadimplência do contratado, bem como quanto à existência de
+pagamento a ser efetuado, para que sejam acionados os meios pertinentes e necessários para garantir o recebimento de seus créditos.
+17
+.
+9
+.
+Persistindo a irregularidade, o contratante deverá adotar as medidas necessárias à rescisão contratual nos autos do
+processo administrativo correspondente, assegurada ao contratado a ampla defesa.
+17
+.
+10
+.
+Havendo a efetiva execução do objeto, os pagamentos serão realizados normalmente, até que se decida pela rescisão
+do contrato, caso o contratado não regularize sua situação junto ao SICAF.
+18
+.
+PRAZO DE PAGAMENTO
+18
+.
+1
+.
+O pagamento será efetuado no prazo de até 10 (dez) dias úteis contados da finalização da liquidação da despesa,
+conforme seção anterior, nos termos da 
+Instrução Normativa SEGES/ME nº 77, de 2022
+.
+18
+.
+2
+.
+No caso de atraso pelo Contratante, os valores devidos ao contratado serão atualizados monetariamente entre o termo
+final do prazo de pagamento até a data de sua efetiva realização, mediante aplicação do índice 
+INPC
+ de correção monetária.
+19
+.
+FORMA DE PAGAMENTO
+19
+.
+1
+.
+O pagamento será realizado por meio de ordem bancária, para crédito em banco, agência e conta corrente indicados
+pelo contratado.
+19
+.
+2
+.
+Será considerada data do pagamento o dia em que constar como emitida a ordem bancária para pagamento.
+19
+.
+3
+.
+Quando do pagamento, será efetuada a retenção tributária prevista na legislação aplicável.
+19
+.
+4
+.
+Independentemente do percentual de tributo inserido na planilha, quando houver, serão retidos na fonte, quando da
+realização do pagamento, os percentuais estabelecidos na legislação vigente.
+19
+.
+5
+.
+O contratado regularmente optante pelo Simples Nacional, nos termos da Lei Complementar nº 123, de 2006, não
+sofrerá a retenção tributária quanto aos impostos e contribuições abrangidos por aquele regime. No entanto, o pagamento ficará
+(CAUSC) Termo de Referência - Serviços TIC 22 Revisado (1064337)         SEI 00177.000227/2026-81 / pg. 12
+condicionado à apresentação de comprovação, por meio de documento oficial, de que faz jus ao tratamento tributário favorecido
+previsto na referida Lei Complementar.
+20
+.
+FORMA E CRITÉRIOS DE SELEÇÃO DO FORNECEDOR E REGIME DE EXECUÇÃO
+20
+.
+1
+.
+O fornecedor será selecionado por meio da realização de procedimento de LICITAÇÃO, na modalidade
+PREGÃO, sob a forma ELETRÔNICA, com adoção do critério de julgamento pelo menor preço.
+21
+.
+REGIME DE EXECUÇÃO
+21
+.
+1
+.
+O regime de execução do contrato será por Empreitada por preço global.
+22
+.
+EXIGÊNCIAS DE HABILITAÇÃO
+22
+.
+1
+.
+Para fins de habilitação, deverá o licitante comprovar os seguintes requisitos:
+22
+.
+1
+.
+1
+.
+Habilitação jurídica
+a
+)
+Pessoa física:
+ cédula de identidade (RG) ou documento equivalente que, por força de lei, tenha validade para fins de
+identificação em todo o território nacional;
+b
+)
+Empresário individual:
+ inscrição no Registro Público de Empresas Mercantis, a cargo da Junta Comercial da respectiva
+sede;
+c
+)
+Microempreendedor Individual - MEI:
+ Certificado da Condição de Microempreendedor Individual - CCMEI, cuja
+aceitação ficará condicionada à verificação da autenticidade no sítio 
+https://www.gov.br/empresas-e-negocios/pt-br/empreendedor
+;
+d
+)
+Sociedade empresária, sociedade limitada unipessoal 
+– SLU ou sociedade identificada como empresa individual de
+responsabilidade limitada - EIRELI: inscrição do ato constitutivo, estatuto ou contrato social no Registro Público de Empresas
+Mercantis, a cargo da Junta Comercial da respectiva sede, acompanhada de documento comprobatório de seus administradores;
+e
+)
+Sociedade empresária estrangeira:
+ portaria de autorização de funcionamento no Brasil, publicada no Diário Oficial da
+União e arquivada na Junta Comercial da unidade federativa onde se localizar a filial, agência, sucursal ou estabelecimento, a qual
+será considerada como sua sede, conforme Instrução 
+Normativa DREI/ME n.º 77, de 18 de março de 2020
+.
+f
+)
+Sociedade simples: 
+inscrição do ato constitutivo no Registro Civil de Pessoas Jurídicas do local de sua sede, acompanhada
+de documento comprobatório de seus administradores;
+g
+)
+Filial, sucursal ou agência de sociedade simples ou empresária:
+ inscrição do ato constitutivo da filial, sucursal ou
+agência da sociedade simples ou empresária, respectivamente, no Registro Civil das Pessoas Jurídicas ou no Registro Público de
+Empresas 
+Mercantis onde
+ opera, com averbação no Registro onde tem sede a matriz
+h
+)
+Sociedade cooperativa:
+ ata de fundação e estatuto social, com a ata da assembleia que o aprovou, devidamente arquivado
+na Junta Comercial ou inscrito no Registro Civil das Pessoas Jurídicas da respectiva sede, além do registro de que trata o 
+art. 107 da
+Lei nº 5.764, de 16 de dezembro 1971
+.
+i
+)
+Os documentos apresentados deverão estar acompanhados de todas as alterações ou da consolidação respectiva.
+22
+.
+1
+.
+2
+.
+Habilitação fiscal, social e trabalhista
+a
+)
+Prova de inscrição no Cadastro Nacional de Pessoas Jurídicas ou no Cadastro de Pessoas Físicas, conforme o caso;
+b
+)
+Prova de regularidade fiscal perante a Fazenda Nacional, mediante apresentação de certidão expedida conjuntamente pela
+Secretaria da Receita Federal do Brasil (RFB) e pela Procuradoria-Geral da Fazenda Nacional (PGFN), referente a todos os créditos
+tributários federais e à Dívida Ativa da União (DAU) por elas administrados, inclusive aqueles relativos à Seguridade Social, nos
+termos da Portaria Conjunta nº 1.751, de 02 de outubro de 2014, do Secretário da Receita Federal do Brasil e da Procuradora-Geral da
+Fazenda Nacional.
+c
+)
+Prova de regularidade com o Fundo de Garantia do Tempo de Serviço (FGTS);
+d
+)
+Prova de inexistência de débitos inadimplidos perante a Justiça do Trabalho, mediante a apresentação de certidão negativa
+ou positiva com efeito de negativa, nos termos do Título VII-A da Consolidação das Leis do Trabalho, aprovada pelo Decreto-Lei nº
+5.452, de 1º de maio de 1943;
+e
+)
+Prova de inscrição no cadastro de contribuintes 
+Municipal
+ relativo ao domicílio ou sede do fornecedor, pertinente ao seu
+ramo de atividade e compatível com o objeto contratual;
+f
+)
+Prova de regularidade com a Fazenda 
+Municipal
+ do domicílio ou sede do fornecedor, relativa à atividade em cujo exercício
+contrata ou concorre;
+g
+)
+Caso o fornecedor seja considerado isento dos tributos 
+Municipal
+ relacionados ao objeto contratual, deverá comprovar tal
+condição mediante a apresentação de declaração da Fazenda respectiva do seu domicílio ou sede, ou outra equivalente, na forma da
+lei.
+h
+)
+O fornecedor enquadrado como microempreendedor individual que pretenda auferir os benefícios do tratamento
+diferenciado previstos na Lei Complementar n. 123, de 2006, estará dispensado da prova de inscrição nos cadastros de contribuintes
+estadual e municipal.
+22
+.
+2
+.
+Qualificação Econômico-Financeira
+a
+)
+Certidão negativa de insolvência civil expedida pelo distribuidor do domicílio ou sede do licitante, caso se trate de
+pessoa física, desde que admitida a sua participação na licitação (art. 5º, inciso II, alínea “c”, da Instrução Normativa Seges/ME
+nº 116, de 2021), ou de sociedade simples;
+(CAUSC) Termo de Referência - Serviços TIC 22 Revisado (1064337)         SEI 00177.000227/2026-81 / pg. 13
+b
+)
+Certidão negativa de falência expedida pelo distribuidor da sede do fornecedor - Lei nº 14.133, de 2021, art. 69, caput,
+inciso II);
+c
+)
+Balanço patrimonial, demonstração de resultado de exercício e demais demonstrações contábeis dos 2 (dois) últimos
+exercícios sociais, comprovando:
+d
+)
+índices de Liquidez Geral (LG), Liquidez Corrente (LC), e Solvência Geral (SG) superiores a 1 (um);
+e
+)
+As empresas criadas no exercício financeiro da licitação deverão atender a todas as exigências da habilitação e poderão
+substituir os demonstrativos contábeis pelo balanço de abertura; e
+f
+)
+Os documentos referidos acima limitar-se-ão ao último exercício no caso de a pessoa jurídica ter sido constituída há
+menos de 2 (dois) anos.
+g
+)
+Os documentos referidos acima deverão ser exigidos com base no limite definido pela Receita Federal do Brasil para
+transmissão da Escrituração Contábil Digital - ECD ao Sped.
+h
+)
+Caso a empresa licitante apresente resultado inferior ou igual a 1 (um) em qualquer dos índices de Liquidez Geral
+(LG), Solvência Geral (SG) e Liquidez Corrente (LC), será exigido para fins de habilitação 
+capital mínimo 
+de 
+10%
+ do 
+valor
+total estimado da contratação.
+i
+)
+As empresas criadas no exercício financeiro da licitação deverão atender a todas as exigências da habilitação e poderão
+substituir os demonstrativos contábeis pelo balanço de abertura. (Lei nº 14.133, de 2021, art. 65, §1º).
+j
+)
+O atendimento dos índices econômicos previstos neste item deverá ser atestado mediante declaração assinada por
+profissional habilitado da área contábil, apresentada pelo fornecedor.
+22
+.
+3
+.
+Qualificação Técnica
+a
+)
+Declaração de que o licitante tomou conhecimento de todas as informações e das condições locais para o cumprimento
+das obrigações objeto da licitação;
+b
+)
+A declaração acima poderá ser substituída por declaração formal assinada pelo responsável técnico do licitante acerca
+do conhecimento pleno das condições e peculiaridades da contratação
+c
+)
+Comprovação de aptidão para execução de serviço de complexidade tecnológica e operacional equivalente ou superior
+com o objeto desta contratação, ou com o item pertinente, por meio da apresentação de certidões ou atestados, por pessoas
+jurídicas de direito público ou privado, ou regularmente emitido(s) pelo conselho profissional competente, quando for o caso.
+d
+)
+Será admitida, para fins de comprovação de quantitativo mínimo, a apresentação e o somatório de diferentes atestados
+executados de forma concomitante.
+e
+)
+Os atestados de capacidade técnica poderão ser apresentados em nome da matriz ou da filial do fornecedor.
+f
+)
+O fornecedor disponibilizará todas as informações necessárias à comprovação da legitimidade dos atestados,
+apresentando, quando solicitado pela Administração, cópia do contrato que deu suporte à contratação, endereço atual da
+contratante e local em que foi executado o objeto contratado, dentre outros documentos.
+g
+)
+Caso admitida a participação de cooperativas, será exigida a seguinte documentação complementar:
+I
+ 
+-
+A relação dos cooperados que atendem aos requisitos técnicos exigidos para a contratação e que executarão o
+contrato, com as respectivas atas de inscrição e a comprovação de que estão domiciliados na localidade da sede da
+cooperativa, respeitado o disposto nos 
+arts. 4º, inciso XI, 21, inciso I
+ e 
+42, §§2º a 6º da Lei n. 5.764, de 1971
+;
+II
+ 
+-
+A declaração de regularidade de situação do contribuinte individual – DRSCI, para cada um dos cooperados
+indicados;
+III
+ 
+-
+A comprovação do capital social proporcional ao número de cooperados necessários à prestação do serviço;
+IV
+ 
+-
+O registro previsto na 
+Lei n. 5.764, de 1971, art. 107
+;
+V
+ 
+-
+A comprovação de integração das respectivas quotas-partes por parte dos cooperados que executarão o
+contrato; e
+VI
+ 
+-
+Os seguintes documentos para a comprovação da regularidade jurídica da cooperativa: a) ata de fundação; b)
+estatuto social com a ata da assembleia que o aprovou; c) regimento dos fundos instituídos pelos cooperados, com a ata
+da assembleia; d) editais de convocação das três últimas assembleias gerais extraordinárias; e) três registros de presença
+dos cooperados que executarão o contrato em assembleias gerais ou nas reuniões seccionais; e f) ata da sessão que os
+cooperados autorizaram a cooperativa a contratar o objeto da licitação;
+VII
+ 
+-
+A última auditoria contábil-financeira da cooperativa, conforme dispõe o 
+art. 112 da Lei n. 5.764, de 1971
+, ou
+uma declaração, sob as penas da lei, de que tal auditoria não foi exigida pelo órgão fiscalizador.
+23
+.
+ESTIMATIVAS DO VALOR DA CONTRATAÇÃO
+23
+.
+1
+.
+O custo estimado total da contratação é 
+de R$ 37.108,20
+, conforme média dos custos apostos na tabela de preços
+neste processo (
+1013214
+) e considerando o prazo total da contratação.
+23
+.
+2
+.
+O custo estimado da contratação possui caráter sigiloso e não será tornado público antes de definido o resultado do
+julgamento das propostas.
+23
+.
+3
+.
+A estimativa de custo levou em consideração o risco envolvido na contratação e sua alocação entre contratante e
+contratado, conforme especificado na matriz de risco constante do Contrato.
+(CAUSC) Termo de Referência - Serviços TIC 22 Revisado (1064337)         SEI 00177.000227/2026-81 / pg. 14
+23
+.
+4
+.
+Em caso de licitação para Registro de Preços, os preços registrados poderão ser alterados ou atualizados em
+decorrência de eventual redução dos preços praticados no mercado ou de fato que eleve o custo dos bens, das obras ou dos serviços
+registrados, nas seguintes situações:
+a
+)
+em caso de força maior, caso fortuito ou fato do príncipe ou em decorrência de fatos imprevisíveis ou previsíveis de
+consequências incalculáveis, que inviabilizem a execução da ata tal como pactuada, nos termos do disposto na a
+línea “d” do
+inciso II do caput do art. 124 da Lei nº 14.133, de 2021;
+b
+)
+em caso de criação, alteração ou extinção de quaisquer tributos ou encargos legais ou superveniência de disposições
+legais, com comprovada repercussão sobre os preços registrados;
+c
+)
+serão reajustados os preços registrados, respeitada a contagem da anualidade e o índice previsto para a contratação; ou
+d
+)
+poderão ser repactuados, a pedido do interessado, conforme critérios definidos para a contratação.
+24
+.
+ADEQUAÇÃO ORÇAMENTÁRIA
+As despesas decorrentes da presente contratação correrão à conta de recursos específicos consignados no Orçamento do
+CAU/SC.
+A contratação será atendida pela seguinte dotação:
+I) Gestão/Unidade: 
+CORTSI
+;
+II) Fonte de Recursos: 
+PCA 2026
+;
+III) Centro de 
+Custo
+: 4.11 - CD - Projetos Estratégicos
+ 
+FERNANDO VOLKMER
+Integrante
+Técnico
+ 
+CASSANDRA FAES
+Integrante
+Técnico/Requisitante
+ 
+JOÃO SCARPIN
+Integrante
+Administrativo
+ 
+ 
+ 
+Autoridade Máxima da Área de TIC
+FERNANDO VOLKMER
+COORDENADOR DE TECNOLOGIA E SERVIÇOS DE INFORMAÇÃO
+ 
+Aprovo,
+ 
+Autoridade Competente
+ 
+ 
+ 
+ 
+(CAUSC) Termo de Referência - Serviços TIC 22 Revisado (1064337)         SEI 00177.000227/2026-81 / pg. 15
+ 
+Florianópolis, 14 de julho de 2026.
+00177.000227/2026-81 - 
+Contratação de solução de automação de
+atendimento
+1009454v8 - Atualização Novembro/2023
+00177.000227/2026-81 - 
+Contratação de solução de automação de
+atendimento
+1021326v4 - Atualização Novembro/2023
+ 
+ 
+Documento assinado eletronicamente por 
+FERNANDO DE OLIVEIRA VOLKMER
+, 
+Coordenador de Tecnologia e
+Sistemas da Informação
+, em 14/07/2026, às 13:16 (horário de Brasília), conforme Decreto Nº 10.543, de 13/11/2020,
+que regulamenta o art. 5º da Lei Nº 14.063, de 23 de setembro de 2020.
+A autenticidade do documento pode ser conferida no portal do SEI CAU, endereço caubr.gov.br/seicau, utilizando o
+código CRC 
+51427C26
+ e informando o identificador 
+1064337
+.
+00177.000227/2026-81 - 
+Contratação de solução de automação de
+atendimento
+1064337v
+5 - Atualização Novembro/2023
+(CAUSC) Termo de Referência - Serviços TIC 22 Revisado (1064337)         SEI 00177.000227/2026-81 / pg. 16

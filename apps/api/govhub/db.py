@@ -1,11 +1,20 @@
 """Fundação de banco: engine, sessão e proteção de imutabilidade do audit_log."""
-from sqlalchemy import create_engine, event
+import os
+from pathlib import Path
+
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from .models import Base
 
+# banco dev ancorado em apps/api, independente do CWD; produção usa GOVHUB_DATABASE_URL
+_DEFAULT_URL = os.environ.get(
+    "GOVHUB_DATABASE_URL",
+    f"sqlite:///{(Path(__file__).resolve().parent.parent / 'govhub.db').as_posix()}",
+)
 
-def make_engine(url: str = "sqlite:///govhub.db"):
+
+def make_engine(url: str = _DEFAULT_URL):
     engine = create_engine(url, future=True)
     Base.metadata.create_all(engine)
     if url.startswith("sqlite"):

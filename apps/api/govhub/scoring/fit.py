@@ -25,12 +25,24 @@ PESOS = {
     "valor_estrategico": 0.05,
 }
 
+# fortes: bastam sozinhos. fracas: termos genéricos — exigem 2+ ocorrências para
+# ativar a categoria (evita falso GO em "centro de treinamento", "curso de formação de guardas").
 TAXONOMIA = {
-    "inteligencia_artificial": ["inteligencia artificial", "ia generativa", "chatbot", "machine learning", "assistente virtual"],
-    "dados_analytics": ["ciencia de dados", "engenharia de dados", "analytics", "business intelligence", "power bi", "data lake", "painel de indicadores", "dashboard", "governanca de dados"],
-    "software": ["desenvolvimento de software", "fabrica de software", "sistema de informacao", "portal", "aplicativo", "integracao de sistemas", "website", "sitio eletronico"],
-    "automacao": ["automacao de processos", "rpa", "digitalizacao", "atendimento digital", "transformacao digital"],
-    "capacitacao": ["capacitacao", "treinamento", "curso", "workshop", "lgpd"],
+    "inteligencia_artificial": {
+        "fortes": ["inteligencia artificial", "ia generativa", "chatbot", "machine learning", "assistente virtual"],
+        "fracas": []},
+    "dados_analytics": {
+        "fortes": ["ciencia de dados", "engenharia de dados", "business intelligence", "power bi", "data lake", "painel de indicadores", "governanca de dados"],
+        "fracas": ["analytics", "dashboard", "indicadores"]},
+    "software": {
+        "fortes": ["desenvolvimento de software", "fabrica de software", "integracao de sistemas", "sitio eletronico", "sistema de informacao"],
+        "fracas": ["portal", "aplicativo", "website", "software"]},
+    "automacao": {
+        "fortes": ["automacao de processos", "rpa", "atendimento digital", "transformacao digital"],
+        "fracas": ["digitalizacao", "automacao"]},
+    "capacitacao": {
+        "fortes": ["capacitacao de servidores", "treinamento em informatica", "lgpd", "engenharia de prompts"],
+        "fracas": ["capacitacao", "treinamento", "curso", "workshop"]},
 }
 
 
@@ -38,12 +50,27 @@ def _norm(s: str) -> str:
     return unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode().lower()
 
 
+def _contem(texto: str, termo: str) -> bool:
+    import re
+    return re.search(rf"\b{re.escape(termo)}\b", texto) is not None
+
+
+def setores_do_objeto(objeto_norm: str) -> set[str]:
+    ativos = set()
+    for cat, kws in TAXONOMIA.items():
+        fortes = [k for k in kws["fortes"] if _contem(objeto_norm, k)]
+        fracas = [k for k in kws["fracas"] if _contem(objeto_norm, k)]
+        if fortes or len(fracas) >= 2:
+            ativos.add(cat)
+    return ativos
+
+
 def calcular(session: Session, company: Company, opp: Opportunity) -> FitScore:
     objeto = _norm(opp.objeto)
     setores_empresa = set(company.setores or [])
 
     # fit técnico: interseção taxonomia do objeto × setores da empresa
-    setores_objeto = {cat for cat, kws in TAXONOMIA.items() if any(k in objeto for k in kws)}
+    setores_objeto = setores_do_objeto(objeto)
     inter = setores_objeto & setores_empresa
     fit_tecnico = (len(inter) / len(setores_objeto)) if setores_objeto else 0.0
 

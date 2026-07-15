@@ -96,5 +96,10 @@ if __name__ == "__main__":
         ingest(sys.argv[2], sys.argv[3])
     elif cmd == "score":
         score(sys.argv[2])
+    elif cmd == "verify":
+        from .ingestion.verify import verificar_qualificadas
+        with SessionLocal() as s:
+            print(verificar_qualificadas(s, sys.argv[2]))
+            s.commit()
     else:
         onboarding_avintis()

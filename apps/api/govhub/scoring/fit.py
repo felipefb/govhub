@@ -139,7 +139,12 @@ def calcular(session: Session, company: Company, opp: Opportunity) -> FitScore:
     score = round(sum(componentes[k] * PESOS[k] for k in PESOS) * 100, 1)
     confianca = round(max(0.1, 1.0 - 0.1 * len(dados_faltantes)), 2)
 
-    if fit_tecnico == 0:
+    inexigibilidade = "inexigibilidade" in _norm(opp.modalidade or "")
+    if inexigibilidade:
+        # contratação direta de fornecedor já definido: não há disputa possível
+        decisao = "NO_GO"
+        riscos_extra.append("inexigibilidade: fornecedor já definido pelo órgão, sem disputa")
+    elif fit_tecnico == 0:
         decisao = "NO_GO"
     elif (valor is not None and ticket_max is not None and valor > ticket_max
           and (perfil.get("interesse_consorcio") or perfil.get("interesse_subcontratacao"))):

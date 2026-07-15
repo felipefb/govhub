@@ -11,9 +11,8 @@ Fonte de verdade das pendências. Nada aqui pode ser esquecido: o objetivo é op
 | 9 | Autenticação de usuários no cockpit (hoje tenant via header/query) | aberta | — |
 | 10 | Confirmar validação dos 6 níveis no "Meu SICAF" e subir balanço 2025 no Nível VI | aberta | dossiê 2026-07-15 §2 |
 | 11 | Certidões Nível IV SP (Débitos Mobiliários, Cadesp, e-CND SP, PGE-SP) com datas de validade no data room | aberta | dossiê §2 |
-| 12 | Definir ticket mínimo, capacidade simultânea e interesse em consórcio/subcontratação | aberta | dossiê §1 |
 | 13 | Catalogar acervo técnico privado (cliente, escopo, valor, atestado/NF/aceite, contato) — zero B2G no PNCP | aberta | dossiê §3 |
-| 14 | Custos GovPricing: custo/hora por perfil, alíquota efetiva Simples, overhead (incluir serviço da dívida 2026), margem mínima, capital de giro | aberta | dossiê §4 |
+| 14 | Custos GovPricing: custo/hora por perfil, alíquota efetiva Simples, overhead (incluir serviço da dívida 2026), margem mínima | parcial (capital_giro=0 já registrado e aplicado ao score) | dossiê §4 |
 | 15 | Alçadas do workflow: quem decide GO/NO-GO, valida técnica, aprova preço/lance; advogado e contador de referência | aberta | dossiê §5 |
 | 16 | Se "capacitação" for alvo real: alteração contratual p/ CNAE 8599-6/04 (hoje setor excluído do perfil) | aberta | dossiê §1 |
 
@@ -26,4 +25,5 @@ Regra: ao fechar uma pendência, mover para a tabela abaixo com data e evidênci
 | 1 | Validação ao vivo do conector PNCP | 2026-07-15 | 50 registros reais ingeridos; validation/evidence/2026-07-15_pncp_connector.md |
 | 2 | Conector Compras.gov.br (dados abertos) | 2026-07-15 | 1.253 registros reais ingeridos; govhub/ingestion/comprasgov.py |
 | 3 | Cockpit web navegável com dados reais | 2026-07-15 | http://localhost:8777 — 1.303 oportunidades reais |
+| 12 | Ticket mínimo R$ 10k (exceção p/ acervo), consórcio e subcontratação: SIM; capital_giro=0 com regra de ciclo de caixa no score | 2026-07-15 | pipeline.onboarding_avintis() + scoring/fit.py |
 | 4 | Onboarding com dados reais da Avintis | 2026-07-15 | Dossiê de Prontidão B2G aplicado: CNPJ 61.167.552/0001-83, ME/Simples, 4 CNAEs de TI, ticket_max R$ 385k (PL×10), índices LC 2,93/LG 9,41; `pipeline.onboarding_avintis()`. Radar real: 7 GO, todas ≤ R$ 80k com benefício ME/EPP |

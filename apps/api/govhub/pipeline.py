@@ -60,7 +60,11 @@ def onboarding_avintis() -> None:
     """
     perfil = {
         "completude_documental": 0.6,  # SICAF em validação; certidões nível IV pendentes
+        "ticket_min": 10000,           # exceção estratégica p/ formação de acervo sinalizada no score
         "ticket_max": 385000,
+        "capital_giro": 0,             # sem caixa próprio: priorizar ciclo curto/parcelado
+        "interesse_consorcio": True,
+        "interesse_subcontratacao": True,
         "porte": "ME",
         "simples_nacional": True,
         "patrimonio_liquido": 38506.99,

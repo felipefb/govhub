@@ -88,6 +88,8 @@ def calcular(session: Session, company: Company, opp: Opportunity) -> FitScore:
     ticket_max = perfil.get("ticket_max")
     riscos_extra: list[str] = []
     condicoes_extra: list[str] = []
+    ticket_min = perfil.get("ticket_min")
+    capital_giro = perfil.get("capital_giro")
     if valor is None or ticket_max is None:
         margem = 0.5
         dados_faltantes.append("valor_ou_ticket")
@@ -97,6 +99,20 @@ def calcular(session: Session, company: Company, opp: Opportunity) -> FitScore:
             riscos_extra.append(
                 f"valor estimado (R$ {valor:,.0f}) acima do teto de habilitação "
                 f"econômico-financeira da empresa (R$ {ticket_max:,.0f} ≈ PL × 10)"
+            )
+        if ticket_min is not None and valor < ticket_min:
+            margem = min(margem, 0.5)
+            condicoes_extra.append(
+                f"valor abaixo do ticket mínimo (R$ {ticket_min:,.0f}): só vale se gerar "
+                "atestado em setor-alvo com preparação de poucas horas"
+            )
+        # sem capital de giro: ciclo de caixa penaliza contratos maiores (30-90 dias p/ receber)
+        if capital_giro is not None and capital_giro <= 0 and valor > 100000:
+            margem = min(margem, 0.6)
+            riscos_extra.append(
+                "ciclo de caixa: empresa sem capital de giro próprio — exigir pagamento "
+                "parcelado/medição mensal ou antecipação contra empenho; conferir se o "
+                "edital exige garantia (evitar)"
             )
 
     # benefícios LC 123/2006 para ME/EPP: empate ficto e exclusividade até R$ 80 mil
@@ -125,6 +141,14 @@ def calcular(session: Session, company: Company, opp: Opportunity) -> FitScore:
 
     if fit_tecnico == 0:
         decisao = "NO_GO"
+    elif (valor is not None and ticket_max is not None and valor > ticket_max
+          and (perfil.get("interesse_consorcio") or perfil.get("interesse_subcontratacao"))):
+        # objeto aderente porém acima da capacidade própria: buscar parceiro em vez de descartar
+        decisao = "PARCERIA_NECESSARIA"
+        condicoes_extra.append(
+            "consórcio (se o edital permitir) ou subcontratação para complementar "
+            "habilitação econômico-financeira e acervo técnico"
+        )
     elif score >= 70:
         decisao = "GO"
     elif score >= 50:

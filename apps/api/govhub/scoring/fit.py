@@ -86,17 +86,33 @@ def calcular(session: Session, company: Company, opp: Opportunity) -> FitScore:
         dados_faltantes.append("data_limite")
     valor = opp.valor_estimado
     ticket_max = perfil.get("ticket_max")
+    riscos_extra: list[str] = []
+    condicoes_extra: list[str] = []
     if valor is None or ticket_max is None:
         margem = 0.5
         dados_faltantes.append("valor_ou_ticket")
     else:
         margem = 1.0 if valor <= ticket_max else 0.3
+        if valor > ticket_max:
+            riscos_extra.append(
+                f"valor estimado (R$ {valor:,.0f}) acima do teto de habilitação "
+                f"econômico-financeira da empresa (R$ {ticket_max:,.0f} ≈ PL × 10)"
+            )
+
+    # benefícios LC 123/2006 para ME/EPP: empate ficto e exclusividade até R$ 80 mil
+    competitiva = 0.5
+    if perfil.get("porte") in ("ME", "EPP") and valor is not None and valor <= 80000:
+        competitiva = 0.65
+        condicoes_extra.append(
+            "verificar se o certame é exclusivo ME/EPP (LC 123/2006, até R$ 80 mil) "
+            "— vantagem competitiva relevante"
+        )
 
     componentes = {
         "fit_tecnico": round(fit_tecnico, 2),
         "capacidade_documental": doc,
         "margem_estimada": margem,
-        "probabilidade_competitiva": 0.5,   # neutro até Inteligência Competitiva (agente 04)
+        "probabilidade_competitiva": competitiva,  # neutro salvo benefício ME/EPP; agente 04 refinará
         "complexidade_operacional": 0.5,    # neutro até Leitura de Edital (agente 08)
         "risco_juridico": 0.5,              # neutro até Agente Jurídico (agente 09)
         "prazo_preparacao": prazo_ok,
@@ -126,9 +142,10 @@ def calcular(session: Session, company: Company, opp: Opportunity) -> FitScore:
             f"interseção com a empresa: {sorted(inter) or 'nenhuma'}. "
             f"Dados faltantes reduziram a confiança: {sorted(set(dados_faltantes))}."
         ),
-        riscos=[f"componente neutro pendente de análise: {d}" for d in
-                ("probabilidade_competitiva", "complexidade_operacional", "risco_juridico")],
-        condicoes=(["complementar capacidade via parceria"] if decisao == "PARCERIA_NECESSARIA" else []),
+        riscos=riscos_extra + [f"componente neutro pendente de análise: {d}" for d in
+                               ("complexidade_operacional", "risco_juridico")],
+        condicoes=condicoes_extra
+        + (["complementar capacidade via parceria"] if decisao == "PARCERIA_NECESSARIA" else []),
         decisao_recomendada=decisao, versao=VERSAO, modelo=MODELO,
         versao_prompt=VERSAO_PROMPT, confianca=confianca, aprovador_humano=None,
     )

@@ -49,18 +49,40 @@ def score(tenant_id: str) -> None:
         print(f"{n} scores calculados para tenant {tenant_id}")
 
 
-def demo() -> None:
+def onboarding_avintis() -> None:
+    """Perfil real — fonte: Dossiê de Prontidão B2G Avintis (2026-07-15).
+
+    Setores derivados dos CNAEs registrados (6204-0/00, 6201-5/01, 6202-3/00,
+    6203-1/00): software e consultoria/dados. 'capacitacao' fica FORA até
+    alteração contratual (não há CNAE 8599-6/04).
+    ticket_max = ~R$ 385.000: teto de habilitação econômico-financeira
+    (PL R$ 38.506,99 × 10, regra do PL ≥ 10% do contrato, Lei 14.133/2021).
+    """
+    perfil = {
+        "completude_documental": 0.6,  # SICAF em validação; certidões nível IV pendentes
+        "ticket_max": 385000,
+        "porte": "ME",
+        "simples_nacional": True,
+        "patrimonio_liquido": 38506.99,
+        "indices": {"LC": 2.93, "LG": 9.41, "SG": 9.41},
+        "origem": "Dossiê de Prontidão B2G 2026-07-15 (balanço 2025 + RFB + PNCP)",
+    }
     with SessionLocal() as s:
-        if not s.scalar(select(Company).where(Company.tenant_id == "avintis")):
+        c = s.scalar(select(Company).where(Company.tenant_id == "avintis"))
+        if c:
+            c.cnpj, c.razao_social, c.uf = "61167552000183", "AVINTIS LTDA", "SP"
+            c.cnaes = ["6204-0/00", "6201-5/01", "6202-3/00", "6203-1/00"]
+            c.setores = ["software", "dados_analytics", "inteligencia_artificial", "automacao"]
+            c.perfil = perfil
+        else:
             s.add(Company(
-                tenant_id="avintis", cnpj="00000000000000", razao_social="Avintis Ltda.",
-                setores=["inteligencia_artificial", "dados_analytics", "software",
-                         "automacao", "capacitacao"],
-                uf="SP",
-                perfil={"completude_documental": 0.7, "ticket_max": 300000},
+                tenant_id="avintis", cnpj="61167552000183", razao_social="AVINTIS LTDA",
+                cnaes=["6204-0/00", "6201-5/01", "6202-3/00", "6203-1/00"],
+                setores=["software", "dados_analytics", "inteligencia_artificial", "automacao"],
+                uf="SP", perfil=perfil,
             ))
-            s.commit()
-            print("empresa demo criada: Avintis (tenant 'avintis')")
+        s.commit()
+        print("perfil real da Avintis aplicado (tenant 'avintis')")
     score("avintis")
 
 
@@ -71,4 +93,4 @@ if __name__ == "__main__":
     elif cmd == "score":
         score(sys.argv[2])
     else:
-        demo()
+        onboarding_avintis()

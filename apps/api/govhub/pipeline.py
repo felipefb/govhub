@@ -34,9 +34,15 @@ def ingest(data_inicial: str, data_final: str) -> None:
 
 
 def score(tenant_id: str) -> None:
+    from datetime import date
+
     with SessionLocal() as s:
         empresas = s.scalars(select(Company).where(Company.tenant_id == tenant_id)).all()
-        opps = s.scalars(select(Opportunity).where(Opportunity.status == "aberta")).all()
+        hoje = date.today().isoformat()
+        opps = s.scalars(select(Opportunity).where(
+            Opportunity.status == "aberta",
+            (Opportunity.data_limite.is_(None)) | (Opportunity.data_limite >= hoje),
+        )).all()
         n = 0
         for c in empresas:
             ja = {f.opportunity_id for f in s.scalars(

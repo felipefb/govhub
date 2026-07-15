@@ -1,7 +1,7 @@
 # Análise de Edital — Pregão Eletrônico 90004/2026 (nº 15/2026) CAU/SC
 
 **Estado do artefato: RASCUNHO_IA — pendente de revisão de especialista e decisão do cliente.**
-Gerado por: agents/08_LEITURA_EDITAL | Modelo: leitura assistida Claude (Fable 5) | Data: 2026-07-15
+Gerado por: agents/08_LEITURA_EDITAL | Modelo: leitura assistida por IA generativa | Data: 2026-07-15
 Fontes: edital 5/2026.pdf, TR 90004-2026.pdf, Anexo POC (SEI 1018092), baixados do PNCP em 2026-07-15 (`docs/`).
 
 ## Resumo do certame

@@ -5,7 +5,7 @@
   "generated_at": "2026-07-15",
   "file_count": 93,
   "files": [
-    "CLAUDE_START_PROMPT.md",
+    "START_PROMPT.md",
     "MANIFEST.json",
     "README.md",
     "agents/00_ORCHESTRATOR.md",

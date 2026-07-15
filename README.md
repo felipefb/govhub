@@ -14,7 +14,7 @@ A plataforma NÃO: cria escopo técnico, define preço, assina documentos, envia
 
 ## Ordem de execução
 
-1. Leia `CLAUDE_START_PROMPT.md`.
+1. Leia `START_PROMPT.md`.
 2. Leia `docs/PRODUCT_MASTER.md`, `docs/ARCHITECTURE.md` e `governance/DECISION_LOG.md`.
 3. Execute `sprints/SPRINT_00_REPOSITORY_AUDIT.md`.
 4. Implemente apenas o primeiro vertical slice aprovado (GovRadar + CompanyFit).

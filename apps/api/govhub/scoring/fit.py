@@ -81,6 +81,28 @@ def _contem(texto: str, termo: str) -> bool:
     return re.search(rf"\b{re.escape(termo)}\b", texto) is not None
 
 
+_PRODUTO = ["equipamento", "equipamentos", "aparelho", "aparelhos", "licenca", "licencas",
+            "material", "materiais", "mobiliario", "hardware", "impressora", "computadores",
+            "notebook", "notebooks", "servidor fisico", "gnss", "camera", "cameras", "kit",
+            "suite", "antivirus", "totem", "totens", "sonorizacao",
+            "software de apresentacao", "software de apresentacoes", "fitas"]
+_SERVICO = ["desenvolvimento", "criacao", "prestacao de servico", "consultoria", "sustentacao",
+            "manutencao de software", "integracao de sistemas", "implantacao de solucao",
+            "implementacao", "customizacao", "capacitacao", "elaboracao"]
+_COMPRA = ["aquisicao de", "fornecimento de", "compra de", "subscricao de licencas",
+           "cessao de licenca", "licenciamento de uso de software de terceiro"]
+
+
+def objeto_e_fornecimento_de_produto(objeto_norm: str) -> bool:
+    """Heurística de executabilidade: objeto de compra de produto/licença de terceiro
+    (mercado de revenda/fabricante) que uma software house não executa. Serviço junto
+    ao objeto (desenvolvimento, implantação...) descaracteriza o bloqueio."""
+    compra = any(c in objeto_norm for c in _COMPRA)
+    produto = any(_contem(objeto_norm, p) for p in _PRODUTO)
+    servico = any(s in objeto_norm for s in _SERVICO)
+    return compra and produto and not servico
+
+
 def setores_do_objeto(objeto_norm: str) -> set[str]:
     ativos = set()
     for cat, kws in TAXONOMIA.items():
@@ -136,11 +158,18 @@ def calcular(session: Session, company: Company, opp: Opportunity) -> FitScore:
                 f"econômico-financeira da empresa (R$ {ticket_max:,.0f} ≈ PL × 10)"
             )
         if ticket_min is not None and valor < ticket_min:
-            margem = min(margem, 0.5)
-            condicoes_extra.append(
-                f"valor abaixo do ticket mínimo (R$ {ticket_min:,.0f}): só vale se gerar "
-                "atestado em setor-alvo com preparação de poucas horas"
-            )
+            if perfil.get("estrategia_acervo"):
+                # fase de formação de acervo: micro-contratos são PRIORIDADE — cada
+                # vitória gera atestado público para destravar certames maiores
+                condicoes_extra.append(
+                    "🎯 ALVO DE ACERVO: valor baixo, esforço pequeno, atestado público na saída"
+                )
+            else:
+                margem = min(margem, 0.5)
+                condicoes_extra.append(
+                    f"valor abaixo do ticket mínimo (R$ {ticket_min:,.0f}): só vale se gerar "
+                    "atestado em setor-alvo com preparação de poucas horas"
+                )
         # sem capital de giro: ciclo de caixa penaliza contratos maiores (30-90 dias p/ receber)
         if capital_giro is not None and capital_giro <= 0 and valor > 100000:
             margem = min(margem, 0.6)
@@ -184,6 +213,11 @@ def calcular(session: Session, company: Company, opp: Opportunity) -> FitScore:
         riscos_extra.append(
             f"prazo insuficiente: {prazo_dias} dia(s) até o encerramento — "
             "inviável preparar habilitação e proposta com qualidade")
+    elif objeto_e_fornecimento_de_produto(objeto):
+        decisao = "NO_GO"
+        riscos_extra.append(
+            "objeto é fornecimento de produto/licença de terceiro (mercado de revenda/"
+            "fabricante) — não é serviço executável por software house")
     elif fit_tecnico == 0:
         decisao = "NO_GO"
     elif (valor is not None and ticket_max is not None and valor > ticket_max

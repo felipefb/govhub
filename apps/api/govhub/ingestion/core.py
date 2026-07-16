@@ -35,6 +35,10 @@ def ingerir(session: Session, fonte: str, agente: str,
             )
         )
         if existente:
+            if (existente.raw or {}).get("_objeto_corrigido"):
+                # correção documental manual tem precedência sobre o espelho
+                c.pop("objeto", None)
+                raw = {**raw, "_objeto_corrigido": True}
             for k, v in c.items():
                 setattr(existente, k, v)
             existente.raw = raw

@@ -112,6 +112,8 @@ def cockpit_html(tenant: str = "avintis", session: Session = Depends(get_session
 
     def linha(f, o, tr):
         dec_txt, dec_cls = DECISAO_LABEL.get(f.decisao_recomendada, (f.decisao_recomendada, "muted"))
+        if any("ACERVO" in c for c in (f.condicoes or [])):
+            dec_txt = "🎯 " + dec_txt
         at_txt, at_cls = ATESTADO_LABEL.get(tr.atestado if tr else "INDEFINIDO",
                                             ("? não triado", "muted"))
         ev = (tr.evidencias or {}).get("atestado", "") if tr else ""

@@ -107,5 +107,24 @@ if __name__ == "__main__":
         with SessionLocal() as s:
             print(verificar_qualificadas(s, sys.argv[2]))
             s.commit()
+    elif cmd == "triage":
+        from .analysis.triage import triar_qualificadas
+        with SessionLocal() as s:
+            print(triar_qualificadas(s, sys.argv[2]))
+            s.commit()
+    elif cmd == "daily":
+        # rotina diária do Plano A: ingerir ontem+hoje, pontuar, verificar na fonte, triar
+        from datetime import date, timedelta
+
+        from .analysis.triage import triar_qualificadas
+        from .ingestion.verify import verificar_qualificadas
+        hoje, ontem = date.today().isoformat(), (date.today() - timedelta(days=1)).isoformat()
+        ingest(ontem, hoje)
+        tenant = sys.argv[2] if len(sys.argv) > 2 else "avintis"
+        score(tenant)
+        with SessionLocal() as s:
+            print("verify:", verificar_qualificadas(s, tenant))
+            print("triage:", triar_qualificadas(s, tenant))
+            s.commit()
     else:
         onboarding_avintis()

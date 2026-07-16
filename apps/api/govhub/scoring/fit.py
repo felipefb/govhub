@@ -73,6 +73,26 @@ TAXONOMIA = {
 }
 
 
+_CACHE_CONCORRENCIA: dict = {"mapa": None}
+
+
+def resetar_cache_concorrencia() -> None:
+    _CACHE_CONCORRENCIA["mapa"] = None
+
+
+def concorrencia_por_setor(session: Session) -> dict[str, int]:
+    """Nº de fornecedores distintos que venceram contratos por setor (base winner_contract).
+    Proxy de densidade competitiva: muitos vencedores = mercado disputado."""
+    if _CACHE_CONCORRENCIA["mapa"] is None:
+        from ..analysis.winners import WinnerContract
+        m: dict[str, set] = {}
+        for w in session.scalars(select(WinnerContract)).all():
+            for s0 in (w.setores or []):
+                m.setdefault(s0, set()).add(w.fornecedor_cnpj)
+        _CACHE_CONCORRENCIA["mapa"] = {k: len(v) for k, v in m.items()}
+    return _CACHE_CONCORRENCIA["mapa"]
+
+
 def _norm(s: str) -> str:
     return unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode().lower()
 
@@ -180,10 +200,25 @@ def calcular(session: Session, company: Company, opp: Opportunity) -> FitScore:
                 "edital exige garantia (evitar)"
             )
 
-    # benefícios LC 123/2006 para ME/EPP: empate ficto e exclusividade até R$ 80 mil
-    competitiva = 0.5
-    if perfil.get("porte") in ("ME", "EPP") and valor is not None and valor <= 80000:
+    # probabilidade competitiva: densidade de vencedores no(s) setor(es) do objeto (#6b)
+    setores_objeto_pre = setores_do_objeto(objeto)
+    conc = concorrencia_por_setor(session)
+    n_conc = max((conc.get(s0, 0) for s0 in setores_objeto_pre), default=0)
+    if n_conc == 0:
+        competitiva = 0.5  # sem dados de mercado — neutro, reduz confiança
+        dados_faltantes.append("densidade_competitiva")
+    elif n_conc <= 8:
         competitiva = 0.65
+        riscos_extra.append(f"mercado de nicho: {n_conc} fornecedores venceram no setor (base recente)")
+    elif n_conc <= 30:
+        competitiva = 0.5
+    else:
+        competitiva = 0.4
+        riscos_extra.append(f"mercado disputado: {n_conc} fornecedores vencedores no setor (base recente)")
+
+    # benefícios LC 123/2006 para ME/EPP: empate ficto e exclusividade até R$ 80 mil
+    if perfil.get("porte") in ("ME", "EPP") and valor is not None and valor <= 80000:
+        competitiva = min(0.8, round(competitiva + 0.15, 2))
         condicoes_extra.append(
             "verificar se o certame é exclusivo ME/EPP (LC 123/2006, até R$ 80 mil) "
             "— vantagem competitiva relevante"
@@ -208,13 +243,12 @@ def calcular(session: Session, company: Company, opp: Opportunity) -> FitScore:
         "fit_tecnico": round(fit_tecnico, 2),
         "capacidade_documental": doc,
         "margem_estimada": margem,
-        "probabilidade_competitiva": competitiva,  # neutro salvo benefício ME/EPP; agente 04 refinará
+        "probabilidade_competitiva": competitiva,  # densidade de vencedores + benefício ME/EPP
         "complexidade_operacional": complexidade,
         "risco_juridico": risco_jur,
         "prazo_preparacao": prazo_ok,
         "valor_estrategico": 0.5,
     }
-    dados_faltantes += ["probabilidade_competitiva"]
     if not sinais and complexidade == 0.5:
         dados_faltantes += ["complexidade_operacional", "risco_juridico"]
     riscos_extra += [f"sinal documental: {k} — {v[:90]}" for k, v in sinais.items()]

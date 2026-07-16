@@ -41,6 +41,9 @@ def ingest(data_inicial: str, data_final: str) -> None:
 def score(tenant_id: str, auto_verify: bool = True) -> None:
     from datetime import date
 
+    from .scoring.fit import resetar_cache_concorrencia
+    resetar_cache_concorrencia()
+
     with SessionLocal() as s:
         empresas = s.scalars(select(Company).where(Company.tenant_id == tenant_id)).all()
         hoje = date.today().isoformat()

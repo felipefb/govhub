@@ -8,7 +8,7 @@ Fonte de verdade das pendências. Nada aqui pode ser esquecido: o objetivo é op
 
 | 18 | Radar diário de dispensas de TI sem exigência de qualificação técnica (padrão ideal p/ formar acervo) | aberta | bids/2026_DETRANDF_DE17/DIVERGENCIA.md |
 
-| 6b | Probabilidade competitiva ainda neutra (0.5) — alimentar com histórico de vencedores por objeto (agente 04) | aberta | winner_contract já tem os dados |
+
 | 7 | Postgres em produção (hoje SQLite dev) + row-level security | aberta | — |
 
 | 9 | Autenticação de usuários no cockpit (hoje tenant via header/query) | aberta | — |
@@ -25,6 +25,7 @@ Regra: ao fechar uma pendência, mover para a tabela abaixo com data e evidênci
 
 | # | Pendência | Data | Evidência |
 |---|-----------|------|-----------|
+| 6b | Probabilidade competitiva pela densidade de vencedores por setor (base de 1.264 contratos), combinada ao benefício ME/EPP | 2026-07-16 | fit.concorrencia_por_setor; 2 testes |
 | 6 | Complexidade operacional e risco jurídico alimentados pela triagem documental: 7 sinais (garantia, POC, vistoria, SLA, cessão de PI, subcontratação/consórcio vedados) com trecho-evidência; taxonomia refinada pelo filtro de executabilidade | 2026-07-16 | triage.RE_SINAIS + fit.calcular; 2 testes novos |
 | 17 | Verify automático após todo scoring | 2026-07-16 | pipeline.score(auto_verify=True) |
 | — | MVP 2 núcleo: Bid Copilot (matriz+checklist+proposta) com botão no cockpit; GovPricing (1.264 contratos de referência, seção de orçamento no pacote de bid); GovProjects (conector PCA de demanda futura no daily + seção no cockpit) | 2026-07-16 | analysis/bidcopilot.py, precos.py; ingestion/pca.py |

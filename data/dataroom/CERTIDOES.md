@@ -9,12 +9,13 @@ Fonte: telas do Meu SICAF em 2026-07-15. Renovar com 15 dias de antecedência.
 | CNDT (TST, trabalhista) | 818055432028 | 2027-01-11 | 2026-12-27 |
 | Certidão Estadual (SP) | 26071151942 98 | 2027-01-15 | 2026-12-31 |
 | Cadastro SICAF (renovação) | — | 2027-07-14 | 2027-06-29 |
+| Balanço 2025 no SICAF (Nível VI) | Balanço Anual 12/2025 | 2027-06 | 2027-05 |
 | CRF FGTS (Caixa) | PENDENTE — corrigir tipo p/ "Certidão" no Nível III | validade típica 30 dias | recorrente |
 
 ## Pendências SICAF em aberto (2026-07-15)
 1. Nível III: FGTS marcado como "Decisão Judicial" — trocar para "Certidão" (CRF Caixa).
 2. Nível IV: anexar Certidão de Inexistência de Inscrição Estadual (Cadesp/Sefaz-SP) no campo Inscrição Estadual.
 3. Nível I: cadastrar Linhas de Fornecimento de SERVIÇO (TI: desenvolvimento, consultoria, processamento de dados).
-4. Nível VI: aguardando tela — conferir balanço 2025 e índices (LC 2,93 / LG 9,41 / SG 9,41).
+4. ~~Nível VI~~: CADASTRADO — balanço anual 12/2025 validado, vigente até 06/2027. ✔
 
 Nível V (qualificação técnica) vazio por estratégia (Plano A — acervo público primeiro).

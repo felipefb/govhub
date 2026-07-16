@@ -33,7 +33,7 @@ def ingest(data_inicial: str, data_final: str) -> None:
         s.commit()
 
 
-def score(tenant_id: str) -> None:
+def score(tenant_id: str, auto_verify: bool = True) -> None:
     from datetime import date
 
     with SessionLocal() as s:
@@ -53,6 +53,11 @@ def score(tenant_id: str) -> None:
                     n += 1
         s.commit()
         print(f"{n} scores calculados para tenant {tenant_id}")
+    if auto_verify and n:
+        from .ingestion.verify import verificar_qualificadas
+        with SessionLocal() as s:
+            print("verify pós-score:", verificar_qualificadas(s, tenant_id))
+            s.commit()
 
 
 def onboarding_bfsa() -> None:
@@ -144,6 +149,11 @@ if __name__ == "__main__":
         from .ingestion.verify import verificar_qualificadas
         hoje, ontem = date.today().isoformat(), (date.today() - timedelta(days=1)).isoformat()
         ingest(ontem, hoje)
+        from .ingestion.pca import coletar_pca
+        with SessionLocal() as s:
+            print("pca:", coletar_pca(s, ontem.replace("-", ""), hoje.replace("-", ""),
+                                       max_paginas=10))
+            s.commit()
         tenant = sys.argv[2] if len(sys.argv) > 2 else "avintis"
         score(tenant)
         with SessionLocal() as s:
@@ -152,6 +162,19 @@ if __name__ == "__main__":
             print("enrich:", enriquecer_detalhes(s, tenant))
             print("triage:", triar_qualificadas(s, tenant))
             s.commit()
+    elif cmd == "pca":
+        from .ingestion.pca import coletar_pca, demanda_futura
+        with SessionLocal() as s:
+            if len(sys.argv) > 3:
+                print(coletar_pca(s, sys.argv[2], sys.argv[3]))
+                s.commit()
+            for d in demanda_futura(s, 25):
+                print(f"  [{d.data_desejada or '—':10s}] R$ {d.valor_total or 0:>12,.0f} | "
+                      f"{d.orgao[:40]} | {d.descricao[:70]}")
+    elif cmd == "precos":
+        from .analysis.precos import secao_orcamento_md
+        with SessionLocal() as s:
+            print(secao_orcamento_md(s, " ".join(sys.argv[2:])))
     elif cmd == "bid":
         from .analysis.bidcopilot import preparar_bid
         with SessionLocal() as s:

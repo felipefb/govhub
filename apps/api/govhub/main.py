@@ -124,7 +124,9 @@ def cockpit_html(tenant: str = "avintis", session: Session = Depends(get_session
                 f"<td class='num'>{'R$ %s' % format(o.valor_estimado, ',.0f') if o.valor_estimado else '—'}</td>"
                 f"<td>{o.uf or '—'}</td><td>{(o.orgao or '')[:44]}</td>"
                 f"<td class='obj'>{(o.objeto or '')[:110]}</td>"
-                f"<td><a href='{o.url_fonte}' target='_blank'>{o.fonte}</a></td></tr>")
+                f"<td><a href='{o.url_fonte}' target='_blank'>{o.fonte}</a></td>"
+                f"<td><form method='post' action='/bid/{o.id}?tenant={tenant}'>"
+                f"<button title='Gerar matriz de requisitos, checklist e proposta-rascunho'>Preparar bid</button></form></td></tr>")
 
     tiles = "".join(
         f"<div class='tile'><div class='n'>{v}</div><div class='l'>{k}</div></div>"
@@ -136,6 +138,19 @@ def cockpit_html(tenant: str = "avintis", session: Session = Depends(get_session
             ("via parceria", por_decisao.get("PARCERIA_NECESSARIA", 0)),
             ("pipeline disputável", f"R$ {pipeline:,.0f}".replace(",", ".")),
         ])
+    from .ingestion.pca import demanda_futura
+    dem = demanda_futura(session, 20)
+    demanda_html = ("<table><tr><th>Quando o órgão planeja</th><th>Valor planejado</th>"
+                    "<th>Órgão</th><th>Item do plano</th></tr>"
+                    + "".join(
+                        f"<tr><td>{d.data_desejada or 'sem data'}</td>"
+                        f"<td class='num'>R$ {d.valor_total or 0:,.0f}</td>"
+                        f"<td>{d.orgao[:42]}</td><td class='obj'>{d.descricao[:120]}</td></tr>"
+                        for d in dem) + "</table>"
+                    "<p class='nota muted' style='font-size:.75rem'>Itens declarados pelos órgãos em seus PCAs "
+                    "(PNCP) — intenção de compra, não edital. Use para relacionamento institucional antecipado.</p>"
+                    ) if dem else "<p class='muted'>nenhum item de PCA capturado ainda — rode `pipeline pca`</p>"
+
     from .analysis.partners import sugerir_parceiros
     blocos = []
     for item in sugerir_parceiros(session, tenant):
@@ -205,8 +220,10 @@ a{{color:var(--info)}}
 <div class='tiles'>{tiles}</div>
 <h2>Disputa viva — ordenada por viabilidade para a Avintis (qualificação alcançável → decisão → prazo)</h2>
 <table><tr><th>Recomendação</th><th>Qualificação técnica</th><th>Prazo</th><th>Score</th>
-<th>Valor est.</th><th>UF</th><th>Órgão</th><th>Objeto</th><th>Fonte</th></tr>
+<th>Valor est.</th><th>UF</th><th>Órgão</th><th>Objeto</th><th>Fonte</th><th>Ação</th></tr>
 {''.join(linha(f, o, tr) for f, o, tr in vivas)}</table>
+<h2>Demanda futura — Planos de Contratações Anuais (3-12 meses antes do edital)</h2>
+{demanda_html}
 <h2>Documentação e certidões — alertas de vencimento</h2>
 <table><tr><th>Documento</th><th>Referência</th><th>Validade</th><th>Situação</th></tr>
 {certs_html or '<tr><td colspan="4" class="muted">nenhuma certidão cadastrada</td></tr>'}</table>
@@ -258,6 +275,24 @@ def listar_fit(tenant: str = Depends(get_tenant), session: Session = Depends(get
         "decisao_recomendada": f.decisao_recomendada, "confianca": f.confianca,
         "justificativa": f.justificativa, "componentes": f.componentes,
     } for f in rows]
+
+
+@app.post("/bid/{opportunity_id}", include_in_schema=False)
+def preparar_bid_route(opportunity_id: int, tenant: str = "avintis",
+                       session: Session = Depends(get_session)):
+    """Gera o pacote de bid (matriz, checklist, proposta-rascunho, referências de preço)."""
+    from fastapi.responses import HTMLResponse
+
+    from .analysis.bidcopilot import preparar_bid
+    r = preparar_bid(session, tenant, opportunity_id)
+    if "erro" in r:
+        raise HTTPException(422, r["erro"])
+    return HTMLResponse(
+        f"<body style='font-family:system-ui;margin:2rem'><h3>Pacote de bid gerado (RASCUNHO_IA)</h3>"
+        f"<p>Pasta: <code>{r['pasta']}</code></p>"
+        f"<p>Requisitos detectados: {r['requisitos']} | Gaps: {', '.join(r['gaps']) or 'nenhum'}</p>"
+        f"<p>Aprovação registrada (id {r['approval_id']}) — revise os arquivos e avance no workflow.</p>"
+        f"<a href='/'>← voltar ao cockpit</a></body>")
 
 
 @app.post("/aprovacoes/{approval_id}/avancar-form", include_in_schema=False)

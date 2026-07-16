@@ -5,7 +5,7 @@ Fonte de verdade das pendências. Nada aqui pode ser esquecido: o objetivo é op
 | # | Pendência | Status | Evidência |
 |---|-----------|--------|-----------|
 | 5 | Novas fontes, prioridade p/ Avintis: (1º) Sistema S — viabilidade CONFIRMADA: transparência SESI/SENAI-SP tem tabela HTML raspável (nº, modalidade RCA, objeto, status, data, edital PDF) e pregões via licitacoes-e/BB; (2º) estatais/Petronect; (3º) Contrata+Brasil e Painel de Compras | aberta — sondada 2026-07-16 | transparencia.sp.senai.br/licitacoes |
-| 17 | Rodar `pipeline verify` automaticamente após todo scoring (hoje comando manual) | aberta | govhub/ingestion/verify.py |
+
 | 18 | Radar diário de dispensas de TI sem exigência de qualificação técnica (padrão ideal p/ formar acervo) | aberta | bids/2026_DETRANDF_DE17/DIVERGENCIA.md |
 
 | 6 | Componentes neutros do fit score (complexidade, risco jurídico) alimentados pelos agentes 08/09; refinar taxonomia (falso positivo residual "saneantes domissanitários") | aberta | — |
@@ -25,6 +25,8 @@ Regra: ao fechar uma pendência, mover para a tabela abaixo com data e evidênci
 
 | # | Pendência | Data | Evidência |
 |---|-----------|------|-----------|
+| 17 | Verify automático após todo scoring | 2026-07-16 | pipeline.score(auto_verify=True) |
+| — | MVP 2 núcleo: Bid Copilot (matriz+checklist+proposta) com botão no cockpit; GovPricing (1.264 contratos de referência, seção de orçamento no pacote de bid); GovProjects (conector PCA de demanda futura no daily + seção no cockpit) | 2026-07-16 | analysis/bidcopilot.py, precos.py; ingestion/pca.py |
 | — | Cockpit v2: alertas de certidões (badge por dias restantes) e UI do workflow de aprovação (chips de etapa + formulário com ator humano), validado ponta a ponta | 2026-07-16 | govhub/main.py; teste test_cockpit.py; approval 1 avançou p/ REVISAO_ESPECIALISTA via UI |
 | 8 | Ingestão agendada diária (07:30, Task Scheduler: ingest→score→verify→triage) | 2026-07-15 | apps/api/govhub_daily.bat; tarefa "GovHub Radar Diario" |
 | 19+20 | Triagem documental automática: exigência de atestado, certame morto (sem disputa/homologado) e data de sessão, com trecho-evidência | 2026-07-15 | govhub/analysis/triage.py; comando pipeline triage |

@@ -192,6 +192,10 @@ Responsável técnico: Felipe Filgueira Barral — 20+ anos em dados e engenhari
 Conforme exigências do edital, prestadas no sistema pelo representante legal.
 """, encoding="utf-8")
 
+    from .precos import secao_orcamento_md
+    (pasta / "ORCAMENTO_REFERENCIAS.md").write_text(
+        secao_orcamento_md(session, opp.objeto or ""), encoding="utf-8")
+
     ap = Approval(tenant_id=tenant_id, artefato_tipo="pacote_bid",
                   artefato_ref=str(pasta.relative_to(BIDS_DIR.parent)).replace("\\", "/"),
                   estado="RASCUNHO_IA")

@@ -35,28 +35,44 @@ def enriquecer_detalhes(session: Session, tenant_id: str, timeout: float = 60.0)
         raw = opp.raw or {}
         cnpj, ano, seq = (raw.get("orgaoEntidadeCnpj"),
                           raw.get("anoCompraPncp"), raw.get("sequencialCompraPncp"))
-        if not (cnpj and ano and seq) or opp.data_limite:
-            continue
-        try:
-            r = httpx.get(CONSULTA_URL.format(cnpj=cnpj, ano=ano, seq=seq), timeout=timeout)
-            r.raise_for_status()
-            d = r.json()
-        except Exception:
-            falhas += 1
+        if not (cnpj and ano and seq) or opp.status != "aberta":
             continue
         mudou = {}
-        encerr = (d.get("dataEncerramentoProposta") or "")[:10]
-        if encerr:
-            opp.data_limite = encerr
-            mudou["data_limite"] = encerr
-        link = d.get("linkSistemaOrigem")
-        if link:
-            opp.url_fonte = link
-            mudou["url_fonte"] = link
+        d = {}
+        if not opp.data_limite:
+            try:
+                r = httpx.get(CONSULTA_URL.format(cnpj=cnpj, ano=ano, seq=seq), timeout=timeout)
+                r.raise_for_status()
+                d = r.json()
+            except Exception:
+                falhas += 1
+                d = {}
+            encerr = (d.get("dataEncerramentoProposta") or "")[:10]
+            if encerr:
+                opp.data_limite = encerr
+                mudou["data_limite"] = encerr
+            link = d.get("linkSistemaOrigem")
+            if link:
+                opp.url_fonte = link
+                mudou["url_fonte"] = link
         situ = (d.get("situacaoCompraNome") or "").lower()
         if "encerrad" in situ or "homolog" in situ or "anulad" in situ or "revogad" in situ:
             opp.status = "encerrada"
             mudou["status"] = "encerrada"
+        else:
+            # a situação do PNCP frequentemente fica desatualizada ("Divulgada") mesmo após
+            # homologação — a verdade está nos RESULTADOS dos itens (caso UNESP 2026-07-16)
+            try:
+                rr = httpx.get(
+                    f"https://pncp.gov.br/api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{seq}"
+                    f"/itens/1/resultados", timeout=timeout)
+                if rr.status_code == 200 and any(
+                        x.get("valorTotalHomologado") and not x.get("dataCancelamento")
+                        for x in (rr.json() or [])):
+                    opp.status = "encerrada"
+                    mudou["status"] = "encerrada (resultado homologado no item)"
+            except Exception:
+                pass
         if mudou:
             session.add(AuditLog(tenant_id=tenant_id, ator="agents/01_RADAR_CONTRATACOES",
                                  tipo_ator="ia", acao="enriquecimento:pncp",

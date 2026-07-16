@@ -4,7 +4,7 @@ Toda rota é escopada por tenant. A API nunca envia propostas nem dá lances:
 expõe apenas leitura, ingestão de fontes públicas e transições de aprovação
 executadas por humanos identificados.
 """
-from fastapi import Depends, FastAPI, Header, HTTPException
+from fastapi import Depends, FastAPI, Form, Header, HTTPException
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
@@ -26,6 +26,20 @@ def get_tenant(x_tenant_id: str = Header(...)) -> str:
     return x_tenant_id
 
 
+def status_certidao(validade_iso: str, alerta_dias: int = 15) -> tuple[str, str, int]:
+    """Retorna (rótulo, classe, dias_restantes) para uma certidão."""
+    from datetime import date
+    try:
+        dias = (date.fromisoformat(validade_iso) - date.today()).days
+    except ValueError:
+        return ("data inválida", "muted", 0)
+    if dias < 0:
+        return (f"VENCIDA há {-dias}d", "bad", dias)
+    if dias <= alerta_dias:
+        return (f"renovar — {dias}d", "warn", dias)
+    return (f"válida — {dias}d", "good", dias)
+
+
 DECISAO_LABEL = {
     "GO": ("GO", "good"), "GO_COM_CONDICOES": ("GO com condições", "warn"),
     "PARCERIA_NECESSARIA": ("Parceria necessária", "info"),
@@ -41,6 +55,31 @@ def cockpit_html(tenant: str = "avintis", session: Session = Depends(get_session
     from fastapi.responses import HTMLResponse
 
     from .analysis.triage import Triage
+    from .approval import ESTADOS
+    from .models import Approval as Ap
+    from .models import Certificate
+
+    certs = session.scalars(select(Certificate).where(Certificate.tenant_id == tenant)
+                            .order_by(Certificate.validade)).all()
+    certs_html = "".join(
+        (lambda rot, cls, _d: f"<tr><td>{c.nome}</td><td class='muted'>{c.referencia or ''}</td>"
+         f"<td>{c.validade}</td><td><span class='badge {cls}'>{rot}</span></td></tr>")
+        (*status_certidao(c.validade, c.alerta_dias)) for c in certs)
+
+    aprovacoes = session.scalars(select(Ap).where(Ap.tenant_id == tenant)).all()
+    def ap_row(a):
+        chips = "".join(
+            f"<span class='step {'on' if ESTADOS.index(a.estado) >= i else ''}'>{e.replace('_', ' ').title()}</span>"
+            for i, e in enumerate(ESTADOS))
+        form = ("" if a.estado == ESTADOS[-1] else
+                f"<form method='post' action='/aprovacoes/{a.id}/avancar-form'>"
+                f"<input name='ator_humano' placeholder='seu e-mail' required>"
+                f"<select name='papel'><option>especialista</option><option>cliente</option>"
+                f"<option>representante_legal</option></select>"
+                f"<button>Aprovar etapa</button></form>")
+        return (f"<tr><td>{a.artefato_tipo}</td><td class='muted'>{a.artefato_ref}</td>"
+                f"<td>{chips}</td><td>{form}</td></tr>")
+    aprov_html = "".join(ap_row(a) for a in aprovacoes)
 
     total_opp = session.scalar(select(func.count()).select_from(Opportunity))
     por_decisao = dict(session.execute(
@@ -118,6 +157,13 @@ font-weight:600;white-space:nowrap}}
 .badge.warn{{background:var(--warnbg);color:var(--warn)}}
 .badge.info{{background:var(--infobg);color:var(--info)}}
 .badge.muted{{background:var(--mutedbg);color:var(--ink2)}}
+.badge.bad{{background:#fde8e8;color:#a02020}}
+.step{{display:inline-block;padding:.1rem .45rem;border-radius:4px;font-size:.68rem;
+background:var(--mutedbg);color:var(--ink2);margin-right:.2rem}}
+.step.on{{background:var(--goodbg);color:var(--good);font-weight:600}}
+form{{display:flex;gap:.3rem}} input,select{{border:1px solid var(--line);border-radius:6px;
+padding:.25rem .4rem;font-size:.75rem}} button{{background:var(--info);color:#fff;border:0;
+border-radius:6px;padding:.25rem .6rem;font-size:.75rem;cursor:pointer}}
 .muted{{color:var(--ink2)}} ul{{font-size:.82rem;color:var(--ink)}}
 footer{{color:var(--ink2);font-size:.75rem;padding:1rem 2rem;max-width:1400px;margin:0 auto}}
 a{{color:var(--info)}}
@@ -130,6 +176,12 @@ a{{color:var(--info)}}
 <table><tr><th>Recomendação</th><th>Qualificação técnica</th><th>Prazo</th><th>Score</th>
 <th>Valor est.</th><th>UF</th><th>Órgão</th><th>Objeto</th><th>Fonte</th></tr>
 {''.join(linha(f, o, tr) for f, o, tr in vivas)}</table>
+<h2>Documentação e certidões — alertas de vencimento</h2>
+<table><tr><th>Documento</th><th>Referência</th><th>Validade</th><th>Situação</th></tr>
+{certs_html or '<tr><td colspan="4" class="muted">nenhuma certidão cadastrada</td></tr>'}</table>
+<h2>Aprovações — Human in the Loop</h2>
+<table><tr><th>Artefato</th><th>Referência</th><th>Fluxo (IA → Especialista → Cliente → Aprovado → Enviado)</th><th>Ação</th></tr>
+{aprov_html or '<tr><td colspan="4" class="muted">nenhum artefato em aprovação</td></tr>'}</table>
 <h2>Descartadas pela triagem documental ({len(mortas)})</h2>
 <ul>{mortas_html or '<li class="muted">nenhuma</li>'}</ul>
 </main>
@@ -173,6 +225,22 @@ def listar_fit(tenant: str = Depends(get_tenant), session: Session = Depends(get
         "decisao_recomendada": f.decisao_recomendada, "confianca": f.confianca,
         "justificativa": f.justificativa, "componentes": f.componentes,
     } for f in rows]
+
+
+@app.post("/aprovacoes/{approval_id}/avancar-form", include_in_schema=False)
+def avancar_aprovacao_form(approval_id: int,
+                           ator_humano: str = Form(...), papel: str = Form(...),
+                           session: Session = Depends(get_session)):
+    """Variante do cockpit (tenant único até a autenticação — pendência #9)."""
+    from fastapi.responses import RedirectResponse
+    ap = session.get(Approval, approval_id)
+    if not ap:
+        raise HTTPException(404, "aprovação não encontrada")
+    try:
+        avancar(session, ap, ator_humano, papel)
+    except ApprovalError as e:
+        raise HTTPException(409, str(e))
+    return RedirectResponse("/", status_code=303)
 
 
 @app.post("/aprovacoes/{approval_id}/avancar")

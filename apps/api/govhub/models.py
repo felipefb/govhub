@@ -76,6 +76,17 @@ class FitScore(Base):
     aprovador_humano: Mapped[str | None] = mapped_column(String, nullable=True)
 
 
+class Certificate(Base):
+    """Certidões do data room com alerta de vencimento (GovDocs/GovReady)."""
+    __tablename__ = "certificate"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    tenant_id: Mapped[str] = mapped_column(String, index=True)
+    nome: Mapped[str] = mapped_column(String)
+    referencia: Mapped[str | None] = mapped_column(String, nullable=True)
+    validade: Mapped[str] = mapped_column(String)          # ISO yyyy-mm-dd
+    alerta_dias: Mapped[int] = mapped_column(default=15)
+
+
 class Approval(Base):
     """Artefato crítico sob workflow humano — ver engines/APPROVAL_WORKFLOW_ENGINE.md."""
     __tablename__ = "approval"

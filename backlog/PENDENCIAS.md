@@ -25,6 +25,7 @@ Regra: ao fechar uma pendência, mover para a tabela abaixo com data e evidênci
 
 | # | Pendência | Data | Evidência |
 |---|-----------|------|-----------|
+| — | Cockpit v2: alertas de certidões (badge por dias restantes) e UI do workflow de aprovação (chips de etapa + formulário com ator humano), validado ponta a ponta | 2026-07-16 | govhub/main.py; teste test_cockpit.py; approval 1 avançou p/ REVISAO_ESPECIALISTA via UI |
 | 8 | Ingestão agendada diária (07:30, Task Scheduler: ingest→score→verify→triage) | 2026-07-15 | apps/api/govhub_daily.bat; tarefa "GovHub Radar Diario" |
 | 19+20 | Triagem documental automática: exigência de atestado, certame morto (sem disputa/homologado) e data de sessão, com trecho-evidência | 2026-07-15 | govhub/analysis/triage.py; comando pipeline triage |
 | — | Verificação de qualificadas contra fonte primária (caso Detran-DF: objeto trocado no espelho dados abertos) | 2026-07-15 | govhub/ingestion/verify.py + bids/2026_DETRANDF_DE17/DIVERGENCIA.md; funil verificado: 3 qualificadas reais |

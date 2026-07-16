@@ -96,6 +96,17 @@ def cockpit_html(tenant: str = "avintis", session: Session = Depends(get_session
     ).all()
     vivas = [(f, o, tr) for f, o, tr in rows if not tr or tr.vida != "MORTA"]
     mortas = [(f, o, tr) for f, o, tr in rows if tr and tr.vida == "MORTA"]
+
+    # ordenação por viabilidade para a empresa:
+    # 1) qualificação técnica alcançável hoje (sem atestado > indefinido > exige)
+    # 2) decisão (GO > condições > parceria)  3) prazo conhecido mais próximo  4) score
+    _at = {"NAO_EXIGE": 0, "INDEFINIDO": 1, "EXIGE": 2}
+    _dec = {"GO": 0, "GO_COM_CONDICOES": 1, "PARCERIA_NECESSARIA": 2}
+    vivas.sort(key=lambda r: (
+        _at.get(r[2].atestado if r[2] else "INDEFINIDO", 1),
+        _dec.get(r[0].decisao_recomendada, 3),
+        r[1].data_limite is None, r[1].data_limite or "9999",
+        -r[0].score))
     pipeline = sum(o.valor_estimado or 0 for f, o, _ in vivas
                    if f.decisao_recomendada in ("GO", "GO_COM_CONDICOES"))
 
@@ -190,7 +201,7 @@ a{{color:var(--info)}}
 <span class='sub'>fontes: PNCP + Compras.gov.br · verificação na fonte primária · triagem documental automática</span></header>
 <main>
 <div class='tiles'>{tiles}</div>
-<h2>Disputa viva — ordenada por prazo</h2>
+<h2>Disputa viva — ordenada por viabilidade para a Avintis (qualificação alcançável → decisão → prazo)</h2>
 <table><tr><th>Recomendação</th><th>Qualificação técnica</th><th>Prazo</th><th>Score</th>
 <th>Valor est.</th><th>UF</th><th>Órgão</th><th>Objeto</th><th>Fonte</th></tr>
 {''.join(linha(f, o, tr) for f, o, tr in vivas)}</table>

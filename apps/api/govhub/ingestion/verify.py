@@ -20,6 +20,53 @@ def _norm(s: str) -> str:
     return " ".join(s.split())
 
 
+def enriquecer_detalhes(session: Session, tenant_id: str, timeout: float = 60.0) -> dict:
+    """Completa dados faltantes das qualificadas direto na fonte primária:
+    data de encerramento de proposta, link do sistema de origem (portal de disputa)
+    e situação atual. Não inventa nada: campo sem resposta permanece vazio."""
+    import time
+
+    fits = session.scalars(
+        select(FitScore).where(FitScore.tenant_id == tenant_id,
+                               FitScore.decisao_recomendada != "NO_GO")).all()
+    enriquecidas = falhas = 0
+    for f in fits:
+        opp = session.get(Opportunity, f.opportunity_id)
+        raw = opp.raw or {}
+        cnpj, ano, seq = (raw.get("orgaoEntidadeCnpj"),
+                          raw.get("anoCompraPncp"), raw.get("sequencialCompraPncp"))
+        if not (cnpj and ano and seq) or opp.data_limite:
+            continue
+        try:
+            r = httpx.get(CONSULTA_URL.format(cnpj=cnpj, ano=ano, seq=seq), timeout=timeout)
+            r.raise_for_status()
+            d = r.json()
+        except Exception:
+            falhas += 1
+            continue
+        mudou = {}
+        encerr = (d.get("dataEncerramentoProposta") or "")[:10]
+        if encerr:
+            opp.data_limite = encerr
+            mudou["data_limite"] = encerr
+        link = d.get("linkSistemaOrigem")
+        if link:
+            opp.url_fonte = link
+            mudou["url_fonte"] = link
+        situ = (d.get("situacaoCompraNome") or "").lower()
+        if "encerrad" in situ or "homolog" in situ or "anulad" in situ or "revogad" in situ:
+            opp.status = "encerrada"
+            mudou["status"] = "encerrada"
+        if mudou:
+            session.add(AuditLog(tenant_id=tenant_id, ator="agents/01_RADAR_CONTRATACOES",
+                                 tipo_ator="ia", acao="enriquecimento:pncp",
+                                 detalhe={"opportunity_id": opp.id, **mudou}))
+            enriquecidas += 1
+        time.sleep(0.5)
+    session.flush()
+    return {"enriquecidas": enriquecidas, "falhas": falhas}
+
+
 def verificar_qualificadas(session: Session, tenant_id: str, timeout: float = 60.0) -> dict:
     fits = session.scalars(
         select(FitScore).where(FitScore.tenant_id == tenant_id,

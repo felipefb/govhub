@@ -124,6 +124,8 @@ if __name__ == "__main__":
         score(tenant)
         with SessionLocal() as s:
             print("verify:", verificar_qualificadas(s, tenant))
+            from .ingestion.verify import enriquecer_detalhes
+            print("enrich:", enriquecer_detalhes(s, tenant))
             print("triage:", triar_qualificadas(s, tenant))
             s.commit()
     elif cmd == "partners":

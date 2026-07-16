@@ -28,12 +28,25 @@ PESOS = {
 # fortes: bastam sozinhos. fracas: termos genéricos — exigem 2+ ocorrências para
 # ativar a categoria (evita falso GO em "centro de treinamento", "curso de formação de guardas").
 TAXONOMIA = {
+    # taxonomia revisada em 2026-07-16 contra o CV do responsável técnico
+    # (20+ anos: XP/dados financeiros+fraudes, Telefónica/BI, SPES/saúde digital FHIR)
     "inteligencia_artificial": {
-        "fortes": ["inteligencia artificial", "ia generativa", "chatbot", "machine learning", "assistente virtual"],
+        "fortes": ["inteligencia artificial", "ia generativa", "chatbot", "machine learning",
+                   "aprendizado de maquina", "assistente virtual", "agentes de inteligencia artificial",
+                   "agente de ia", "modelos preditivos", "llm"],
         "fracas": []},
     "dados_analytics": {
-        "fortes": ["ciencia de dados", "engenharia de dados", "business intelligence", "power bi", "data lake", "painel de indicadores", "governanca de dados"],
-        "fracas": ["analytics", "dashboard", "indicadores"]},
+        "fortes": ["ciencia de dados", "engenharia de dados", "business intelligence", "power bi",
+                   "data lake", "lakehouse", "databricks", "big data", "painel de indicadores",
+                   "governanca de dados", "qualidade de dados", "catalogo de dados",
+                   "integracao de dados", "pipeline de dados", "anonimizacao", "pseudonimizacao",
+                   "prevencao a fraude", "deteccao de fraude", "analise de dados"],
+        "fracas": ["analytics", "dashboard", "indicadores", "etl", "data warehouse"]},
+    "saude_digital": {
+        "fortes": ["prontuario eletronico", "interoperabilidade em saude", "fhir", "e-sus", "rnds",
+                   "telessaude", "saude digital", "informatizacao de unidades de saude",
+                   "sistema de gestao hospitalar", "dados clinicos"],
+        "fracas": ["prontuario", "telemedicina", "regulacao em saude"]},
     "software": {
         "fortes": ["desenvolvimento de software", "fabrica de software", "integracao de sistemas", "sitio eletronico", "sistema de informacao"],
         "fracas": ["portal", "aplicativo", "website", "software"]},

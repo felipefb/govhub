@@ -104,7 +104,8 @@ def onboarding_avintis() -> None:
         if c:
             c.cnpj, c.razao_social, c.uf = "61167552000183", "AVINTIS LTDA", "SP"
             c.cnaes = ["6204-0/00", "6201-5/01", "6202-3/00", "6203-1/00"]
-            c.setores = ["software", "dados_analytics", "inteligencia_artificial", "automacao"]
+            c.setores = ["software", "dados_analytics", "inteligencia_artificial", "automacao",
+                         "saude_digital"]  # CV: FHIR/mCODE, plataforma clínica em produção
             c.perfil = perfil
         else:
             s.add(Company(

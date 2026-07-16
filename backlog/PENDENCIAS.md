@@ -7,6 +7,8 @@ Fonte de verdade das pendências. Nada aqui pode ser esquecido: o objetivo é op
 | 5 | Conector Contrata+Brasil e Painel de Compras | aberta | — |
 | 17 | Rodar `pipeline verify` automaticamente após todo scoring (hoje comando manual) | aberta | govhub/ingestion/verify.py |
 | 18 | Radar diário de dispensas de TI sem exigência de qualificação técnica (padrão ideal p/ formar acervo) | aberta | bids/2026_DETRANDF_DE17/DIVERGENCIA.md |
+| 19 | Detectar "dispensa sem disputa"/contratada já definida nos avisos (caso CFM/OpenLex) e status homologado (caso CREFITO-MT) → NO_GO automático | aberta | análise de 2026-07-15 |
+| 20 | Extração automática da cláusula de qualificação técnica (exige/não exige atestado) na análise de cada GO | aberta | método manual validado em 7 certames |
 | 6 | Componentes neutros do fit score (complexidade, risco jurídico) alimentados pelos agentes 08/09; refinar taxonomia (falso positivo residual "saneantes domissanitários") | aberta | — |
 | 7 | Postgres em produção (hoje SQLite dev) + row-level security | aberta | — |
 | 8 | Agendamento recorrente da ingestão (hoje CLI manual) | aberta | — |

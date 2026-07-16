@@ -43,6 +43,19 @@ TAXONOMIA = {
     "capacitacao": {
         "fortes": ["capacitacao de servidores", "treinamento em informatica", "lgpd", "engenharia de prompts"],
         "fracas": ["capacitacao", "treinamento", "curso", "workshop"]},
+    # setores do tenant BFSA Trade Law (jurídico/aduaneiro) — "juridica" sozinha é proibida
+    # como palavra-chave: colide com "pessoa jurídica" (falso positivo massivo)
+    "juridico": {
+        "fortes": ["assessoria juridica", "consultoria juridica", "servicos advocaticios",
+                   "servicos juridicos", "sociedade de advogados", "parecer juridico",
+                   "contencioso judicial", "execucao fiscal", "assessoramento juridico",
+                   "consultoria tributaria"],
+        "fracas": ["advocacia", "advocaticio", "contencioso"]},
+    "aduaneiro_comex": {
+        "fortes": ["desembaraco aduaneiro", "despacho aduaneiro", "legislacao aduaneira",
+                   "comercio exterior", "comercio internacional", "drawback",
+                   "despachante aduaneiro", "agenciamento de cargas"],
+        "fracas": ["aduaneiro", "aduaneira", "importacao", "exportacao"]},
 }
 
 

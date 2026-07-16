@@ -55,6 +55,28 @@ def score(tenant_id: str) -> None:
         print(f"{n} scores calculados para tenant {tenant_id}")
 
 
+def onboarding_bfsa() -> None:
+    """Segundo tenant do hub — BFSA Trade Law (Borges Furlaneto & Sayeg Advogados).
+
+    Perfil declarado pelo indicante (Felipe, 2026-07-16): direito aduaneiro e
+    comércio internacional. Dados a completar pelo próprio escritório no onboarding
+    formal (porte, ticket, regiões, capacidade) — campos ausentes reduzem a
+    confiança do score, nunca são presumidos.
+    """
+    with SessionLocal() as s:
+        if not s.scalar(select(Company).where(Company.tenant_id == "bfsa")):
+            s.add(Company(
+                tenant_id="bfsa", cnpj="33667079000168",
+                razao_social="BORGES FURLANETO & SAYEG ADVOGADOS (BFSA Trade Law)",
+                cnaes=[], setores=["juridico", "aduaneiro_comex"], uf="SP",
+                perfil={"origem": "indicação Felipe/Avintis 2026-07-16; perfil declarado, "
+                                  "pendente de onboarding formal"},
+            ))
+            s.commit()
+            print("tenant 'bfsa' criado (perfil declarado)")
+    score("bfsa")
+
+
 def onboarding_avintis() -> None:
     """Perfil real — fonte: Dossiê de Prontidão B2G Avintis (2026-07-15).
 

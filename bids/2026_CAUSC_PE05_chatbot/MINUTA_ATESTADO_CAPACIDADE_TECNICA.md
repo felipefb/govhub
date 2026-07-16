@@ -2,8 +2,8 @@
 
 > **Instruções (não enviar este bloco):** dados factuais extraídos do contrato assinado de
 > 14/07/2025 (arquivado em `data/dataroom/2025-07-14_contrato_SPES_AI_assinado.pdf`).
-> A seção "Objeto dos serviços" está com marcadores [ ] — preencher SOMENTE com o que o
-> SOFTWARE SPES realmente contém; o pregoeiro pode exigir o contrato, as notas fiscais e os
+> Escopo confirmado pelo responsável técnico em 2026-07-15 (LLM, RAG, ML em Azure,
+> Docker/AKS). O pregoeiro pode exigir o contrato, as notas fiscais e os
 > relatórios mensais (cláusula 3.2) na diligência. Assinatura digital Gov.br/ICP-Brasil dispensa
 > reconhecimento de firma. Signatário sugerido: o sócio-administrador.
 
@@ -21,12 +21,13 @@ descritos a seguir:
 
 **Objeto dos serviços:**
 Desenvolvimento, implantação e evolução contínua de software sob encomenda
-(SOFTWARE SPES), compreendendo: [preencher fielmente — ex.: arquitetura e
-desenvolvimento de módulos de inteligência artificial com modelos de linguagem (LLM);
-mecanismos de busca e recuperação em base de conhecimento (RAG); interface
-conversacional/chatbot; painéis administrativos e relatórios; integrações com sistemas e
-APIs de terceiros; tratamento de dados pessoais em conformidade com a LGPD, com
-padrões de criptografia; entrega de código-fonte e documentação].
+(SOFTWARE SPES), compreendendo: arquitetura e desenvolvimento de funcionalidades de
+inteligência artificial com modelos de linguagem (LLM); mecanismos de busca e recuperação
+aumentada em base de conhecimento (RAG); desenvolvimento e implantação de modelos de
+aprendizado de máquina (machine learning) em nuvem Microsoft Azure; conteinerização com
+Docker e orquestração em Azure Kubernetes Service (AKS); tratamento de dados pessoais em
+conformidade com a LGPD, com padrões de criptografia; entrega de código-fonte e
+documentação técnica.
 
 **Período de execução:** 14/07/2025 até a presente data (contrato vigente, por prazo
 indeterminado), com entregas e faturamento mensais acompanhados de relatório de serviços.

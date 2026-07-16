@@ -12,7 +12,7 @@ Fonte de verdade das pendências. Nada aqui pode ser esquecido: o objetivo é op
 | 7 | Postgres em produção (hoje SQLite dev) + row-level security | aberta | — |
 
 | 9 | Autenticação de usuários no cockpit (hoje tenant via header/query) | aberta | — |
-| 10 | SICAF: restam 3 ajustes — FGTS p/ "Certidão" (III), Cadesp inexistência de IE (IV), linhas de fornecimento de serviço (I). Níveis II e VI completos (balanço 2025 válido até 06/2027) | em andamento | data/dataroom/CERTIDOES.md |
+| 10 | SICAF: restam 2 ajustes — FGTS p/ "Certidão" (Nível III) e Cadesp inexistência de IE (Nível IV). Linhas de fornecimento cadastradas; níveis I, II e VI completos | quase fechada | data/dataroom/CERTIDOES.md |
 | 11 | Certidões: validades registradas com alertas (RFB/PGFN vence 22/09/2026 ← próxima); falta apenas Cadesp inexistência de IE | quase fechada | data/dataroom/CERTIDOES.md |
 | 13 | Acervo técnico — PLANO A: formar acervo público via dispensas sem exigência de qualificação técnica. Atestado SPES AI não será solicitado (decisão do representante, 2026-07-15); contrato+NFs ficam no data room como lastro secundário (usar apenas com exigência branda, ciente do risco de diligência) | redirecionada | data/dataroom/2025-07-14_contrato_SPES_AI_assinado.pdf |
 | 14 | Custos GovPricing: custo/hora por perfil, alíquota efetiva Simples, overhead (incluir serviço da dívida 2026), margem mínima | parcial (capital_giro=0 já registrado e aplicado ao score) | dossiê §4 |

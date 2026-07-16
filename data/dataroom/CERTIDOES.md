@@ -15,7 +15,7 @@ Fonte: telas do Meu SICAF em 2026-07-15. Renovar com 15 dias de antecedência.
 ## Pendências SICAF em aberto (2026-07-15)
 1. Nível III: FGTS marcado como "Decisão Judicial" — trocar para "Certidão" (CRF Caixa).
 2. Nível IV: anexar Certidão de Inexistência de Inscrição Estadual (Cadesp/Sefaz-SP) no campo Inscrição Estadual.
-3. Nível I: cadastrar Linhas de Fornecimento de SERVIÇO (TI: desenvolvimento, consultoria, processamento de dados).
+3. ~~Nível I: Linhas de Fornecimento~~ — CADASTRADAS em 2026-07-15 (consultoria TIC, desenvolvimento/sustentação de software, integração de sistemas, P&D em TIC, dados/DaaS, SaaS). ✔
 4. ~~Nível VI~~: CADASTRADO — balanço anual 12/2025 validado, vigente até 06/2027. ✔
 
 Nível V (qualificação técnica) vazio por estratégia (Plano A — acervo público primeiro).

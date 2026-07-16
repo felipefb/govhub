@@ -94,8 +94,11 @@ def cockpit_html(tenant: str = "avintis", session: Session = Depends(get_session
         .order_by(Opportunity.data_limite.is_(None), Opportunity.data_limite,
                   FitScore.score.desc())
     ).all()
-    vivas = [(f, o, tr) for f, o, tr in rows if not tr or tr.vida != "MORTA"]
-    mortas = [(f, o, tr) for f, o, tr in rows if tr and tr.vida == "MORTA"]
+    def _no_go(tr):
+        return tr and (tr.evidencias or {}).get("no_go_avintis")
+    vivas = [(f, o, tr) for f, o, tr in rows if (not tr or tr.vida != "MORTA") and not _no_go(tr)]
+    mortas = [(f, o, tr) for f, o, tr in rows
+              if (tr and tr.vida == "MORTA") or _no_go(tr)]
 
     # ordenação por viabilidade para a empresa:
     # 1) qualificação técnica alcançável hoje (sem atestado > indefinido > exige)
@@ -171,7 +174,7 @@ def cockpit_html(tenant: str = "avintis", session: Session = Depends(get_session
 
     mortas_html = "".join(
         f"<li><b>{(o.orgao or '')[:40]}</b> — {(o.objeto or '')[:80]} "
-        f"<span class='muted'>({(tr.evidencias or {}).get('vida', 'certame encerrado')[:90]}…)</span></li>"
+        f"<span class='muted'>({((tr.evidencias or {}).get('no_go_avintis') or (tr.evidencias or {}).get('vida', 'certame encerrado'))[:110]}…)</span></li>"
         for f, o, tr in mortas)
     return HTMLResponse(f"""<!doctype html><html lang='pt-BR'><head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width,initial-scale=1'>

@@ -4,7 +4,7 @@ Fonte de verdade das pendências. Nada aqui pode ser esquecido: o objetivo é op
 
 | # | Pendência | Status | Evidência |
 |---|-----------|--------|-----------|
-| 5 | Conector Contrata+Brasil e Painel de Compras | aberta | — |
+| 5 | Novas fontes, prioridade p/ Avintis: (1º) Sistema S — viabilidade CONFIRMADA: transparência SESI/SENAI-SP tem tabela HTML raspável (nº, modalidade RCA, objeto, status, data, edital PDF) e pregões via licitacoes-e/BB; (2º) estatais/Petronect; (3º) Contrata+Brasil e Painel de Compras | aberta — sondada 2026-07-16 | transparencia.sp.senai.br/licitacoes |
 | 17 | Rodar `pipeline verify` automaticamente após todo scoring (hoje comando manual) | aberta | govhub/ingestion/verify.py |
 | 18 | Radar diário de dispensas de TI sem exigência de qualificação técnica (padrão ideal p/ formar acervo) | aberta | bids/2026_DETRANDF_DE17/DIVERGENCIA.md |
 

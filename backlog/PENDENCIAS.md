@@ -15,7 +15,7 @@ Fonte de verdade das pendências. Nada aqui pode ser esquecido: o objetivo é op
 | 9 | Autenticação de usuários no cockpit (hoje tenant via header/query) | aberta | — |
 | 10 | Confirmar validação dos 6 níveis no "Meu SICAF" e subir balanço 2025 no Nível VI | aberta | dossiê 2026-07-15 §2 |
 | 11 | Certidões Nível IV SP (Débitos Mobiliários, Cadesp, e-CND SP, PGE-SP) com datas de validade no data room | aberta | dossiê §2 |
-| 13 | Catalogar acervo técnico privado (cliente, escopo, valor, atestado/NF/aceite, contato) — zero B2G no PNCP | aberta | dossiê §3 |
+| 13 | Acervo técnico: contrato SPES AI catalogado (R$ 31k/mês desde 14/07/2025, ~R$ 372k/ano); falta ATESTADO ASSINADO (minuta pronta aguardando confirmação do escopo real e assinatura do cliente) + NFs/relatórios mensais no data room | parcial | data/dataroom/2025-07-14_contrato_SPES_AI_assinado.pdf; bids/2026_CAUSC_PE05_chatbot/MINUTA_ATESTADO_CAPACIDADE_TECNICA.md |
 | 14 | Custos GovPricing: custo/hora por perfil, alíquota efetiva Simples, overhead (incluir serviço da dívida 2026), margem mínima | parcial (capital_giro=0 já registrado e aplicado ao score) | dossiê §4 |
 | 15 | Alçadas do workflow: quem decide GO/NO-GO, valida técnica, aprova preço/lance; advogado e contador de referência | aberta | dossiê §5 |
 | 16 | Se "capacitação" for alvo real: alteração contratual p/ CNAE 8599-6/04 (hoje setor excluído do perfil) | aberta | dossiê §1 |

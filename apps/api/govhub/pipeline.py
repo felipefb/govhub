@@ -126,5 +126,14 @@ if __name__ == "__main__":
             print("verify:", verificar_qualificadas(s, tenant))
             print("triage:", triar_qualificadas(s, tenant))
             s.commit()
+    elif cmd == "winners":
+        from .analysis.winners import coletar, ranking
+        with SessionLocal() as s:
+            if len(sys.argv) > 3:
+                print(coletar(s, sys.argv[2], sys.argv[3]))
+                s.commit()
+            for i, e in enumerate(ranking(s), 1):
+                print(f"{i:2d}. {e['nome'][:45]:45s} {e['contratos']:2d}x R$ {e['valor_total']:>13,.0f} "
+                      f"{','.join(e['ufs'])[:15]} {','.join(e['setores'])[:35]}")
     else:
         onboarding_avintis()

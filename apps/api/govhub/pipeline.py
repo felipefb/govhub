@@ -126,6 +126,13 @@ if __name__ == "__main__":
             print("verify:", verificar_qualificadas(s, tenant))
             print("triage:", triar_qualificadas(s, tenant))
             s.commit()
+    elif cmd == "partners":
+        from .analysis.partners import sugerir_parceiros
+        with SessionLocal() as s:
+            for item in sugerir_parceiros(s, sys.argv[2] if len(sys.argv) > 2 else "avintis"):
+                print(f"\n[{item['uf']}] R$ {item['valor'] or 0:,.0f} | {item['objeto'][:90]}")
+                for p in item["parceiros"]:
+                    print(f"  {p['score']:5.1f} | {p['nome'][:45]} | {p['contratos_recentes']}x")
     elif cmd == "winners":
         from .analysis.winners import coletar, ranking
         with SessionLocal() as s:

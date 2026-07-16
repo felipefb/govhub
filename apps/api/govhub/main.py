@@ -123,6 +123,24 @@ def cockpit_html(tenant: str = "avintis", session: Session = Depends(get_session
             ("via parceria", por_decisao.get("PARCERIA_NECESSARIA", 0)),
             ("pipeline disputável", f"R$ {pipeline:,.0f}".replace(",", ".")),
         ])
+    from .analysis.partners import sugerir_parceiros
+    blocos = []
+    for item in sugerir_parceiros(session, tenant):
+        linhas_p = "".join(
+            f"<tr><td><span class='badge {'good' if p['score'] >= 75 else 'info'}'>{p['score']:.0f}</span></td>"
+            f"<td>{p['nome'][:48]}</td><td class='muted'>{p['cnpj']}</td>"
+            f"<td class='num'>{p['contratos_recentes']}x</td>"
+            f"<td class='num'>R$ {p['valor_recente']:,.0f}</td>"
+            f"<td class='muted' style='font-size:.7rem'>{', '.join(f'{k} {v}' for k, v in p['componentes'].items())}</td></tr>"
+            for p in item["parceiros"])
+        if linhas_p:
+            blocos.append(
+                f"<p style='margin:.8rem 0 .3rem;font-size:.82rem'><b>[{item['uf']}] "
+                f"R$ {item['valor'] or 0:,.0f}</b> — {item['objeto']}</p>"
+                f"<table><tr><th>Aceitação</th><th>Empresa</th><th>CNPJ</th><th>Contratos</th>"
+                f"<th>Valor recente</th><th>Componentes do score</th></tr>{linhas_p}</table>")
+    parcerias_html = "".join(blocos) or "<p class='muted'>nenhuma oportunidade de parceria no funil</p>"
+
     mortas_html = "".join(
         f"<li><b>{(o.orgao or '')[:40]}</b> — {(o.objeto or '')[:80]} "
         f"<span class='muted'>({(tr.evidencias or {}).get('vida', 'certame encerrado')[:90]}…)</span></li>"
@@ -182,6 +200,8 @@ a{{color:var(--info)}}
 <h2>Aprovações — Human in the Loop</h2>
 <table><tr><th>Artefato</th><th>Referência</th><th>Fluxo (IA → Especialista → Cliente → Aprovado → Enviado)</th><th>Ação</th></tr>
 {aprov_html or '<tr><td colspan="4" class="muted">nenhum artefato em aprovação</td></tr>'}</table>
+<h2>Parcerias sugeridas — vencedores de TIC com score de aceitação</h2>
+{parcerias_html}
 <h2>Descartadas pela triagem documental ({len(mortas)})</h2>
 <ul>{mortas_html or '<li class="muted">nenhuma</li>'}</ul>
 </main>

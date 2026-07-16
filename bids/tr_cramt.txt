@@ -1,0 +1,749 @@
+ Comissão Permanente de Licitação
+Rua 05 - Quadra 14 Lote 05 
+- Bairro Centro Político e Administrativo - Cuiabá-MT - CEP 78049-919
+Telefone: (65) 99648-8050 
+- www.cramt.org.br
+ 
+TERMO DE REFERÊNCIA Nº 19/2026/CRA-MT
+PROCESSO Nº 476909.000868/2026-73
+Este Termo de Referência foi elaborado em cumprimento ao disposto nos arts. 6º, XXIII, e 40, § 1º  da Lei
+14.133/2021; arts. 8º, I, II e 21, II, do Decreto 3.555/00; art. 14 do Decreto nº 10.024/19.
+1
+.
+DO OBJETO
+1
+.
+1
+.
+Contratação de empresa especializada para criação, desenvolvimento, implementação,
+disponibilização, operação assistida, manutenção e suporte de website e aplicativo (software online de
+gestão de eventos), para atendimento às necessidades do XXX Encontro Brasileiro de Administração –
+ENBRA 2026, a ser realizado nos dias 11, 12 e 13 de novembro de 2026, na cidade de Cuiabá-MT.
+2
+.
+ESPECIFICAÇÕES DO OBJETO
+2
+.
+1
+.
+A solução deverá ser disponibilizada em ambiente web (SaaS) e aplicativo mobile,
+contemplando, no mínimo, os seguintes itens e funcionalidades:
+2
+.
+1
+.
+1
+.
+WEBSITE DO EVENTO:
+Desenvolvimento de website institucional personalizado;
+Layout responsivo (desktop e mobile);
+Hospedagem e disponibilidade durante todo o período do contrato;
+Páginas: programação, palestrantes, inscrições, notícias e informações gerais;
+Painel administrativo para gestão de conteúdo;
+Domínio (quando aplicável) e certificados de segurança (HTTPS).
+2
+.
+1
+.
+2
+.
+SISTEMA DE INSCRIÇÕES E PAGAMENTOS:
+Cadastro de participantes com perfis e categorias;
+Controle de vagas e lotes de inscrição;
+Inscrição em atividades específicas (minicursos, oficinas, etc.);
+Integração com meios de pagamento (PIX, boleto e cartão de crédito);
+Conciliação automática de pagamentos;
+Emissão de comprovantes;
+Envio automatizado de comunicações.
+2
+.
+1
+.
+3
+.
+CREDENCIAMENTO E CONTROLE DE ACESSO:
+Geração de QR Code individual;
+Sistema de check-in e check-out;
+Controle de presença por atividade;
+Termo de Referência 19 (4010028)         SEI 476909.000868/2026-73 / pg. 1
+Operação em dispositivos móveis;
+Emissão de etiquetas/crachás (quando aplicável).
+2
+.
+1
+.
+4
+.
+MÓDULO DE TRABALHOS CIENTÍFICOS:
+Submissão de trabalhos em formatos digitais;
+Cadastro de autores e coautores;
+Gestão de avaliadores;
+Sistema de avaliação com critérios definidos;
+Comunicação entre avaliadores e autores;
+Exportação de dados para anais.
+2
+.
+1
+.
+5
+.
+CERTIFICAÇÃO DIGITAL:
+Emissão automatizada de certificados;
+Disponibilização para download;
+Validação por QR Code ou código único;
+Vinculação à frequência e participação.
+2
+.
+1
+.
+6
+.
+APLICATIVO MOBILE:
+Disponível para Android e iOS;
+Acesso à programação;
+Notificações em tempo real (push);
+Informações do evento;
+Interação com participantes (enquetes/perguntas);
+2
+.
+1
+.
+7
+.
+RELATÓRIOS GERENCIAIS:
+Relatórios de inscritos, pagamentos, presença e participação;
+Exportação em formatos editáveis (ex.: Excel/CSV);
+Painel de acompanhamento em tempo real.
+2
+.
+1
+.
+8
+.
+TREINAMENTO E SUPORTE:
+Treinamento da equipe do CRA-MT;
+Suporte técnico antes, durante e após o evento;
+Atendimento para resolução de incidentes.
+2
+.
+2
+.
+A solução deverá garantir:
+Segurança da informação;
+Estabilidade e disponibilidade;
+Capacidade de atendimento simultâneo ao público estimado.
+3
+.
+PRAZO DE EXECUÇÃO E CRONOGRAMA
+3
+.
+1
+.
+O contrato terá vigência suficiente para contemplar desenvolvimento, testes, operação do
+evento e suporte pós-evento.
+3
+.
+2
+.
+Marcos mínimos:
+Termo de Referência 19 (4010028)         SEI 476909.000868/2026-73 / pg. 2
+1
+. 
+Implantação inicial: até 30 dias após assinatura;
+2
+. 
+Disponibilização do sistema de inscrições: conforme cronograma do evento;
+3
+. 
+Operação plena durante o evento;
+4
+. 
+Encerramento e entrega final: até 30 dias após o evento.
+4
+.
+CONDIÇÕES DE EXECUÇÃO E NÍVEIS DE SERVIÇO (SLA)
+4
+.
+1
+.
+Disponibilidade mínima da plataforma: 99% durante o período de inscrições e realização do
+evento.
+4
+.
+2
+.
+Tempo de resposta para incidentes:
+Crítico: até 2 horas;
+Alto: até 4 horas;
+Médio: até 8 horas.
+4
+.
+3
+.
+Correção de falhas críticas deverá ocorrer em prazo compatível com a continuidade do
+serviço.
+5
+.
+ACEITE DOS SERVIÇOS
+5
+.
+1
+.
+O aceite será realizado por etapas:
+Aceite do ambiente inicial;
+Aceite do sistema de inscrições;
+Aceite da plataforma completa;
+Aceite final após o evento.
+5
+.
+2
+.
+O aceite estará condicionado à verificação do atendimento às especificações previstas.
+ 
+6
+.
+JUSTIFICATIVA
+6
+.
+1
+.
+A contratação justifica-se pela necessidade de utilização de solução tecnológica integrada
+para gestão do evento, considerando seu porte (estimativa de 1.000 a 1.500 participantes) e a
+complexidade operacional envolvida.
+6
+.
+2
+.
+A solução permitirá a centralização das informações, automação de processos, maior
+controle gerencial e melhoria na experiência dos participantes, reduzindo riscos operacionais e retrabalho.
+6
+.
+3
+.
+O Conselho Regional de Administração de Mato Grosso não dispõe de solução própria que
+atenda integralmente às necessidades do evento.
+7
+.
+MAPA DE RISCOS DA CONTRATAÇÃO
+7
+.
+1
+.
+Identificam-se os principais riscos relacionados à contratação e execução do objeto, bem
+como respectivas medidas de mitigação:
+7
+.
+2
+.
+Risco 1 – Atraso na implantação da plataforma
+Impacto: Comprometimento do cronograma de inscrições e divulgação do evento.
+Mitigação: Definição de cronograma com marcos obrigatórios; acompanhamento pelo fiscal do contrato;
+aplicação de penalidades em caso de atraso.
+7
+.
+3
+.
+Risco 2 – Instabilidade ou indisponibilidade do sistema
+Impacto: Prejuízo às inscrições, credenciamento e operação do evento.
+Mitigação: Exigência de SLA mínimo (99%); suporte técnico ativo; testes prévios antes do evento.
+7
+.
+4
+.
+Risco 3 – Falhas no processamento de pagamentos
+Impacto: Inconsistências financeiras e insatisfação dos participantes.
+Mitigação: Utilização de integrações consolidadas; conciliação automática; validação de relatórios
+Termo de Referência 19 (4010028)         SEI 476909.000868/2026-73 / pg. 3
+financeiros.
+7
+.
+5
+.
+Risco 4 – Problemas no credenciamento durante o evento
+Impacto: Filas, atrasos e má experiência dos participantes.
+Mitigação: Testes operacionais prévios; suporte in loco ou remoto em tempo real; plano de contingência
+(listas offline)
+7
+.
+6
+.
+Risco 5 – Falhas na emissão de certificados
+Impacto: Retrabalho e insatisfação dos participantes.
+Mitigação: Validação prévia das regras de certificação; testes antes da liberação; suporte pós-evento.
+7
+.
+7
+.
+Risco 6 – Vazamento ou perda de dados
+Impacto: Risco à segurança da informação e responsabilização institucional.
+Mitigação: Exigência de protocolos de segurança (HTTPS, controle de acesso); backup de dados;
+responsabilidade contratual.
+7
+.
+8
+.
+Os riscos serão monitorados durante toda a execução contratual, cabendo ao fiscal do
+contrato registrar ocorrências e adotar as medidas necessárias.
+ 
+8
+.
+DAS OBRIGAÇÕES DAS PARTES
+8
+.
+1
+.
+  A 
+CONTRATANTE 
+obriga-se a:
+8
+.
+2
+.
+Acompanhar e fiscalizar a execução do contrato, através de servidor designado para este
+fim, nos termos do art. 117 da Lei nº 14.133/21.
+8
+.
+3
+.
+Atentar para que durante a vigência do presente contrato seja mantida a situação de
+regularidade relativa à seguridade social (INSS), ao Fundo de Garantia por Tempo de Serviço (FGTS) e a
+Fazenda Federal da CONTRATADA, bem assim a sua compatibilidade com as obrigações assumidas pela
+CONTRATADA.
+8
+.
+4
+.
+Efetuar o pagamento nas condições e preços ajustados, após o devido atesto da nota
+fiscal/fatura.
+8
+.
+5
+.
+Transmitir ao preposto da CONTRATADA toda e qualquer demanda.
+8
+.
+6
+.
+Aplicar à CONTRATADA as penalidades regulamentares e contratuais.
+8
+.
+7
+.
+Designar responsável para o acompanhamento e fiscalização da execução do objeto deste
+Termo de Referência.
+8
+.
+8
+.
+Prestar as informações e esclarecimentos necessários à CONTRATADA.
+8
+.
+9
+.
+Responder pelas consequências de suas ações ou omissões.
+8
+.
+10
+.
+O abastecimento será por meio de autorização de abastecimento.
+8
+.
+11
+.
+Comunicar à CONTRATADA quaisquer ocorrências relacionadas com a execução do(s)
+serviço(s).
+8
+.
+12
+.
+ a 
+CONTRATADA 
+obriga-se a:
+8
+.
+13
+.
+Pagar todos os tributos que, direta ou indiretamente, incidam sobre o fornecimento do
+objeto, inclusive as contribuições previdenciárias fiscais e parafiscais, FGTS, PIS, emolumentos, seguros
+de acidentes de trabalho etc., ficando excluída qualquer solidariedade da CONTRATANTE por eventuais
+autuações administrativas e/ou judiciais uma vez que a inadimplência da CONTRATADA, com referência
+às suas obrigações, não se transfere à CONTRATANTE;
+8
+.
+14
+.
+Arcar com eventuais prejuízos causados à CONTRATANTE e/ou a terceiros, provocados
+por ineficiência ou irregularidade cometida por seus empregados ou prepostos envolvidos na execução do
+contrato que não terão nenhum vínculo empregatício com a administração;
+8
+.
+15
+.
+Facilitar a ação da FISCALIZAÇÃO no fornecimento do objeto e na prestação dos
+serviços, prestando prontamente, os esclarecimentos que forem solicitados pela CONTRATANTE;
+8
+.
+16
+.
+Não permitir a utilização de qualquer trabalho do menor de dezesseis anos, exceto na
+condição de aprendiz para os maiores de quatorze anos; nem permitir a utilização do trabalho do menor de
+Termo de Referência 19 (4010028)         SEI 476909.000868/2026-73 / pg. 4
+dezoito anos em trabalho noturno, perigoso ou insalubre;
+8
+.
+17
+.
+A inadimplência com referência aos encargos e obrigações estabelecidos não transfere ao
+Conselho Regional de Administração de Mato Grosso a responsabilidade pelo seu pagamento, nem poderá
+onerar o fornecimento, razão pela qual a Empresa Vencedora renuncia expressamente a qualquer vínculo
+de solidariedade, ativa ou passiva, com a Contratante;
+8
+.
+18
+.
+Fornecer os materiais nas embalagens e adotar todas as medidas preventivas no sentido de
+se minimizar acidentes ou danos que venham a comprometer a qualidade e a quantidade fornecida;
+8
+.
+19
+.
+Manter, pessoal e equipamentos suficientes para o atendimento;
+8
+.
+20
+.
+Assumir inteira responsabilidade quanto à qualidade do fornecimento;
+8
+.
+21
+.
+Fornecer o objeto obedecendo às quantidades requisitadas, qualidade, horários, prazos e
+locais estabelecidos para a entrega;
+8
+.
+22
+.
+Comunicar, antecipadamente, a data e o horário da entrega, não sendo aceito o produto que
+estiver em desacordo com as especificações constantes deste Termo;
+8
+.
+23
+.
+Contratada deverá se responsabilizar por todos os encargos trabalhistas, previdenciários,
+contribuições ao Instituto Nacional de Seguridade Social–INSS, Assistenciais, Securitárias e Sindicais, de
+seus funcionários, sendo considerada como única empregadora, não havendo qualquer vínculo de
+solidariedade empregatícia desta Contratante;
+8
+.
+24
+.
+Cumprir outras obrigações previstas no Código de Proteção e Defesa do Consumidor (Lei
+n° 8.078/90) que sejam compatíveis com o regime de direito público;
+8
+.
+25
+.
+Executar os serviços conforme especificações;
+8
+.
+26
+.
+Garantir a qualidade e segurança da solução;
+8
+.
+27
+.
+Prestar suporte técnico;
+8
+.
+28
+.
+Disponibilizar equipe qualificada;
+8
+.
+29
+.
+Corrigir falhas identificadas;
+8
+.
+30
+.
+Manter sigilo das informações.
+9
+.
+JUSTIFICATIVA DA DISPENSA DE LICITAÇÃO
+    As compras e contratações das entidades públicas seguem obrigatoriamente um regime regulamentado por
+Lei. O fundamento principal que reza por esta iniciativa é o artigo. 37, inciso XXI, da Constituição Federal
+de 1988, no qual determina que as obras, os serviços, compras e alienações devem ocorrer por meio de
+licitações. A licitação foi o meio encontrado pela Administração Pública, para tornar isonômica a
+participação de interessados em procedimentos que visam suprir as necessidades dos órgãos públicos acerca
+dos serviços disponibilizados por pessoas físicas e/ou pessoas jurídicas nos campos mercadológicos
+distritais, municipais, estaduais e nacionais, e ainda procurar conseguir a proposta mais vantajosa às
+contratações. Para melhor entendimento, vejamos o que dispõe o inciso XXI do Artigo 37 da CF/1988:
+(...)
+“XXI - ressalvados os casos especificados na legislação, as obras, serviços, compras e alienações serão
+contratados mediante processo de licitação pública que assegure igualdade de condições a todos os
+concorrentes, com cláusulas que estabeleçam obrigações de pagamento, mantidas as condições efetivas da
+proposta, nos termos da lei, o qual somente permitirá as exigências de qualificação técnica e econômica
+indispensáveis à garantia do cumprimento das obrigações.”
+ 
+Para regulamentar o exercício dessa atividade foi então criada a Lei Federal nº 14.133, de 1º de abril de 2021,
+mais conhecida como Lei de Licitações e Contratos Administrativos.
+O objetivo da licitação é contratar a proposta mais vantajosa, primando pelos princípios da legalidade,
+impessoalidade, igualdade, moralidade e publicidade. Licitar é regra.
+Termo de Referência 19 (4010028)         SEI 476909.000868/2026-73 / pg. 5
+Entretanto, há aquisições e contratações que possuem caracterizações específicas tornando impossíveis e/ou
+inviáveis as licitações nos trâmites usuais, frustrando a realização adequada das funções gerenciais. Na
+ocorrência de licitações impossíveis e/ou inviáveis, a lei previu exceções à regra, a Dispensa de Licitação e a
+Inexigibilidade de Licitação. Trata-se de certame realizado sob a obediência ao estabelecido no artigo 75, da
+Lei nº 14.133/2021 que prevê em seu quando pode ocorrer a dispensa de licitação.
+ 
+Art. 75. É dispensável a licitação:
+[...]
+§ 1º Para fins de aferição dos valores que atendam aos limites referidos nos incisos I e II do 
+caput
+ deste
+artigo, deverão ser observados:
+I - o somatório do que for despendido no exercício financeiro pela respectiva unidade gestora;
+II - o somatório da despesa realizada com objetos de mesma natureza, entendidos como tais aqueles
+relativos a contratações no mesmo ramo de atividade.
+ 
+No caso em questão verifica-se a Dispensa de Licitação com base jurídica nos incisos I e II do art. 75 da Lei
+nº 14.133/2021.
+10
+.
+LOCAL DA ENTREGA DO SERVIÇO CONTRATADO
+10
+.
+1
+.
+A execução dos serviços ocorrerá de forma predominantemente remota, por meio de
+plataforma digital disponibilizada pela contratada, acessível via internet.
+10
+.
+2
+.
+As atividades presenciais, quando necessárias, especialmente relacionadas ao
+credenciamento e suporte durante a realização do evento, ocorrerão no local de realização do XXX
+Encontro Brasileiro de Administração – ENBRA 2026, na cidade de Cuiabá-MT, em espaço a ser definido
+pela organização do evento.
+10
+.
+3
+.
+A contratada deverá assegurar pleno funcionamento da solução tanto no ambiente online
+quanto, quando aplicável, no ambiente físico do evento.
+11
+.
+DAS PENALIDADES E SANSÕES ADMINISTRATIVAS
+11
+.
+1
+.
+Pela inexecução total ou parcial deste CONTRATO, a CONTRATANTE poderá, garantida
+a prévia defesa, aplicar à CONTRATADA as seguintes sanções:
+11
+.
+2
+.
+Advertência;
+11
+.
+3
+.
+Multa de mora de um décimo por cento calculada sobre o valor deste CONTRATO, por dia
+de atraso injustificado no cumprimento do prazo de entrega do objeto;
+11
+.
+4
+.
+Multa de um décimo por cento sobre o valor deste CONTRATO, por dia de atraso
+injustificado no cumprimento do prazo de reapresentação do material rejeitado, após esgotado o prazo
+fixado para substituição, correção ou reparação; e
+11
+.
+5
+.
+Multa de dez por cento sobre o valor deste CONTRATO, em caso de rescisão causada por
+ação ou omissão injustificada da CONTRATADA;
+11
+.
+6
+.
+Ficará suspensa, tecnicamente, de participar em licitação, impedida de contratar com a
+União e descredenciada no SICAF, por prazo não superior a cinco anos;
+11
+.
+7
+.
+Será declarada inidônea para licitar ou contratar com a União, enquanto pendurarem os
+motivos determinantes da punição ou até que seja promovida a reabilitação perante a própria autoridade
+que aplicou a penalidade, que será concedida sempre que o contratado ressarcir a União pelos prejuízos
+resultantes após decorrido o prazo da sanção aplicada;
+11
+.
+8
+.
+Ensejar o retardamento da execução do objeto da CONTRATO;
+Termo de Referência 19 (4010028)         SEI 476909.000868/2026-73 / pg. 6
+11
+.
+9
+.
+Não mantiver a proposta;
+11
+.
+10
+.
+Falhar ou fraudar na execução do CONTRATO;
+11
+.
+11
+.
+Comportar-se de modo inidôneo;
+11
+.
+12
+.
+Fizer declaração falsa; ou
+11
+.
+13
+.
+Cometer fraude fiscal.
+11
+.
+14
+.
+As multas poderão ser aplicadas concomitantemente com as demais sanções, facultada a
+defesa prévia do interessado no prazo de cinco dias úteis, contados a partir da data em que tomar ciência.
+11
+.
+15
+.
+Para efeito de aplicação de multa, o valor do CONTRATO será apurado deduzindo-se dele
+o valor das entregas aceitas.
+11
+.
+16
+.
+A aplicação das sanções previstas neste CONTRATO não exclui a possibilidade da
+responsabilidade civil da CONTRATADA por eventuais perdas e danos causados à Administração
+Pública.
+12
+.
+DA DOTAÇÃO ORÇAMENTÁRIA
+15.1                 O saldo orçamentário disposto para a realização da aquisição em questão, está previsto na
+dotação orçamentária: 
+6.2.2.1.1.01.04.04.022 - Serviços Técnicos Especializados/ Projeto.
+13
+.
+DOS CUSTOS ESTIMADOS
+13
+.
+1
+.
+ O custo estimado da contratação é de 
+R$ 31.720,00 (Trinta e um mil, setecentos e vinte
+reais).
+14
+.
+DO PAGAMENTO 
+14
+.
+1
+.
+O pagamento poderá ser realizado por etapas, vinculadas às entregas:
+14
+.
+2
+.
+Etapa 1: implantação inicial;
+14
+.
+3
+.
+Etapa 2: sistema de inscrições ativo;
+14
+.
+4
+.
+Etapa 3: operação do evento;
+14
+.
+5
+.
+Etapa 4: entrega final.
+15
+.
+DISPOSIÇÕES GERAIS
+15
+.
+1
+.
+Assim, diante do exposto acima, entendemos ser 
+VIÁVEL
+ a contratação da solução
+demandada.
+ 
+ 
+Termo de referência elaborado pela Coordenação Administrativa e Financeira
+ 
+Adm. Wilians Silva Salustiano
+Coordenador Administrativo e Financeiro
+CRA-MT 6.045
+ 
+ 
+Aprovado
+ 
+ 
+Admª. Kátia Aparecida Reis de Oliveira Arruda
+Diretora Administrativa e Financeira
+CRA-MT 00474
+Termo de Referência 19 (4010028)         SEI 476909.000868/2026-73 / pg. 7
+ 
+ 
+ 
+Adm. Helio Tito Simões de Arruda
+Presidente
+CRA-MT 00011
+ 
+ 
+ 
+Documento assinado eletronicamente por 
+Adm. Wilians Silva Salustiano
+, 
+Superintendente
+, em
+07/05/2026, às 10:46, conforme horário oficial de Brasília.
+Documento assinado eletronicamente por 
+Adm. Helio Tito Simões de Arruda
+, 
+Presidente
+, em
+08/05/2026, às 09:25, conforme horário oficial de Brasília.
+Documento assinado eletronicamente por 
+Admª. Katia Aparecida Reis de Oliveira Arruda
+,
+Diretor(a)
+, em 01/06/2026, às 06:25, conforme horário oficial de Brasília.
+A autenticidade deste documento pode ser conferida no site 
+sei.cfa.org.br/conferir
+, informando o código
+verificador 
+4010028
+ e o código CRC 
+03B382BB
+.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Referência:
+ Processo nº 476909.000868/2026-73
+SEI nº 4010028
+Termo de Referência 19 (4010028)         SEI 476909.000868/2026-73 / pg. 8

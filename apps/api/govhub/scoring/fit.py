@@ -77,6 +77,15 @@ def calcular(session: Session, company: Company, opp: Opportunity) -> FitScore:
     perfil = company.perfil or {}
     dados_faltantes = []
 
+    # prazo de preparação: menos de 3 dias úteis não dá para habilitar/propor com qualidade
+    from datetime import date
+    prazo_dias = None
+    if opp.data_limite:
+        try:
+            prazo_dias = (date.fromisoformat(opp.data_limite) - date.today()).days
+        except ValueError:
+            pass
+
     doc = perfil.get("completude_documental")
     if doc is None:
         doc = 0.5
@@ -144,6 +153,11 @@ def calcular(session: Session, company: Company, opp: Opportunity) -> FitScore:
         # contratação direta de fornecedor já definido: não há disputa possível
         decisao = "NO_GO"
         riscos_extra.append("inexigibilidade: fornecedor já definido pelo órgão, sem disputa")
+    elif prazo_dias is not None and prazo_dias < 3:
+        decisao = "NO_GO"
+        riscos_extra.append(
+            f"prazo insuficiente: {prazo_dias} dia(s) até o encerramento — "
+            "inviável preparar habilitação e proposta com qualidade")
     elif fit_tecnico == 0:
         decisao = "NO_GO"
     elif (valor is not None and ticket_max is not None and valor > ticket_max
@@ -162,6 +176,9 @@ def calcular(session: Session, company: Company, opp: Opportunity) -> FitScore:
         decisao = "PARCERIA_NECESSARIA"
     else:
         decisao = "NO_GO"
+
+    if decisao != "NO_GO" and prazo_dias is not None and 3 <= prazo_dias <= 7:
+        condicoes_extra.append(f"prazo apertado ({prazo_dias} dias): priorizar imediatamente")
 
     fs = FitScore(
         tenant_id=company.tenant_id, company_id=company.id, opportunity_id=opp.id,

@@ -30,6 +30,11 @@ def ingest(data_inicial: str, data_final: str) -> None:
             print(f"pncp: {pncp.ingerir(s, regs)}")
         except FonteIndisponivel as e:
             print(f"pncp INDISPONÍVEL: {e}")
+        try:
+            from .ingestion.sistemas import ingerir_sistema_s
+            print(f"sistema_s: {ingerir_sistema_s(s)}")
+        except Exception as e:
+            print(f"sistema_s indisponível: {repr(e)[:80]}")
         s.commit()
 
 

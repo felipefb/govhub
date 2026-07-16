@@ -4,7 +4,7 @@ Fonte de verdade das pendências. Nada aqui pode ser esquecido: o objetivo é op
 
 | # | Pendência | Status | Evidência |
 |---|-----------|--------|-----------|
-| 5 | Novas fontes, prioridade p/ Avintis: (1º) Sistema S — viabilidade CONFIRMADA: transparência SESI/SENAI-SP tem tabela HTML raspável (nº, modalidade RCA, objeto, status, data, edital PDF) e pregões via licitacoes-e/BB; (2º) estatais/Petronect; (3º) Contrata+Brasil e Painel de Compras | aberta — sondada 2026-07-16 | transparencia.sp.senai.br/licitacoes |
+| 5 | Novas fontes: Sistema S SP FEITO (conector API JSON central sistematransparenciaweb, SESI+SENAI-SP, 423 licitações, no daily). Restam: outras regionais do Sistema S (mesma API, só ampliar REGIONAIS), estatais/Petronect, Contrata+Brasil, Painel de Compras | parcialmente fechada | govhub/ingestion/sistemas.py |
 
 | 18 | Radar diário de dispensas de TI sem exigência de qualificação técnica (padrão ideal p/ formar acervo) | aberta | bids/2026_DETRANDF_DE17/DIVERGENCIA.md |
 

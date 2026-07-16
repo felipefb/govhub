@@ -15,7 +15,7 @@ Fonte: telas do Meu SICAF em 2026-07-15. Renovar com 15 dias de antecedência.
 
 ## Pendências SICAF em aberto (2026-07-15)
 1. ~~Nível III: FGTS~~ — CRF REGULARIZADO em 2026-07-16. ✔
-2. ~~Nível IV: Cadesp~~ — certidão NÃO INSCRITA emitida 2026-07-16 (controle d91cab49), arquivada em 2026-07-16_cadesp_nao_inscrita.pdf. Falta apenas ANEXAR no campo Inscrição Estadual do SICAF. ✔ (documento)
+2. ~~Nível IV: Cadesp~~ — certidão NÃO INSCRITA emitida 2026-07-16 (controle d91cab49), arquivada em 2026-07-16_cadesp_nao_inscrita.pdf. ANEXADA no SICAF Nível IV em 2026-07-16 (campo 'NÃO INSCRITA' + arquivo). Aguardando reprocessamento do status. ✔
 3. ~~Nível I: Linhas de Fornecimento~~ — CADASTRADAS em 2026-07-15 (consultoria TIC, desenvolvimento/sustentação de software, integração de sistemas, P&D em TIC, dados/DaaS, SaaS). ✔
 4. ~~Nível VI~~: CADASTRADO — balanço anual 12/2025 validado, vigente até 06/2027. ✔
 

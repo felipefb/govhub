@@ -12,8 +12,8 @@ Fonte de verdade das pendências. Nada aqui pode ser esquecido: o objetivo é op
 | 7 | Postgres em produção (hoje SQLite dev) + row-level security | aberta | — |
 
 | 9 | Autenticação de usuários no cockpit (hoje tenant via header/query) | aberta | — |
-| 10 | Confirmar validação dos 6 níveis no "Meu SICAF" e subir balanço 2025 no Nível VI | aberta | dossiê 2026-07-15 §2 |
-| 11 | Certidões Nível IV SP (Débitos Mobiliários, Cadesp, e-CND SP, PGE-SP) com datas de validade no data room | aberta | dossiê §2 |
+| 10 | SICAF: corrigir FGTS p/ "Certidão" (Nível III), anexar Cadesp inexistência de IE (Nível IV), cadastrar linhas de fornecimento de serviço (Nível I), conferir Nível VI/balanço | em andamento — níveis II ok; III/IV com certidões válidas | data/dataroom/CERTIDOES.md |
+| 11 | Certidões: validades registradas com alertas (RFB/PGFN vence 22/09/2026 ← próxima); falta apenas Cadesp inexistência de IE | quase fechada | data/dataroom/CERTIDOES.md |
 | 13 | Acervo técnico — PLANO A: formar acervo público via dispensas sem exigência de qualificação técnica. Atestado SPES AI não será solicitado (decisão do representante, 2026-07-15); contrato+NFs ficam no data room como lastro secundário (usar apenas com exigência branda, ciente do risco de diligência) | redirecionada | data/dataroom/2025-07-14_contrato_SPES_AI_assinado.pdf |
 | 14 | Custos GovPricing: custo/hora por perfil, alíquota efetiva Simples, overhead (incluir serviço da dívida 2026), margem mínima | parcial (capital_giro=0 já registrado e aplicado ao score) | dossiê §4 |
 | 15 | Alçadas do workflow: quem decide GO/NO-GO, valida técnica, aprova preço/lance; advogado e contador de referência | aberta | dossiê §5 |

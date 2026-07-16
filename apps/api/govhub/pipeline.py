@@ -152,6 +152,12 @@ if __name__ == "__main__":
             print("enrich:", enriquecer_detalhes(s, tenant))
             print("triage:", triar_qualificadas(s, tenant))
             s.commit()
+    elif cmd == "bid":
+        from .analysis.bidcopilot import preparar_bid
+        with SessionLocal() as s:
+            r = preparar_bid(s, sys.argv[3] if len(sys.argv) > 3 else "avintis", int(sys.argv[2]))
+            s.commit()
+            print(r)
     elif cmd == "partners":
         from .analysis.partners import sugerir_parceiros
         with SessionLocal() as s:

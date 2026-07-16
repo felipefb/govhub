@@ -26,59 +26,116 @@ def get_tenant(x_tenant_id: str = Header(...)) -> str:
     return x_tenant_id
 
 
+DECISAO_LABEL = {
+    "GO": ("GO", "good"), "GO_COM_CONDICOES": ("GO com condições", "warn"),
+    "PARCERIA_NECESSARIA": ("Parceria necessária", "info"),
+}
+ATESTADO_LABEL = {
+    "NAO_EXIGE": ("✓ sem atestado", "good"), "EXIGE": ("● exige atestado", "warn"),
+    "INDEFINIDO": ("? conferir docs", "muted"),
+}
+
+
 @app.get("/", include_in_schema=False)
 def cockpit_html(tenant: str = "avintis", session: Session = Depends(get_session)):
     from fastapi.responses import HTMLResponse
+
+    from .analysis.triage import Triage
 
     total_opp = session.scalar(select(func.count()).select_from(Opportunity))
     por_decisao = dict(session.execute(
         select(FitScore.decisao_recomendada, func.count())
         .where(FitScore.tenant_id == tenant).group_by(FitScore.decisao_recomendada)
     ).all())
-    pipeline = session.scalar(
-        select(func.coalesce(func.sum(Opportunity.valor_estimado), 0.0))
-        .join(FitScore, FitScore.opportunity_id == Opportunity.id)
-        .where(FitScore.tenant_id == tenant,
-               FitScore.decisao_recomendada.in_(["GO", "GO_COM_CONDICOES"]))
-    )
-    top = session.execute(
-        select(FitScore, Opportunity)
+    rows = session.execute(
+        select(FitScore, Opportunity, Triage)
         .join(Opportunity, FitScore.opportunity_id == Opportunity.id)
+        .outerjoin(Triage, Triage.opportunity_id == Opportunity.id)
         .where(FitScore.tenant_id == tenant, FitScore.decisao_recomendada != "NO_GO")
-        .order_by(FitScore.score.desc()).limit(25)
+        .order_by(Opportunity.data_limite.is_(None), Opportunity.data_limite,
+                  FitScore.score.desc())
     ).all()
-    linhas = "".join(
-        f"<tr><td>{f.score:.1f}</td><td>{f.decisao_recomendada}</td><td>{o.uf or ''}</td>"
-        f"<td>{(o.orgao or '')[:50]}</td><td>{(o.objeto or '')[:120]}</td>"
-        f"<td>{'R$ %.0f' % o.valor_estimado if o.valor_estimado else '—'}</td>"
-        f"<td>{o.data_limite or '—'}</td>"
-        f"<td><a href='{o.url_fonte}' target='_blank'>{o.fonte}</a></td></tr>"
-        for f, o in top
-    )
-    cards = "".join(
-        f"<div class='card'><div class='n'>{v}</div><div>{k}</div></div>"
-        for k, v in [("oportunidades monitoradas", total_opp),
-                     ("GO", por_decisao.get("GO", 0)),
-                     ("GO COM CONDIÇÕES", por_decisao.get("GO_COM_CONDICOES", 0)),
-                     ("PARCERIA NECESSÁRIA", por_decisao.get("PARCERIA_NECESSARIA", 0)),
-                     ("pipeline qualificado", f"R$ {pipeline:,.0f}")]
-    )
+    vivas = [(f, o, tr) for f, o, tr in rows if not tr or tr.vida != "MORTA"]
+    mortas = [(f, o, tr) for f, o, tr in rows if tr and tr.vida == "MORTA"]
+    pipeline = sum(o.valor_estimado or 0 for f, o, _ in vivas
+                   if f.decisao_recomendada in ("GO", "GO_COM_CONDICOES"))
+
+    def linha(f, o, tr):
+        dec_txt, dec_cls = DECISAO_LABEL.get(f.decisao_recomendada, (f.decisao_recomendada, "muted"))
+        at_txt, at_cls = ATESTADO_LABEL.get(tr.atestado if tr else "INDEFINIDO",
+                                            ("? não triado", "muted"))
+        ev = (tr.evidencias or {}).get("atestado", "") if tr else ""
+        prazo = o.data_limite or (tr.data_sessao if tr else None) or "—"
+        return (f"<tr><td><span class='badge {dec_cls}'>{dec_txt}</span></td>"
+                f"<td><span class='badge {at_cls}' title='{ev[:200]}'>{at_txt}</span></td>"
+                f"<td>{prazo}</td><td class='num'>{f.score:.0f}</td>"
+                f"<td class='num'>{'R$ %s' % format(o.valor_estimado, ',.0f') if o.valor_estimado else '—'}</td>"
+                f"<td>{o.uf or '—'}</td><td>{(o.orgao or '')[:44]}</td>"
+                f"<td class='obj'>{(o.objeto or '')[:110]}</td>"
+                f"<td><a href='{o.url_fonte}' target='_blank'>{o.fonte}</a></td></tr>")
+
+    tiles = "".join(
+        f"<div class='tile'><div class='n'>{v}</div><div class='l'>{k}</div></div>"
+        for k, v in [
+            ("monitoradas na base", f"{total_opp:,}".replace(",", ".")),
+            ("em disputa viva", len(vivas)),
+            ("GO direto", por_decisao.get("GO", 0)),
+            ("com condições", por_decisao.get("GO_COM_CONDICOES", 0)),
+            ("via parceria", por_decisao.get("PARCERIA_NECESSARIA", 0)),
+            ("pipeline disputável", f"R$ {pipeline:,.0f}".replace(",", ".")),
+        ])
+    mortas_html = "".join(
+        f"<li><b>{(o.orgao or '')[:40]}</b> — {(o.objeto or '')[:80]} "
+        f"<span class='muted'>({(tr.evidencias or {}).get('vida', 'certame encerrado')[:90]}…)</span></li>"
+        for f, o, tr in mortas)
     return HTMLResponse(f"""<!doctype html><html lang='pt-BR'><head><meta charset='utf-8'>
-<title>GovHub AI — Cockpit</title><style>
-body{{font-family:system-ui;margin:2rem;color:#1a2332;background:#f6f8fa}}
-h1{{font-size:1.4rem}} .cards{{display:flex;gap:1rem;flex-wrap:wrap;margin:1rem 0}}
-.card{{background:#fff;border:1px solid #dde3ea;border-radius:8px;padding:1rem 1.5rem}}
-.card .n{{font-size:1.6rem;font-weight:700}}
-table{{border-collapse:collapse;width:100%;background:#fff;font-size:.85rem}}
-th,td{{border:1px solid #dde3ea;padding:.4rem .6rem;text-align:left}}
-th{{background:#eef2f6}} .nota{{color:#667;font-size:.8rem;margin-top:1rem}}
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>GovHub — Radar Avintis</title><style>
+:root{{--ink:#1a2332;--ink2:#5a6676;--line:#e3e8ef;--bg:#f7f9fb;--card:#fff;
+--good:#0d7a4f;--goodbg:#e5f5ec;--warn:#8a5a00;--warnbg:#fdf3d9;
+--info:#1c5fae;--infobg:#e7f0fb;--mutedbg:#eef1f5}}
+*{{box-sizing:border-box}} body{{font-family:system-ui,Segoe UI,sans-serif;margin:0;
+color:var(--ink);background:var(--bg)}}
+header{{background:var(--card);border-bottom:1px solid var(--line);padding:1rem 2rem;
+display:flex;justify-content:space-between;align-items:baseline}}
+header h1{{font-size:1.1rem;margin:0}} header .sub{{color:var(--ink2);font-size:.8rem}}
+main{{padding:1.5rem 2rem;max-width:1400px;margin:0 auto}}
+.tiles{{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem}}
+.tile{{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.9rem 1.1rem}}
+.tile .n{{font-size:1.5rem;font-weight:700;font-variant-numeric:tabular-nums}}
+.tile .l{{color:var(--ink2);font-size:.78rem;margin-top:.15rem}}
+h2{{font-size:.95rem;margin:1.6rem 0 .6rem}}
+table{{border-collapse:collapse;width:100%;background:var(--card);font-size:.82rem;
+border:1px solid var(--line);border-radius:10px;overflow:hidden}}
+th{{background:var(--mutedbg);color:var(--ink2);font-weight:600;text-align:left;
+padding:.5rem .6rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.03em}}
+td{{border-top:1px solid var(--line);padding:.45rem .6rem;vertical-align:top}}
+td.num{{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}}
+td.obj{{color:var(--ink2)}}
+.badge{{display:inline-block;padding:.12rem .5rem;border-radius:99px;font-size:.72rem;
+font-weight:600;white-space:nowrap}}
+.badge.good{{background:var(--goodbg);color:var(--good)}}
+.badge.warn{{background:var(--warnbg);color:var(--warn)}}
+.badge.info{{background:var(--infobg);color:var(--info)}}
+.badge.muted{{background:var(--mutedbg);color:var(--ink2)}}
+.muted{{color:var(--ink2)}} ul{{font-size:.82rem;color:var(--ink)}}
+footer{{color:var(--ink2);font-size:.75rem;padding:1rem 2rem;max-width:1400px;margin:0 auto}}
+a{{color:var(--info)}}
 </style></head><body>
-<h1>GovHub AI — Cockpit · tenant: {tenant}</h1>
-<div class='cards'>{cards}</div>
-<table><tr><th>Score</th><th>Recomendação</th><th>UF</th><th>Órgão</th><th>Objeto</th>
-<th>Valor estimado</th><th>Prazo</th><th>Fonte</th></tr>{linhas}</table>
-<p class='nota'>Scores são recomendações de IA (heurística v1) com componentes neutros pendentes
-de análise jurídica e competitiva. A decisão de participação é sempre humana.</p>
+<header><h1>GovHub · Radar de Contratações — Avintis</h1>
+<span class='sub'>fontes: PNCP + Compras.gov.br · verificação na fonte primária · triagem documental automática</span></header>
+<main>
+<div class='tiles'>{tiles}</div>
+<h2>Disputa viva — ordenada por prazo</h2>
+<table><tr><th>Recomendação</th><th>Qualificação técnica</th><th>Prazo</th><th>Score</th>
+<th>Valor est.</th><th>UF</th><th>Órgão</th><th>Objeto</th><th>Fonte</th></tr>
+{''.join(linha(f, o, tr) for f, o, tr in vivas)}</table>
+<h2>Descartadas pela triagem documental ({len(mortas)})</h2>
+<ul>{mortas_html or '<li class="muted">nenhuma</li>'}</ul>
+</main>
+<footer>Scores e triagens são recomendações de IA com evidência textual dos documentos oficiais
+(passe o mouse sobre o selo de qualificação para ver o trecho). Componentes competitivo e jurídico
+ainda neutros. A decisão de participação é sempre humana — o sistema não envia propostas nem dá lances.</footer>
 </body></html>""")
 
 

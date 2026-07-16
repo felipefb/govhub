@@ -6,6 +6,7 @@ silenciosamente; a decisão final de participação é sempre humana
 """
 import unicodedata
 
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from ..models import AuditLog, Company, FitScore, Opportunity
@@ -188,17 +189,35 @@ def calcular(session: Session, company: Company, opp: Opportunity) -> FitScore:
             "— vantagem competitiva relevante"
         )
 
+    # complexidade e risco jurídico a partir dos sinais da triagem documental (pendência #6)
+    complexidade, risco_jur = 0.5, 0.5
+    sinais: dict = {}
+    if opp.id is not None:
+        from ..analysis.triage import Triage
+        _tr = session.scalar(select(Triage).where(Triage.opportunity_id == opp.id))
+        if _tr is not None:
+            sinais = (_tr.evidencias or {}).get("sinais", {})
+            complexidade = max(0.1, round(
+                0.85 - 0.20 * ("poc_ou_amostra" in sinais) - 0.15 * ("garantia_exigida" in sinais)
+                - 0.15 * ("vistoria_presencial" in sinais) - 0.10 * ("sla_formal" in sinais), 2))
+            risco_jur = max(0.1, round(
+                0.75 - 0.15 * ("garantia_exigida" in sinais) - 0.10 * ("cessao_pi" in sinais)
+                - 0.10 * ("subcontratacao_vedada" in sinais), 2))
+
     componentes = {
         "fit_tecnico": round(fit_tecnico, 2),
         "capacidade_documental": doc,
         "margem_estimada": margem,
         "probabilidade_competitiva": competitiva,  # neutro salvo benefício ME/EPP; agente 04 refinará
-        "complexidade_operacional": 0.5,    # neutro até Leitura de Edital (agente 08)
-        "risco_juridico": 0.5,              # neutro até Agente Jurídico (agente 09)
+        "complexidade_operacional": complexidade,
+        "risco_juridico": risco_jur,
         "prazo_preparacao": prazo_ok,
         "valor_estrategico": 0.5,
     }
-    dados_faltantes += ["probabilidade_competitiva", "complexidade_operacional", "risco_juridico"]
+    dados_faltantes += ["probabilidade_competitiva"]
+    if not sinais and complexidade == 0.5:
+        dados_faltantes += ["complexidade_operacional", "risco_juridico"]
+    riscos_extra += [f"sinal documental: {k} — {v[:90]}" for k, v in sinais.items()]
 
     score = round(sum(componentes[k] * PESOS[k] for k in PESOS) * 100, 1)
     confianca = round(max(0.1, 1.0 - 0.1 * len(dados_faltantes)), 2)

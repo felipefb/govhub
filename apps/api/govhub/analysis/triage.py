@@ -30,6 +30,19 @@ RE_EXIGE = re.compile(
 RE_MORTO = re.compile(
     r"sem disputa|termo de homologa[çc][ãa]o|homologo o presente|adjudicad[oa] [àa]"
     r"|contratada[:\s]+\d{2}\.\d{3}\.\d{3}/", re.I)
+# sinais documentais que alimentam complexidade operacional e risco jurídico (pendência #6)
+RE_SINAIS = {
+    "garantia_exigida": re.compile(
+        r"garantia (?:de proposta|contratual|de execu[çc][ãa]o)|seguro[- ]garantia|cau[çc][ãa]o", re.I),
+    "poc_ou_amostra": re.compile(
+        r"prova de conceito|apresenta[çc][ãa]o de amostra|demonstra[çc][ãa]o pr[áa]tica", re.I),
+    "vistoria_presencial": re.compile(r"visita t[ée]cnica|vistoria", re.I),
+    "sla_formal": re.compile(r"n[íi]veis? de servi[çc]o|acordo de n[íi]vel|\bSLA\b", re.I),
+    "cessao_pi": re.compile(r"propriedade intelectual|direitos? autorais", re.I),
+    "subcontratacao_vedada": re.compile(r"vedada? a subcontrata[çc][ãa]o", re.I),
+    "consorcio_vedado": re.compile(r"n[ãa]o (?:ser[áa] admitid|se admitir)[ao][^.]{0,40}cons[óo]rcio", re.I),
+}
+
 RE_SESSAO = re.compile(
     r"(?:data da sess[ãa]o|sess[ãa]o p[úu]blica|fase de lances|encerramento[^\n]{0,40})"
     r"[^\n]{0,60}?(\d{2}/\d{2}/\d{4})", re.I)
@@ -104,6 +117,14 @@ def triar_oportunidade(opp: Opportunity, timeout: float = 90.0) -> dict:
     if m:
         resultado["data_sessao"] = m.group(1)
         resultado["evidencias"]["sessao"] = re.sub(r"\s+", " ", m.group(0))[:150]
+
+    sinais = {}
+    for nome, rx in RE_SINAIS.items():
+        ms = rx.search(texto_total)
+        if ms:
+            i = max(0, ms.start() - 60)
+            sinais[nome] = re.sub(r"\s+", " ", texto_total[i:ms.end() + 100])[:150]
+    resultado["evidencias"]["sinais"] = sinais
     return resultado
 
 

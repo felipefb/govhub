@@ -8,7 +8,7 @@ Fonte de verdade das pendências. Nada aqui pode ser esquecido: o objetivo é op
 
 | 18 | Radar diário de dispensas de TI sem exigência de qualificação técnica (padrão ideal p/ formar acervo) | aberta | bids/2026_DETRANDF_DE17/DIVERGENCIA.md |
 
-| 6 | Componentes neutros do fit score (complexidade, risco jurídico) alimentados pelos agentes 08/09; refinar taxonomia (falso positivo residual "saneantes domissanitários") | aberta | — |
+| 6b | Probabilidade competitiva ainda neutra (0.5) — alimentar com histórico de vencedores por objeto (agente 04) | aberta | winner_contract já tem os dados |
 | 7 | Postgres em produção (hoje SQLite dev) + row-level security | aberta | — |
 
 | 9 | Autenticação de usuários no cockpit (hoje tenant via header/query) | aberta | — |
@@ -25,6 +25,7 @@ Regra: ao fechar uma pendência, mover para a tabela abaixo com data e evidênci
 
 | # | Pendência | Data | Evidência |
 |---|-----------|------|-----------|
+| 6 | Complexidade operacional e risco jurídico alimentados pela triagem documental: 7 sinais (garantia, POC, vistoria, SLA, cessão de PI, subcontratação/consórcio vedados) com trecho-evidência; taxonomia refinada pelo filtro de executabilidade | 2026-07-16 | triage.RE_SINAIS + fit.calcular; 2 testes novos |
 | 17 | Verify automático após todo scoring | 2026-07-16 | pipeline.score(auto_verify=True) |
 | — | MVP 2 núcleo: Bid Copilot (matriz+checklist+proposta) com botão no cockpit; GovPricing (1.264 contratos de referência, seção de orçamento no pacote de bid); GovProjects (conector PCA de demanda futura no daily + seção no cockpit) | 2026-07-16 | analysis/bidcopilot.py, precos.py; ingestion/pca.py |
 | — | Cockpit v2: alertas de certidões (badge por dias restantes) e UI do workflow de aprovação (chips de etapa + formulário com ator humano), validado ponta a ponta | 2026-07-16 | govhub/main.py; teste test_cockpit.py; approval 1 avançou p/ REVISAO_ESPECIALISTA via UI |

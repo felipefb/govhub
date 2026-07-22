@@ -3,3 +3,32 @@ pncp INDISPONÍVEL: https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao i
 1251 scores calculados para tenant avintis
 verify: {'confirmadas': 10, 'corrigidas': 0, 'falhas': 6}
 triage: {'triadas': 1, 'vivas_sem_atestado': 0, 'mortas': 0, 'exigem': 0, 'indefinidas': 1}
+invalid pdf header: b'PK\x03\x04\x14'
+EOF marker not found
+comprasgov: {'novos': 1280, 'atualizados': 0, 'quarentena': 0}
+pncp INDISPONÍVEL: https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao indisponível após 3 tentativas: HTTP 500
+sistema_s: {'novos': 1, 'atualizados': 459, 'quarentena': 0}
+pca: {'itens_vistos': 4500, 'capturados': 5}
+1281 scores calculados para tenant avintis
+verify pós-score: {'confirmadas': 12, 'corrigidas': 0, 'falhas': 6}
+verify: {'confirmadas': 7, 'corrigidas': 0, 'falhas': 11}
+enrich: {'enriquecidas': 1, 'falhas': 0}
+triage: {'triadas': 4, 'vivas_sem_atestado': 0, 'mortas': 0, 'exigem': 0, 'indefinidas': 4}
+comprasgov: {'novos': 0, 'atualizados': 0, 'quarentena': 0}
+pncp: {'novos': 50, 'atualizados': 0, 'quarentena': 0}
+sistema_s: {'novos': 5, 'atualizados': 461, 'quarentena': 0}
+pca: {'itens_vistos': 2902, 'capturados': 3}
+54 scores calculados para tenant avintis
+verify pós-score: {'confirmadas': 12, 'corrigidas': 0, 'falhas': 6}
+verify: {'confirmadas': 8, 'corrigidas': 0, 'falhas': 10}
+enrich: {'enriquecidas': 0, 'falhas': 0}
+triage: {'triadas': 0, 'vivas_sem_atestado': 0, 'mortas': 0, 'exigem': 0, 'indefinidas': 0}
+comprasgov: {'novos': 0, 'atualizados': 0, 'quarentena': 0}
+pncp: {'novos': 5, 'atualizados': 45, 'quarentena': 0}
+sistema_s: {'novos': 0, 'atualizados': 466, 'quarentena': 0}
+pca: {'itens_vistos': 5000, 'capturados': 3}
+5 scores calculados para tenant avintis
+verify pós-score: {'confirmadas': 12, 'corrigidas': 0, 'falhas': 6}
+verify: {'confirmadas': 9, 'corrigidas': 0, 'falhas': 9}
+enrich: {'enriquecidas': 0, 'falhas': 0}
+triage: {'triadas': 0, 'vivas_sem_atestado': 0, 'mortas': 0, 'exigem': 0, 'indefinidas': 0}
